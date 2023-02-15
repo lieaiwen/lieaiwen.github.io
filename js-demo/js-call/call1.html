@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>call</title>
+</head>
+<body>
+    <h3>call(): 呼叫，把...看做，认为....是</h3>
+    <script>
+        function Person(){
+        	this.sayName = function(){
+        		return this.name;
+            }
+        }
+
+        function Chinese(name){
+	        //借助 call 实现继承
+        	Person.call(this)
+            this.name = name;
+        	this.whichPeople = function(){
+        		console.log('我是中国人')
+            }
+        }
+        var people = new Chinese('小明和')
+        console.log(people);
+        console.log(people.sayName()) //小明和
+    </script>
+</body>
+</html>

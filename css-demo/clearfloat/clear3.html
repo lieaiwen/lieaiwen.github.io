@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类清除浮动</title>
+    <style>
+        .one{
+            border:2px dashed #6a8bad;
+        }
+        .left{
+            width:200px;
+            height:200px;
+            float: left;
+            border:2px solid red;
+        }
+        .clearfix::after{
+            content:'';
+            display: block;
+            visibility: hidden;
+            height:0;
+            clear: both;
+        }
+        .clearfix{
+            zoom:1;/*为了兼容ie*/
+        }
+
+    </style>
+</head>
+<body>
+<div class="one clearfix">
+    <div class="left">我是浮动的</div>
+</div>
+</body>
+</html>

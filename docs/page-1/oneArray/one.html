@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="">
+    <i class="yticon icon-yiguoq1"></i>
+    <i class="yticon "></i>
+    <i class="icon-yiguoq1"></i>
+</div>
+    <script>
+        // const chunk = (arr, size) => arr.reduce((acc, e, i) => (i % size ? acc[acc.length - 1].push(e) : acc.push([e]), acc), []);
+        //const cartesian = (...sets) => sets.reduce((acc, set) => acc.flatMap((x) => set.map((y) => [...x, y])), [[]]);
+        function _toConsumableArray(arr) {
+            if (Array.isArray(arr)) {
+                for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {
+                    arr2[i] = arr[i];
+                }
+                return arr2;
+            } else {
+                return Array.from(arr);
+            }
+        }
+
+        var cartesian = function cartesian() {
+            var _len = arguments.length;// 参数长度
+            var sets = Array(_len);// 初始数组长度，都为空
+            for (var _key = 0; _key < _len; _key++) {
+                sets[_key] = arguments[_key]; // 赋值给sets
+            }
+            return sets.reduce(function (acc, set) {
+                return acc.flatMap(function (x) {
+                    return set.map(function (y) {
+                        return [].concat(_toConsumableArray(x), [y]);
+                    });
+                });
+            }, [[]]);
+        };
+        console.log(cartesian([1, 2], [3, 4]))
+        // [ [1, 3], [1, 4], [2, 3], [2, 4] ]
+    </script>
+</body>
+</html>

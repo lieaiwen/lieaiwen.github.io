@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>call2</title>
+</head>
+<body>
+<h3>a.call(b)</h3>
+1.0 通过call 改变a函数中的this指向
+<script>
+    var person = {
+    	fullName:function(){
+    		return this.firstName + '--' + this.lastName
+        }
+    }
+    var person1 = {
+    	firstName:'1111',
+      lastName:'2222',
+    }
+    var person2 = {
+	    firstName:'3333',
+	    lastName:'444',
+    }
+    console.log(person.fullName.call(person1)) //1111--2222
+    console.log(person.fullName.call(person2)) // 3333--444
+</script>
+</body>
+</html>

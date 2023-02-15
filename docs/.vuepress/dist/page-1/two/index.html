@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>call apply bind | 速度至上</title>
+    <meta name="description" content="Reggie Study Notes">
+    <meta name="generator" content="VuePress 1.3.0">
+    <link rel="icon" href="/dist/img/logo.ico">
+  <link rel="manifest" href="/dist/manifest.json">
+    
+    <link rel="preload" href="/dist/assets/css/0.styles.35364d6e.css" as="style"><link rel="preload" href="/dist/assets/js/app.c917e6cc.js" as="script"><link rel="preload" href="/dist/assets/js/2.47087845.js" as="script"><link rel="preload" href="/dist/assets/js/22.a9af6621.js" as="script"><link rel="prefetch" href="/dist/assets/js/10.272a0d8f.js"><link rel="prefetch" href="/dist/assets/js/11.b18936e9.js"><link rel="prefetch" href="/dist/assets/js/12.e6c034ba.js"><link rel="prefetch" href="/dist/assets/js/13.e6607d61.js"><link rel="prefetch" href="/dist/assets/js/14.3dcb46ff.js"><link rel="prefetch" href="/dist/assets/js/15.c98ab082.js"><link rel="prefetch" href="/dist/assets/js/16.b4d38ade.js"><link rel="prefetch" href="/dist/assets/js/17.99b8ec1e.js"><link rel="prefetch" href="/dist/assets/js/18.7fe5e6e5.js"><link rel="prefetch" href="/dist/assets/js/19.7a75dd83.js"><link rel="prefetch" href="/dist/assets/js/20.900a3232.js"><link rel="prefetch" href="/dist/assets/js/21.829fa9a5.js"><link rel="prefetch" href="/dist/assets/js/23.931d5e65.js"><link rel="prefetch" href="/dist/assets/js/24.b81fd765.js"><link rel="prefetch" href="/dist/assets/js/25.ade77fd1.js"><link rel="prefetch" href="/dist/assets/js/26.57bd2b69.js"><link rel="prefetch" href="/dist/assets/js/27.e432c17e.js"><link rel="prefetch" href="/dist/assets/js/28.770b7223.js"><link rel="prefetch" href="/dist/assets/js/29.a1c0088d.js"><link rel="prefetch" href="/dist/assets/js/3.63fad206.js"><link rel="prefetch" href="/dist/assets/js/30.7e308595.js"><link rel="prefetch" href="/dist/assets/js/31.2d3f011a.js"><link rel="prefetch" href="/dist/assets/js/32.84c6baee.js"><link rel="prefetch" href="/dist/assets/js/33.746c8544.js"><link rel="prefetch" href="/dist/assets/js/34.d2e3b45c.js"><link rel="prefetch" href="/dist/assets/js/35.54e93ddf.js"><link rel="prefetch" href="/dist/assets/js/36.fd9a8d86.js"><link rel="prefetch" href="/dist/assets/js/37.b656b7e3.js"><link rel="prefetch" href="/dist/assets/js/38.7598d92e.js"><link rel="prefetch" href="/dist/assets/js/39.b235fd2a.js"><link rel="prefetch" href="/dist/assets/js/4.bd5c7804.js"><link rel="prefetch" href="/dist/assets/js/40.5b412597.js"><link rel="prefetch" href="/dist/assets/js/41.10e71457.js"><link rel="prefetch" href="/dist/assets/js/42.2adc995a.js"><link rel="prefetch" href="/dist/assets/js/43.7fb986a0.js"><link rel="prefetch" href="/dist/assets/js/44.221d507c.js"><link rel="prefetch" href="/dist/assets/js/45.c01a5315.js"><link rel="prefetch" href="/dist/assets/js/46.27464cbe.js"><link rel="prefetch" href="/dist/assets/js/47.cda53af1.js"><link rel="prefetch" href="/dist/assets/js/48.a97682dd.js"><link rel="prefetch" href="/dist/assets/js/49.31315172.js"><link rel="prefetch" href="/dist/assets/js/5.28d23724.js"><link rel="prefetch" href="/dist/assets/js/50.55f5cfd4.js"><link rel="prefetch" href="/dist/assets/js/51.6dfcf284.js"><link rel="prefetch" href="/dist/assets/js/52.30f62370.js"><link rel="prefetch" href="/dist/assets/js/53.870a03f6.js"><link rel="prefetch" href="/dist/assets/js/54.79e4283b.js"><link rel="prefetch" href="/dist/assets/js/55.d6541f26.js"><link rel="prefetch" href="/dist/assets/js/56.7656c52b.js"><link rel="prefetch" href="/dist/assets/js/57.3155b432.js"><link rel="prefetch" href="/dist/assets/js/58.aa9e6022.js"><link rel="prefetch" href="/dist/assets/js/59.ace2375a.js"><link rel="prefetch" href="/dist/assets/js/6.24776c69.js"><link rel="prefetch" href="/dist/assets/js/60.bbca0748.js"><link rel="prefetch" href="/dist/assets/js/61.4885868f.js"><link rel="prefetch" href="/dist/assets/js/62.adb1f4a1.js"><link rel="prefetch" href="/dist/assets/js/63.42890dc8.js"><link rel="prefetch" href="/dist/assets/js/64.2563c169.js"><link rel="prefetch" href="/dist/assets/js/65.9113a683.js"><link rel="prefetch" href="/dist/assets/js/66.75f88a90.js"><link rel="prefetch" href="/dist/assets/js/67.5ec328fe.js"><link rel="prefetch" href="/dist/assets/js/68.389976e3.js"><link rel="prefetch" href="/dist/assets/js/69.64bb83b1.js"><link rel="prefetch" href="/dist/assets/js/7.5f367344.js"><link rel="prefetch" href="/dist/assets/js/70.013210ce.js"><link rel="prefetch" href="/dist/assets/js/71.f310f6e9.js"><link rel="prefetch" href="/dist/assets/js/72.f6b8ca15.js"><link rel="prefetch" href="/dist/assets/js/73.44de2be4.js"><link rel="prefetch" href="/dist/assets/js/74.eedb9492.js"><link rel="prefetch" href="/dist/assets/js/75.c32d2819.js"><link rel="prefetch" href="/dist/assets/js/76.e98765e3.js"><link rel="prefetch" href="/dist/assets/js/77.9b1efc2a.js"><link rel="prefetch" href="/dist/assets/js/78.9ab31ecd.js"><link rel="prefetch" href="/dist/assets/js/8.5b2229dc.js"><link rel="prefetch" href="/dist/assets/js/9.46cc1f89.js">
+    <link rel="stylesheet" href="/dist/assets/css/0.styles.35364d6e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/dist/" class="home-link router-link-active"><!----> <span class="site-name">速度至上</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/dist/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/dist/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dist/language/chinese.html" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/dist/language/english.html" class="nav-link">
+  English
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/dist/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/dist/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dist/language/chinese.html" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/dist/language/english.html" class="nav-link">
+  English
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>js知识点</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/dist/page-1/one/" class="sidebar-link">数组操作</a></li><li><a href="/dist/page-1/three/" class="sidebar-link">js基础知识2</a></li><li><a href="/dist/page-1/two/" class="active sidebar-link">call apply bind</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/dist/page-1/two/#call-apply-bind" class="sidebar-link">call apply bind</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/two/#call" class="sidebar-link">call</a></li></ul></li><li><a href="/dist/page-1/Boolean/" class="sidebar-link">Boolean</a></li><li><a href="/dist/page-1/Object/" class="sidebar-link">js对象</a></li><li><a href="/dist/page-1/RegExp/" class="sidebar-link">js RegExp 对象</a></li><li><a href="/dist/page-1/Date/" class="sidebar-link">Date 对象</a></li><li><a href="/dist/page-1/Math/" class="sidebar-link">Math 对象</a></li><li><a href="/dist/page-1/Number/" class="sidebar-link">Number 对象</a></li><li><a href="/dist/page-1/String/" class="sidebar-link">String 对象</a></li><li><a href="/dist/page-1/Error/" class="sidebar-link">js Error(错误)对象</a></li><li><a href="/dist/page-1/Global/" class="sidebar-link">js 全局</a></li><li><a href="/dist/page-1/Class/" class="sidebar-link">es6 class</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js杂项知识点</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>有待学习的</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>VUE</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTTP</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>es6相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>webpack</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>英语单词</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="call-apply-bind"><a href="#call-apply-bind" class="header-anchor">#</a> call apply bind</h2> <h2 id="call"><a href="#call" class="header-anchor">#</a> call</h2> <p>call和apply作用是一样的，都是为了改变某个函数运行时的上下文（context）而存在的，换句话说，就是为了改变函数体内部this的指向。<br>
+作用：<br>
+使用 call() 方法，您可以编写能够在不同对象上使用的方法<br>
+用法：
+A.call(B,x,y)<br>
+1  改变函数A的this指向，使之指向B;<br>
+2  把A函数放到B中运行，x和y是A函数的<br>
+一 常规用法<br>
+call()方法是预定义的js方法 <br>
+通过call（）你能够使用属于另一个对象的方法</p> <div class="language- extra-class"><pre class="language-text"><code> var person = {
+      fullName:function(){
+        return this.firstName + '--' + this.lastName
+         }
+     }
+     var person1 = {
+      firstName:'1111',
+       lastName:'2222',
+     }
+     var person2 = {
+      firstName:'3333',
+      lastName:'444',
+     }
+     console.log(person.fullName.call(person1)) //1111--2222
+     console.log(person.fullName.call(person2)) // 3333--444
+</code></pre></div><p><a href="http://www.zliel.top/vpdemo/js-demo/js-call/call1.html" target="_blank" rel="noopener noreferrer">demo<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> <br>
+2.0 带参数的</p> <div class="language- extra-class"><pre class="language-text"><code>    var person = {
+      fullName:function(city,age){
+        return this.firstName + '--' + this.lastName +'=' +city+ '年龄'+age
+        }
+    }
+    var person1 = {
+      firstName:'1111',
+      lastName:'2222',
+    }
+    var person2 = {
+      firstName:'3333',
+      lastName:'444',
+    }
+    console.log(person.fullName.call(person1,'郑州','18')) //1111--2222=郑州年龄18
+    console.log(person.fullName.call(person2,'上海','19')) // 3333--444=上海年龄19
+</code></pre></div><p><a href="http://www.zliel.top/vpdemo/js-demo/js-call/call2.html" target="_blank" rel="noopener noreferrer">demo<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> <br>
+3.0 用来继承</p> <div class="language- extra-class"><pre class="language-text"><code> function Person(){
+  this.sayName = function(){
+    return this.name;
+     }
+ }
+
+ function Chinese(name){
+  //借助 call 实现继承
+  Person.call(this)
+     this.name = name;
+  this.whichPeople = function(){
+    console.log('我是中国人')
+     }
+ }
+ var people = new Chinese('小明和')
+ console.log(people);
+ console.log(people.sayName()) //小明和
+</code></pre></div><p><a href="http://www.zliel.top/vpdemo/js-demo/js-call/call3.html" target="_blank" rel="noopener noreferrer">demo<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> <br>
+4.0 例1：</p> <div class="language- extra-class"><pre class="language-text"><code> var name = '笑笑';
+    var age  = 17;
+    var obj = {
+    	name:'打打',
+        objAge:this.age, // 指向上一级作用域 window ，对象不形成作用域
+        myFun:function(){
+    		console.log(this.name + '年龄' + this.age);
+        }
+    }
+    console.log(obj.objAge) //17
+    obj.myFun() // 打打年龄undefined
+    var fav = '大爷';
+    function showf(){
+    	console.log(this.fav)
+    }
+    showf();// 大爷
+    比较一下这两者 this 的差别，第一个打印里面的 this 指向 obj，第二个全局声明的 shows() 函数 this 是 window ；
+</code></pre></div><p><a href="http://www.zliel.top/vpdemo/js-demo/js-call/call4.html" target="_blank" rel="noopener noreferrer">demo<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> <br></p> <p>5.0 例2：</p> <div class="language- extra-class"><pre class="language-text"><code>var name = '笑笑';
+	var age  = 17;
+	var obj = {
+		name:'打打',
+		objAge:this.age, // 指向上一级作用域 window ，对象不形成作用域
+		myFun:function(){
+			console.log(this.name + '年龄' + this.age);
+		}
+	}
+	var dd = {
+		name:'美女',
+        age:99
+    }
+    obj.myFun.call(dd);// 美女年龄99
+    obj.myFun.apply(dd);// 美女年龄99
+    obj.myFun.bind(dd)();// 美女年龄99
+以上出了 bind 方法后面多了个 () 外 ，结果返回都一致！
+
+由此得出结论，bind 返回的是一个新的函数，你必须调用它才会被执行。
+</code></pre></div><p><a href="http://www.zliel.top/vpdemo/js-demo/js-call/call5.html" target="_blank" rel="noopener noreferrer">demo<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> <br>
+6.0 例3：</p> <div class="language- extra-class"><pre class="language-text"><code>var name = '笑笑';
+	var age  = 17;
+	var obj = {
+		name:'打打',
+		objAge:this.age, // 指向上一级作用域 window ，对象不形成作用域
+		myFun:function(fm,t){
+			console.log(this.name + '年龄' + this.age+'来自'+fm+'的'+t);
+		}
+	}
+	var dd = {
+		name:'美女',
+        age:99
+    }
+    obj.myFun.call(dd,'四川','成都');// 美女年龄99美女年龄99来自四川的成都
+    obj.myFun.apply(dd,['上海','静安区']);// 美女年龄99来自上海的静安区
+	obj.myFun.bind(dd,'上海','静安区')();// 美女年龄99来自上海静安区的
+    obj.myFun.bind(dd,['上海','静安区'])();// 美女年龄99来自上海,静安区的undefined
+从上面四个结果不难看出:
+
+call 、bind 、 apply 这三个函数的第一个参数都是 this 的指向对象，第二个参数差别就来了：
+
+call 的参数是直接放进去的，第二第三第 n 个参数全都用逗号分隔，直接放到后面 obj.myFun.call(db,'成都', ... ,'string' )。
+
+apply 的所有参数都必须放在一个数组里面传进去 obj.myFun.apply(db,['成都', ..., 'string' ])。
+
+bind 除了返回是函数以外，它 的参数和 call 一样。
+
+当然，三者的参数不限定是 string 类型，允许是各种类型，包括函数 、 object 等等！
+</code></pre></div><p><a href="http://www.zliel.top/vpdemo/js-demo/js-call/call6.html" target="_blank" rel="noopener noreferrer">demo<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> <br></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/dist/page-1/three/" class="prev">
+        js基础知识2
+      </a></span> <span class="next"><a href="/dist/page-1/Boolean/">
+        Boolean
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/dist/assets/js/app.c917e6cc.js" defer></script><script src="/dist/assets/js/2.47087845.js" defer></script><script src="/dist/assets/js/22.a9af6621.js" defer></script>
+  </body>
+</html>

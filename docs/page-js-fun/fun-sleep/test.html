@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>修改页面背景颜色</h1>
+    <script>
+        window.onload = function(color){
+            let Promise1 = new Promise(function(resolve, reject){
+                resolve({name:'小红'})
+            })
+            let Promise2 = new Promise(function(resolve, reject){
+                setTimeout(()=>{
+                    resolve({name:'小明'})
+                },2000)
+            })
+            let Promise3 = new Promise(function(resolve, reject){
+                resolve({name:'小白'})
+            })
+
+            let p = Promise.all([Promise1, Promise2, Promise3])
+            console.log('p',p)
+            p.then((data) => {
+                 console.log('resolved',data); // [{name:'小红'},{name:'小明'},{name:'小白'}]
+              }
+            ).catch(err=>{
+                console.log('rejected',err);
+            });
+
+        }
+    </script>
+</body>
+</html>

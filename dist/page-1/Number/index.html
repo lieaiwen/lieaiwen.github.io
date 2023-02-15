@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Number 对象 | 速度至上</title>
+    <meta name="description" content="Reggie Study Notes">
+    <meta name="generator" content="VuePress 1.3.0">
+    <link rel="icon" href="/dist/img/logo.ico">
+  <link rel="manifest" href="/dist/manifest.json">
+    
+    <link rel="preload" href="/dist/assets/css/0.styles.35364d6e.css" as="style"><link rel="preload" href="/dist/assets/js/app.c917e6cc.js" as="script"><link rel="preload" href="/dist/assets/js/2.47087845.js" as="script"><link rel="preload" href="/dist/assets/js/15.c98ab082.js" as="script"><link rel="prefetch" href="/dist/assets/js/10.272a0d8f.js"><link rel="prefetch" href="/dist/assets/js/11.b18936e9.js"><link rel="prefetch" href="/dist/assets/js/12.e6c034ba.js"><link rel="prefetch" href="/dist/assets/js/13.e6607d61.js"><link rel="prefetch" href="/dist/assets/js/14.3dcb46ff.js"><link rel="prefetch" href="/dist/assets/js/16.b4d38ade.js"><link rel="prefetch" href="/dist/assets/js/17.99b8ec1e.js"><link rel="prefetch" href="/dist/assets/js/18.7fe5e6e5.js"><link rel="prefetch" href="/dist/assets/js/19.7a75dd83.js"><link rel="prefetch" href="/dist/assets/js/20.900a3232.js"><link rel="prefetch" href="/dist/assets/js/21.829fa9a5.js"><link rel="prefetch" href="/dist/assets/js/22.a9af6621.js"><link rel="prefetch" href="/dist/assets/js/23.931d5e65.js"><link rel="prefetch" href="/dist/assets/js/24.b81fd765.js"><link rel="prefetch" href="/dist/assets/js/25.ade77fd1.js"><link rel="prefetch" href="/dist/assets/js/26.57bd2b69.js"><link rel="prefetch" href="/dist/assets/js/27.e432c17e.js"><link rel="prefetch" href="/dist/assets/js/28.770b7223.js"><link rel="prefetch" href="/dist/assets/js/29.a1c0088d.js"><link rel="prefetch" href="/dist/assets/js/3.63fad206.js"><link rel="prefetch" href="/dist/assets/js/30.7e308595.js"><link rel="prefetch" href="/dist/assets/js/31.2d3f011a.js"><link rel="prefetch" href="/dist/assets/js/32.84c6baee.js"><link rel="prefetch" href="/dist/assets/js/33.746c8544.js"><link rel="prefetch" href="/dist/assets/js/34.d2e3b45c.js"><link rel="prefetch" href="/dist/assets/js/35.54e93ddf.js"><link rel="prefetch" href="/dist/assets/js/36.fd9a8d86.js"><link rel="prefetch" href="/dist/assets/js/37.b656b7e3.js"><link rel="prefetch" href="/dist/assets/js/38.7598d92e.js"><link rel="prefetch" href="/dist/assets/js/39.b235fd2a.js"><link rel="prefetch" href="/dist/assets/js/4.bd5c7804.js"><link rel="prefetch" href="/dist/assets/js/40.5b412597.js"><link rel="prefetch" href="/dist/assets/js/41.10e71457.js"><link rel="prefetch" href="/dist/assets/js/42.2adc995a.js"><link rel="prefetch" href="/dist/assets/js/43.7fb986a0.js"><link rel="prefetch" href="/dist/assets/js/44.221d507c.js"><link rel="prefetch" href="/dist/assets/js/45.c01a5315.js"><link rel="prefetch" href="/dist/assets/js/46.27464cbe.js"><link rel="prefetch" href="/dist/assets/js/47.cda53af1.js"><link rel="prefetch" href="/dist/assets/js/48.a97682dd.js"><link rel="prefetch" href="/dist/assets/js/49.31315172.js"><link rel="prefetch" href="/dist/assets/js/5.28d23724.js"><link rel="prefetch" href="/dist/assets/js/50.55f5cfd4.js"><link rel="prefetch" href="/dist/assets/js/51.6dfcf284.js"><link rel="prefetch" href="/dist/assets/js/52.30f62370.js"><link rel="prefetch" href="/dist/assets/js/53.870a03f6.js"><link rel="prefetch" href="/dist/assets/js/54.79e4283b.js"><link rel="prefetch" href="/dist/assets/js/55.d6541f26.js"><link rel="prefetch" href="/dist/assets/js/56.7656c52b.js"><link rel="prefetch" href="/dist/assets/js/57.3155b432.js"><link rel="prefetch" href="/dist/assets/js/58.aa9e6022.js"><link rel="prefetch" href="/dist/assets/js/59.ace2375a.js"><link rel="prefetch" href="/dist/assets/js/6.24776c69.js"><link rel="prefetch" href="/dist/assets/js/60.bbca0748.js"><link rel="prefetch" href="/dist/assets/js/61.4885868f.js"><link rel="prefetch" href="/dist/assets/js/62.adb1f4a1.js"><link rel="prefetch" href="/dist/assets/js/63.42890dc8.js"><link rel="prefetch" href="/dist/assets/js/64.2563c169.js"><link rel="prefetch" href="/dist/assets/js/65.9113a683.js"><link rel="prefetch" href="/dist/assets/js/66.75f88a90.js"><link rel="prefetch" href="/dist/assets/js/67.5ec328fe.js"><link rel="prefetch" href="/dist/assets/js/68.389976e3.js"><link rel="prefetch" href="/dist/assets/js/69.64bb83b1.js"><link rel="prefetch" href="/dist/assets/js/7.5f367344.js"><link rel="prefetch" href="/dist/assets/js/70.013210ce.js"><link rel="prefetch" href="/dist/assets/js/71.f310f6e9.js"><link rel="prefetch" href="/dist/assets/js/72.f6b8ca15.js"><link rel="prefetch" href="/dist/assets/js/73.44de2be4.js"><link rel="prefetch" href="/dist/assets/js/74.eedb9492.js"><link rel="prefetch" href="/dist/assets/js/75.c32d2819.js"><link rel="prefetch" href="/dist/assets/js/76.e98765e3.js"><link rel="prefetch" href="/dist/assets/js/77.9b1efc2a.js"><link rel="prefetch" href="/dist/assets/js/78.9ab31ecd.js"><link rel="prefetch" href="/dist/assets/js/8.5b2229dc.js"><link rel="prefetch" href="/dist/assets/js/9.46cc1f89.js">
+    <link rel="stylesheet" href="/dist/assets/css/0.styles.35364d6e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/dist/" class="home-link router-link-active"><!----> <span class="site-name">速度至上</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/dist/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/dist/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dist/language/chinese.html" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/dist/language/english.html" class="nav-link">
+  English
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/dist/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/dist/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dist/language/chinese.html" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/dist/language/english.html" class="nav-link">
+  English
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>js知识点</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/dist/page-1/one/" class="sidebar-link">数组操作</a></li><li><a href="/dist/page-1/three/" class="sidebar-link">js基础知识2</a></li><li><a href="/dist/page-1/two/" class="sidebar-link">call apply bind</a></li><li><a href="/dist/page-1/Boolean/" class="sidebar-link">Boolean</a></li><li><a href="/dist/page-1/Object/" class="sidebar-link">js对象</a></li><li><a href="/dist/page-1/RegExp/" class="sidebar-link">js RegExp 对象</a></li><li><a href="/dist/page-1/Date/" class="sidebar-link">Date 对象</a></li><li><a href="/dist/page-1/Math/" class="sidebar-link">Math 对象</a></li><li><a href="/dist/page-1/Number/" class="active sidebar-link">Number 对象</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/dist/page-1/Number/#number-对象" class="sidebar-link">Number 对象</a></li></ul></li><li><a href="/dist/page-1/String/" class="sidebar-link">String 对象</a></li><li><a href="/dist/page-1/Error/" class="sidebar-link">js Error(错误)对象</a></li><li><a href="/dist/page-1/Global/" class="sidebar-link">js 全局</a></li><li><a href="/dist/page-1/Class/" class="sidebar-link">es6 class</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js杂项知识点</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>有待学习的</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>VUE</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTTP</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>es6相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>webpack</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>英语单词</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="number-对象"><a href="#number-对象" class="header-anchor">#</a> Number 对象</h2> <p>Number 对象是原始数值的包装对象。 <br>
+Number 创建方式 new Number()。 <br>
+var num = new Number(value); <br>
+注意： 如果一个参数值不能转换为一个数字将返回 NaN (非数字值)。 <br>
+主要Number 对象属性<br>
+prototype	允许您可以向对象添加属性和方法。</p> <div class="language- extra-class"><pre class="language-text"><code>Number.prototype.myMet=function(){
+	this.myProp=this.valueOf()/2;
+}
+function myFunction(){
+	var d = new Number(55);
+	d.myMet();
+	var x=document.getElementById(&quot;demo&quot;);
+	x.innerHTML=d.myProp;
+}
+</code></pre></div><p>1.0 Number.isFinite() 方法  ie12才支持<br></p> <p>isFinite() 函数用于检测指定参数是否为无穷大。 <br></p> <p>提示： 如果 number 是 NaN（非数字），或者是正、负无穷大的数，则返回 false。 <br></p> <p>Number.isFinite() 与全局的 isFinite() 函数不同，全局的 isFinite() 会先把检测值转换为 Number ，然后在检测。 <br></p> <p>Number.isFinite() 不会将检测值转换为 Number对象，如果检测值不是 Number 类型，则返回 false。</p> <div class="language- extra-class"><pre class="language-text"><code>Number.isFinite(123) //true
+Number.isFinite(-1.23) //true
+Number.isFinite(5-2) //true
+Number.isFinite(0) //true
+Number.isFinite('123') //false
+Number.isFinite('Hello') //false
+Number.isFinite('2005/12/12') //false
+Number.isFinite(Infinity) //false
+Number.isFinite(-Infinity) //false
+Number.isFinite(0 / 0) //false
+</code></pre></div><p>2.0 toFixed(x)	把数字转换为字符串，结果的小数点后有指定位数的数字。
+toFixed() 方法可把 Number 四舍五入为指定小数位数的数字。</p> <div class="language- extra-class"><pre class="language-text"><code>把数字转换为字符串，结果的小数点后有指定位数的数字：
+var num = 5.56789;
+var n=num.toFixed(2); // 5.57 
+
+将一个数字，不留任何小数：
+var num = 5.56789;
+var n=num.toFixed(); // 6
+
+转换一个比指定数小的小数点后的位数的数字：
+var num = 5.56789;
+var n=num.toFixed(7); // 5.5678900
+
+</code></pre></div><p>3.0  toPrecision(x)	把数字格式化为指定的长度。</p> <div class="language- extra-class"><pre class="language-text"><code>var num = new Number(13.3714);
+var a = num.toPrecision(); // 13.3714
+var b = num.toPrecision(2); // 13
+var c = num.toPrecision(3); // 13.4
+var d = num.toPrecision(10); // 13.37140000
+</code></pre></div><p>4.0  toString()	把数字转换为字符串，使用指定的基数。</p> <div class="language- extra-class"><pre class="language-text"><code>数字的字符串表示。例如，当 radix 为 2 时，NumberObject 会被转换为二进制值表示的字符串。
+
+var num = 15;
+var a = num.toString(); // 15
+var b = num.toString(2); // 1111
+var c = num.toString(8); // 17
+var d = num.toString(16); // f
+</code></pre></div><p>5.0  valueOf()	返回一个 Number 对象的基本数字值。</p> <div class="language- extra-class"><pre class="language-text"><code>返回一个 Number 对象的基本数字值：
+
+var num = 15;
+var n = num.valueOf(); // 15
+</code></pre></div><p>6.0  （es6新增的）Number.isInteger(): 用来判断给定的参数是否为整数。</p> <div class="language- extra-class"><pre class="language-text"><code>Number.isInteger() 在参数是整数时返回 true。
+Number.isInteger(10);        // 返回 true
+Number.isInteger(10.5);      // 返回 false
+</code></pre></div><p>7.0  （es6新增的）Number.isSafeInteger(): 判断传入的参数值是否是一个&quot;安全整数&quot;。</p> <div class="language- extra-class"><pre class="language-text"><code>Number.isSafeInteger()判断传入的参数值是否是一个&quot;安全整数&quot;。
+
+安全整数范围为 -(253 - 1)到 253 - 1 之间的整数，包含 -(253 - 1)和 253 - 1。
+Number.isSafeInteger(10);    // 返回 true
+Number.isSafeInteger(12345678901234567890);  // 返回 false
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/dist/page-1/Math/" class="prev">
+        Math 对象
+      </a></span> <span class="next"><a href="/dist/page-1/String/">
+        String 对象
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/dist/assets/js/app.c917e6cc.js" defer></script><script src="/dist/assets/js/2.47087845.js" defer></script><script src="/dist/assets/js/15.c98ab082.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数声明和函数表达式</title>
+</head>
+<body>
+<h3>函数声明和函数表达式</h3>
+<script>
+    a();
+	function a(){
+		console.log('a')
+	}
+	b(); // f1.html?_ijt=67g8ejmn7i8g4hgugtsknq7inu:14 Uncaught TypeError: b is not a function
+	var b = function(){
+		console.log('b')
+	}
+    b() // 正常
+</script>
+</body>
+</html>

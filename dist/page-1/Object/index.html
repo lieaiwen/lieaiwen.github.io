@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>js对象 | 速度至上</title>
+    <meta name="description" content="Reggie Study Notes">
+    <meta name="generator" content="VuePress 1.3.0">
+    <link rel="icon" href="/dist/img/logo.ico">
+  <link rel="manifest" href="/dist/manifest.json">
+    
+    <link rel="preload" href="/dist/assets/css/0.styles.35364d6e.css" as="style"><link rel="preload" href="/dist/assets/js/app.c917e6cc.js" as="script"><link rel="preload" href="/dist/assets/js/2.47087845.js" as="script"><link rel="preload" href="/dist/assets/js/16.b4d38ade.js" as="script"><link rel="prefetch" href="/dist/assets/js/10.272a0d8f.js"><link rel="prefetch" href="/dist/assets/js/11.b18936e9.js"><link rel="prefetch" href="/dist/assets/js/12.e6c034ba.js"><link rel="prefetch" href="/dist/assets/js/13.e6607d61.js"><link rel="prefetch" href="/dist/assets/js/14.3dcb46ff.js"><link rel="prefetch" href="/dist/assets/js/15.c98ab082.js"><link rel="prefetch" href="/dist/assets/js/17.99b8ec1e.js"><link rel="prefetch" href="/dist/assets/js/18.7fe5e6e5.js"><link rel="prefetch" href="/dist/assets/js/19.7a75dd83.js"><link rel="prefetch" href="/dist/assets/js/20.900a3232.js"><link rel="prefetch" href="/dist/assets/js/21.829fa9a5.js"><link rel="prefetch" href="/dist/assets/js/22.a9af6621.js"><link rel="prefetch" href="/dist/assets/js/23.931d5e65.js"><link rel="prefetch" href="/dist/assets/js/24.b81fd765.js"><link rel="prefetch" href="/dist/assets/js/25.ade77fd1.js"><link rel="prefetch" href="/dist/assets/js/26.57bd2b69.js"><link rel="prefetch" href="/dist/assets/js/27.e432c17e.js"><link rel="prefetch" href="/dist/assets/js/28.770b7223.js"><link rel="prefetch" href="/dist/assets/js/29.a1c0088d.js"><link rel="prefetch" href="/dist/assets/js/3.63fad206.js"><link rel="prefetch" href="/dist/assets/js/30.7e308595.js"><link rel="prefetch" href="/dist/assets/js/31.2d3f011a.js"><link rel="prefetch" href="/dist/assets/js/32.84c6baee.js"><link rel="prefetch" href="/dist/assets/js/33.746c8544.js"><link rel="prefetch" href="/dist/assets/js/34.d2e3b45c.js"><link rel="prefetch" href="/dist/assets/js/35.54e93ddf.js"><link rel="prefetch" href="/dist/assets/js/36.fd9a8d86.js"><link rel="prefetch" href="/dist/assets/js/37.b656b7e3.js"><link rel="prefetch" href="/dist/assets/js/38.7598d92e.js"><link rel="prefetch" href="/dist/assets/js/39.b235fd2a.js"><link rel="prefetch" href="/dist/assets/js/4.bd5c7804.js"><link rel="prefetch" href="/dist/assets/js/40.5b412597.js"><link rel="prefetch" href="/dist/assets/js/41.10e71457.js"><link rel="prefetch" href="/dist/assets/js/42.2adc995a.js"><link rel="prefetch" href="/dist/assets/js/43.7fb986a0.js"><link rel="prefetch" href="/dist/assets/js/44.221d507c.js"><link rel="prefetch" href="/dist/assets/js/45.c01a5315.js"><link rel="prefetch" href="/dist/assets/js/46.27464cbe.js"><link rel="prefetch" href="/dist/assets/js/47.cda53af1.js"><link rel="prefetch" href="/dist/assets/js/48.a97682dd.js"><link rel="prefetch" href="/dist/assets/js/49.31315172.js"><link rel="prefetch" href="/dist/assets/js/5.28d23724.js"><link rel="prefetch" href="/dist/assets/js/50.55f5cfd4.js"><link rel="prefetch" href="/dist/assets/js/51.6dfcf284.js"><link rel="prefetch" href="/dist/assets/js/52.30f62370.js"><link rel="prefetch" href="/dist/assets/js/53.870a03f6.js"><link rel="prefetch" href="/dist/assets/js/54.79e4283b.js"><link rel="prefetch" href="/dist/assets/js/55.d6541f26.js"><link rel="prefetch" href="/dist/assets/js/56.7656c52b.js"><link rel="prefetch" href="/dist/assets/js/57.3155b432.js"><link rel="prefetch" href="/dist/assets/js/58.aa9e6022.js"><link rel="prefetch" href="/dist/assets/js/59.ace2375a.js"><link rel="prefetch" href="/dist/assets/js/6.24776c69.js"><link rel="prefetch" href="/dist/assets/js/60.bbca0748.js"><link rel="prefetch" href="/dist/assets/js/61.4885868f.js"><link rel="prefetch" href="/dist/assets/js/62.adb1f4a1.js"><link rel="prefetch" href="/dist/assets/js/63.42890dc8.js"><link rel="prefetch" href="/dist/assets/js/64.2563c169.js"><link rel="prefetch" href="/dist/assets/js/65.9113a683.js"><link rel="prefetch" href="/dist/assets/js/66.75f88a90.js"><link rel="prefetch" href="/dist/assets/js/67.5ec328fe.js"><link rel="prefetch" href="/dist/assets/js/68.389976e3.js"><link rel="prefetch" href="/dist/assets/js/69.64bb83b1.js"><link rel="prefetch" href="/dist/assets/js/7.5f367344.js"><link rel="prefetch" href="/dist/assets/js/70.013210ce.js"><link rel="prefetch" href="/dist/assets/js/71.f310f6e9.js"><link rel="prefetch" href="/dist/assets/js/72.f6b8ca15.js"><link rel="prefetch" href="/dist/assets/js/73.44de2be4.js"><link rel="prefetch" href="/dist/assets/js/74.eedb9492.js"><link rel="prefetch" href="/dist/assets/js/75.c32d2819.js"><link rel="prefetch" href="/dist/assets/js/76.e98765e3.js"><link rel="prefetch" href="/dist/assets/js/77.9b1efc2a.js"><link rel="prefetch" href="/dist/assets/js/78.9ab31ecd.js"><link rel="prefetch" href="/dist/assets/js/8.5b2229dc.js"><link rel="prefetch" href="/dist/assets/js/9.46cc1f89.js">
+    <link rel="stylesheet" href="/dist/assets/css/0.styles.35364d6e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/dist/" class="home-link router-link-active"><!----> <span class="site-name">速度至上</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/dist/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/dist/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dist/language/chinese.html" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/dist/language/english.html" class="nav-link">
+  English
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/dist/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/dist/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dist/language/chinese.html" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/dist/language/english.html" class="nav-link">
+  English
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>js知识点</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/dist/page-1/one/" class="sidebar-link">数组操作</a></li><li><a href="/dist/page-1/three/" class="sidebar-link">js基础知识2</a></li><li><a href="/dist/page-1/two/" class="sidebar-link">call apply bind</a></li><li><a href="/dist/page-1/Boolean/" class="sidebar-link">Boolean</a></li><li><a href="/dist/page-1/Object/" class="active sidebar-link">js对象</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/dist/page-1/Object/#js对象" class="sidebar-link">js对象</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/Object/#问题：-创建js对象的集中方法" class="sidebar-link">问题： 创建js对象的集中方法</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/Object/#问题：-this指向问题" class="sidebar-link">问题： this指向问题</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/Object/#for-in-遍历对象和数组" class="sidebar-link">for in 遍历对象和数组</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/Object/#删除对象属性delete" class="sidebar-link">删除对象属性delete</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/Object/#js对象访问器" class="sidebar-link">js对象访问器</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/Object/#内建js构造器" class="sidebar-link">内建js构造器</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/Object/#js-对象原型" class="sidebar-link">js 对象原型</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/Object/#es5-为js添加了大量新的对象方法" class="sidebar-link">es5 为js添加了大量新的对象方法</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/Object/#object-defineproperty" class="sidebar-link">Object.defineProperty()</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/Object/#object-assign-基本方法-拷贝相关" class="sidebar-link">Object.assign() 基本方法 拷贝相关</a></li></ul></li><li><a href="/dist/page-1/RegExp/" class="sidebar-link">js RegExp 对象</a></li><li><a href="/dist/page-1/Date/" class="sidebar-link">Date 对象</a></li><li><a href="/dist/page-1/Math/" class="sidebar-link">Math 对象</a></li><li><a href="/dist/page-1/Number/" class="sidebar-link">Number 对象</a></li><li><a href="/dist/page-1/String/" class="sidebar-link">String 对象</a></li><li><a href="/dist/page-1/Error/" class="sidebar-link">js Error(错误)对象</a></li><li><a href="/dist/page-1/Global/" class="sidebar-link">js 全局</a></li><li><a href="/dist/page-1/Class/" class="sidebar-link">es6 class</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js杂项知识点</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>有待学习的</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>VUE</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTTP</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>es6相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>webpack</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>英语单词</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="js对象"><a href="#js对象" class="header-anchor">#</a> js对象</h2> <p>js中所有的事情都是对象：字符串，数字，数组，日期等<br>
+在js中 对象是拥有属性和方法的数据 <br>
+属性 是与对象相关的值 <br>
+方法 是能够在对象上执行的动作 <br></p><hr>
+比如： var txt = &quot;hello&quot;;<br>
+这实际上创建了一个js字符串对象，字符串拥有内建的属性length <br>
+txt.length = 5 ; <br>
+同时拥有若干个内建的方法：<br>Object.defineProperty() 方法
+txt.indexOf(); //判断某个字符在不在 字符串中 txt.indexOf('e')<br>
+txt.replace(); // 替换某个字符 txt.replace('l','aa')<br>
+txt.search(); //判断某个字符在不在 字符串中 txt.search('a')<br> <hr>
+在面向对象的语言中，属性和方法常被称为对象的成员。<br><p></p> <h3 id="创建一个对象"><a href="#创建一个对象" class="header-anchor">#</a> 创建一个对象</h3> <div class="language- extra-class"><pre class="language-text"><code>	var person = new Object();
+	person.name = &quot;bill&quot;; // 添加属性
+	person.sleep = function(){ // 添加方法
+		console.log(this.name + '在睡觉');
+	}
+	访问属性
+	person.name
+	并可以用 String 对象的length属性 比如
+	person.name.length
+	使用 String 对象的toUpperCase()方法把文本准换为大写
+	var x = person.name.toUpperCase();// BILL
+</code></pre></div><h2 id="问题：-创建js对象的集中方法"><a href="#问题：-创建js对象的集中方法" class="header-anchor">#</a> 问题： 创建js对象的集中方法</h2> <p>1.0 通过new关键字创建对象</p> <div class="language- extra-class"><pre class="language-text"><code>var obj = new Object(); 
+</code></pre></div><p>2.0  通过字面量创建对象</p> <div class="language- extra-class"><pre class="language-text"><code>var obj = { 
+	name:'lele'， 
+	age:function(){
+		console.log('789456')
+	}
+}&lt;br&gt;
+</code></pre></div><p>3.0 通过构造函数创建对象</p> <div class="language- extra-class"><pre class="language-text"><code>// 建议首字母大写
+function Person(name,age){
+	this.name = name;
+	this.age = age;
+	this.say = function(){
+		console.log('我是'+this.name)
+	}
+}
+var person1 = new Person('bill',13)
+var person2 = new PErson('wen',54)
+</code></pre></div><p>注意：访问对象的属性 两种： <br></p> <p>0.1 通过点访问 obj.name  <br>
+0.2 通过中括号访问。obj['name']  <br>
+访问 方法 只能用点 obj.say()</p> <h2 id="问题：-this指向问题"><a href="#问题：-this指向问题" class="header-anchor">#</a> 问题： this指向问题</h2> <p>他代表函数运行时，自动生成的一个内部对象，只能在函数内部使用。<br>
+随着函数使用场合的不同，this的值会发生变化。但是有一个总的原则，<br></p> <p>重点：：那就是this指的是，调用函数的那个对象。<br></p> <p>1.0 纯粹的函数调用 <br>
+这是函数的最通常的用法，属于全局性调用，因此this就代表全局对象(Global)</p> <div class="language- extra-class"><pre class="language-text"><code>var index = 0;
+function fun(){
+	// 此处的this代表就是全局对象 window
+	this.index = 1;
+}
+fun();
+console.log(index);// 1
+</code></pre></div><p>因为我们使用window.fun()来调用函数，调用函数的那个对象是window，所以this的指向的也是window。	<br></p> <p>2.0 作为对象方法的调用 <br>
+作为对象方法的调用，this指向当前实例对象。</p> <div class="language- extra-class"><pre class="language-text"><code>var point = {
+	x:0,
+	y:0,
+	moveTo:function(x,y){
+		this.x += x;
+		this.y += y;
+	}
+}
+point.moveTo(10,10);
+console.log(&quot;x: &quot; + point.x + &quot; y: &quot; + point.y);  // 输出：x: 10 y: 10
+</code></pre></div><p>因为point.moveTo()来调用函数，调用函数的那个对象是point，所以this指向的也是point  <br></p> <p>3.0 作为构造函数调用<br>
+所谓构造函数，就是通过这个函数生成一个新对象(object)，这时this就指这个新对象。</p> <div class="language- extra-class"><pre class="language-text"><code>function Student(){
+	this.name = 'asd';
+}
+var s1 = new Student();
+s1.name // asd 
+</code></pre></div><p>构造函数 不能在外面添加 属性和方法 比如 Student.age = 18;这样是不对的</p> <h2 id="for-in-遍历对象和数组"><a href="#for-in-遍历对象和数组" class="header-anchor">#</a> for in 遍历对象和数组</h2> <p>遍历对象</p> <div class="language- extra-class"><pre class="language-text"><code>var obj ={
+	name:'a',
+	age:10,
+	sex:'man'
+}
+for(var attr in obj){
+	if(typeof obj[attr] != 'function'){
+		console.log('属性值'+obj[attr])
+	}
+}
+</code></pre></div><p>遍历数组</p> <div class="language- extra-class"><pre class="language-text"><code>var arr = [1,2,3,4]
+for(var attr in arr){
+	console.log(arr[attr])
+}
+</code></pre></div><h2 id="删除对象属性delete"><a href="#删除对象属性delete" class="header-anchor">#</a> 删除对象属性delete</h2> <div class="language- extra-class"><pre class="language-text"><code>var person = {
+	firstName:&quot;Bill&quot;, 
+	lastName:&quot;Gates&quot;,
+ 	age:62,
+ 	eyeColor:&quot;blue&quot;
+};
+delete person.age;
+</code></pre></div><h2 id="js对象访问器"><a href="#js对象访问器" class="header-anchor">#</a> js对象访问器</h2> <p>es5 引入了Getter 和Setter 他俩允许您定义对象访问器(被计算的属性)</p> <div class="language- extra-class"><pre class="language-text"><code>Getter(get关键字)
+var persona = {
+	firstName:'zheng',
+	lastName:'ll',
+	get name(){
+		return this.firstName;
+	}
+}
+console.log(person.name) // 'zheng'
+</code></pre></div><p>Setter(set关键字)</p> <div class="language- extra-class"><pre class="language-text"><code>var persona = {
+	firstName:'zheng',
+	lastName:'ll',
+	set name(ne){
+		this.firstName = ne;
+	}
+}
+person.name  = &quot;aiai&quot;;
+console.log(person.firstName) // 'aiai'
+</code></pre></div><p>js函数还是 Getter 区别在哪里？</p> <div class="language- extra-class"><pre class="language-text"><code>var persona = {
+	firstName:'zheng',
+	lastName:'ll',
+	oName:function(){
+		return this.firstName;
+	}
+}
+console.log(person.oName()) // 'zheng'
+</code></pre></div><p>对比：console.log(person.name) <br>
+console.log(person.oName()) <br>
+为什么使用Getter 和Setter？ <br>
+1.0 第一个更简洁 <br>
+2.0 它允许属性 跟方法的语法相同 <br>
+3.0 它可以确保更好的数据质量 <br>
+4.0 有利于后台工作  <br>
+数据质量更好</p> <div class="language- extra-class"><pre class="language-text"><code>1.0  使用 lang 属性以大写形式返回 language 属性的值：
+// Create an object:
+var person = {
+ firstName: &quot;Bill&quot;,
+ lastName : &quot;Gates&quot;,
+ language : &quot;en&quot;,
+ get lang() {
+   return this.language.toUpperCase();
+ }
+};
+
+// 使用 getter 来显示来自对象的数据：
+person.lang
+
+2.0 使用 lang 属性将大写值存储在 language 属性中：
+var person = {
+ firstName: &quot;Bill&quot;,
+ lastName : &quot;Gates&quot;,
+ language : &quot;&quot;,
+ set lang(lang) {
+   this.language = lang.toUpperCase();
+ }
+};
+
+// 使用 getter 来设置对象属性：
+person.lang = &quot;en&quot;;
+
+// 显示来自对象的数据：
+person.language;
+</code></pre></div><p>实例：</p> <div class="language- extra-class"><pre class="language-text"><code>var obj = {
+ counter : 0,
+ get reset() {
+   this.counter = 0;
+ },
+ get increment() {
+   this.counter++;
+ },
+ get decrement() {
+   this.counter--;
+ },
+ set add(value) {
+   this.counter += value;
+ },
+ set subtract(value) {
+   this.counter -= value;
+ }
+};
+
+// 操作计数器：
+obj.reset;
+obj.add = 5;
+obj.subtract = 1;
+obj.increment;
+obj.decrement;
+</code></pre></div><p>Object.defineProperty() 方法也可用于添加 Getter 和 Setter：</p> <div class="language- extra-class"><pre class="language-text"><code>// 定义对象
+var obj = {counter : 0};
+
+// 定义 setters
+Object.defineProperty(obj, &quot;reset&quot;, {
+  get : function () {this.counter = 0;}
+});
+Object.defineProperty(obj, &quot;increment&quot;, {
+  get : function () {this.counter++;}
+});
+Object.defineProperty(obj, &quot;decrement&quot;, {
+  get : function () {this.counter--;}
+});
+Object.defineProperty(obj, &quot;add&quot;, {
+  set : function (value) {this.counter += value;}
+});
+Object.defineProperty(obj, &quot;subtract&quot;, {
+  set : function (value) {this.counter -= value;}
+});
+
+// 操作计数器：
+obj.reset;
+obj.add = 5;
+obj.subtract = 1;
+obj.increment;
+obj.decrement;
+</code></pre></div><p>Object.defineProperty() 的作用就是直接在一个对象上
+定义一个新属性，或者修改一个已经存在的属性</p> <div class="language- extra-class"><pre class="language-text"><code>Object.defineProperty(obj, prop, desc)
+obj 需要定义属性的当前对象
+prop 当前需要定义的属性名
+desc 属性描述符 必须是 Object
+</code></pre></div><p>例子</p> <div class="language- extra-class"><pre class="language-text"><code>
+let Person = {}
+
+Object.defineProperty(Person,'name',{name:'ll'}) // 这种不指定的话不可逆 再定义任何属性都会报错
+Person.name //undefined
+// 因为writable 默认是false，不能改变属性的值
+上面desc(数据描述符)--特有的两个属性（value，writable）
+应该这样写
+Object.defineProperty(Person, 'name', {
+   value: 'jack',
+   writable: true // 是否可以改变
+})
+Person.name //jack
+
+其中还有属性  configurable(是否可以删除)、
+enumerable(是否可以枚举)、
+writable(是否可以修改)  默认都是false
+</code></pre></div><h2 id="内建js构造器"><a href="#内建js构造器" class="header-anchor">#</a> 内建js构造器</h2> <p>JavaScript 提供用于原始对象的构造器：</p> <div class="language- extra-class"><pre class="language-text"><code>var x1 = new Object();    // 一个新的 Object 对象
+var x2 = new String();    // 一个新的 String 对象
+var x3 = new Number();    // 一个新的 Number 对象
+var x4 = new Boolean();   // 一个新的 Boolean 对象
+var x5 = new Array();     // 一个新的 Array 对象
+var x6 = new RegExp();    // 一个新的 RegExp 对象
+var x7 = new Function();  // 一个新的 Function 对象
+var x8 = new Date();      // 一个新的 Date 对象
+注意： Math() 对象不再此列。Math 是全局对象。new 关键词不可用于 Math。
+</code></pre></div><p>正如以上所见，JavaScript 提供原始数据类型字符串、数字和布尔的对象版本。但是并无理由创建复杂的对象。原始值快得多！</p> <div class="language- extra-class"><pre class="language-text"><code>请使用对象字面量 {} 代替 new Object()。
+
+请使用字符串字面量 &quot;&quot; 代替 new String()。
+
+请使用数值字面量代替 Number()。
+
+请使用布尔字面量代替 new Boolean()。
+
+请使用数组字面量 [] 代替 new Array()。
+
+请使用模式字面量代替 new RexExp()。
+
+请使用函数表达式 () {} 代替 new Function()。
+var x1 = {};            // 新对象
+var x2 = &quot;&quot;;            // 新的原始字符串
+var x3 = 0;             // 新的原始数值
+var x4 = false;         // 新的原始逻辑值
+var x5 = [];            // 新的数组对象
+var x6 = /()/           // 新的正则表达式对象
+var x7 = function(){};  // 新的函数对象
+</code></pre></div><p>为什么不建议使用 new</p> <div class="language- extra-class"><pre class="language-text"><code>var x = &quot;Bill&quot;;
+var y = new String(&quot;Bill&quot;);
+
+// typeof x 将返回 string
+// typeof y 将返回 object
+</code></pre></div><p>2.0 请不要把字符串创建为对象。它会拖慢执行速度。<br></p> <p>new 关键字使代码复杂化。也可能产生一些意想不到的结果：<br></p> <p>当使用 == 相等运算符时，相等字符串是相等的：<br></p> <div class="language- extra-class"><pre class="language-text"><code>var x = &quot;Bill&quot;;             
+var y = new String(&quot;Bill&quot;);
+
+// (x == y) 为 true，因为 x 和 y 的值相等
+</code></pre></div><p>3.0 当使用 === 运算符时，相等字符串是不相等的，因为 === 运算符需要类型和值同时相等。</p> <div class="language- extra-class"><pre class="language-text"><code>var x = &quot;Bill&quot;;             
+var y = new String(&quot;Bill&quot;);
+
+// (x === y) 为 false，因为 x 和 y 的类型不同（字符串与对象）
+</code></pre></div><p>4.0 甚至更糟。对象无法比较：</p> <div class="language- extra-class"><pre class="language-text"><code>var x = new String(&quot;Bill&quot;);             
+var y = new String(&quot;Bill&quot;);
+
+// (x == y) 为 false，因为 x 和 y 是不同的对象
+
+var x = new String(&quot;Bill&quot;);             
+var y = new String(&quot;Bill&quot;);
+
+// (x === y) 为 false，因为 x 和 y 是不同的对象
+请注意 (x==y) 与 (x===y) 的区别。
+
+JavaScript 对象无法进行对比，比较两个 JavaScript 对象将始终返回 false。
+</code></pre></div><h2 id="js-对象原型"><a href="#js-对象原型" class="header-anchor">#</a> js 对象原型</h2> <p>所有 JavaScript 对象都从原型继承属性和方法。 <br>
+我们上面知道了 我们无法为已有的对象构造器添加新的属性和方法。<br>
+日期对象继承自 Date.prototype <br>
+数组对象继承自 Array.prototype<br>
+Person对象继承自 Person.prototype<br>
+Object.prototype 位于原型继承链的顶端<br>
+日期对象,数组对象和Person 对象都继承自 Object.prototype<br></p> <p>有时候 你希望向所有给定类型的已有对象添加新属性(或方法)<br>
+有时候 你希望向对象构造器添加新属性(或方法)。<br>
+使用prototype 属性<br>
+js prototype 属性允许您为对象构造器添加新属性和方法：</p> <div class="language- extra-class"><pre class="language-text"><code>function Person(first, last, age, eyecolor) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eyecolor;
+}
+Person.prototype.nationality = &quot;English&quot;;
+Person.prototype.name = function() {
+    return this.firstName + &quot; &quot; + this.lastName;
+};
+var myFriend = new Person(&quot;Bill&quot;, &quot;Gates&quot;, 62, &quot;blue&quot;);
+myFriend.nationality // English
+myFriend.name // Bill Gates
+</code></pre></div><p>注意： 请只修改您自己的原型，绝不要 修改标准js对象的原型</p> <h2 id="es5-为js添加了大量新的对象方法"><a href="#es5-为js添加了大量新的对象方法" class="header-anchor">#</a> es5 为js添加了大量新的对象方法</h2> <p>es5 新的对象方法</p> <div class="language- extra-class"><pre class="language-text"><code>// 添加或更改对象属性
+Object.defineProperty(object, property, descriptor)
+
+// 添加或更改多个对象属性
+Object.defineProperties(object, descriptors)
+
+// 访问属性
+Object.getOwnPropertyDescriptor(object, property)
+
+// 以数组返回所有属性
+Object.getOwnPropertyNames(object)
+
+// 以数组返回所有可枚举的属性
+Object.keys(object)
+
+// 访问原型
+Object.getPrototypeOf(object)
+
+// 阻止向对象添加属性
+Object.preventExtensions(object)
+
+// 如果可将属性添加到对象，则返回 true
+Object.isExtensible(object)
+
+// 防止更改对象属性（而不是值）
+Object.seal(object)
+
+// 如果对象被密封，则返回 true
+Object.isSealed(object)
+
+// 防止对对象进行任何更改
+Object.freeze(object)
+
+// 如果对象被冻结，则返回 true
+Object.isFrozen(object)
+
+
+ES5 允许更改以下属性元数据：
+writable : true      // 属性值可修改
+enumerable : true    // 属性可枚举
+configurable : true  // 属性可重新配置
+writable : false     // 属性值不可修改
+enumerable : false   // 属性不可枚举
+configurable : false // 属性不可重新配置
+</code></pre></div><h2 id="object-defineproperty"><a href="#object-defineproperty" class="header-anchor">#</a> Object.defineProperty()</h2> <p>一个有意思的例子</p> <div class="language- extra-class"><pre class="language-text"><code>var a = new function() {return &quot;圆心&quot;}; 
+console.log(a); // [object object] 
+
+function x(){ 
+    return &quot;圆心&quot;; 
+} 
+var a = new x(); 
+ console.log(a); // [object object] 
+
+ var a = new function() {return new String(&quot;圆心&quot;)}; 
+ console.log(a); // 圆心
+
+为什么：
+ var a=new function(){}
+ 在javascript中，方法被当作一个类来处理，这中定义方式下，a即带表了这个方法的类，也就是这个方法本身。
+
+但是有一种特殊情况，若是在该方法中，返回值为数组、方法、或是别的类，那么a不在表示该方法，而是表示返回的新类了。 
+只要 new 表达式之后返回（return）一个引用对象（数组，对象，函数等），都将覆盖new创建的匿名对象，如果返回（return）一个原始类型（无 return 时其实为 return 原始类型 undefined），那么就返回 new 创建的匿名对象
+由于 new String 会构造一个对象，而不是一个 string 直接量，且new String(x) 如果带参数，那么alert它的时候就会返回 x。所以 yx01 将返回 new String(”圆心”) 这个对象，而 alert yx01 则显示 “圆心”。
+</code></pre></div><h2 id="object-assign-基本方法-拷贝相关"><a href="#object-assign-基本方法-拷贝相关" class="header-anchor">#</a> Object.assign() 基本方法 拷贝相关</h2> <p>Object.assign方法用于对象的合并，将源对象（source）的所有可枚举属性，复制到目标对象（target）。</p> <div class="language- extra-class"><pre class="language-text"><code>const target = { a: 1 };
+
+const source1 = { b: 2 };
+const source2 = { c: 3 };
+
+Object.assign(target, source1, source2);
+target // {a:1, b:2, c:3}
+</code></pre></div><p><a href="https://www.jianshu.com/p/d5f572dd3776" target="_blank" rel="noopener noreferrer">example<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> <br></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/dist/page-1/Boolean/" class="prev">
+        Boolean
+      </a></span> <span class="next"><a href="/dist/page-1/RegExp/">
+        js RegExp 对象
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/dist/assets/js/app.c917e6cc.js" defer></script><script src="/dist/assets/js/2.47087845.js" defer></script><script src="/dist/assets/js/16.b4d38ade.js" defer></script>
+  </body>
+</html>

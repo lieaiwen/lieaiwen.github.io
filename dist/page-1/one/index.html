@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>数组操作 | 速度至上</title>
+    <meta name="description" content="Reggie Study Notes">
+    <meta name="generator" content="VuePress 1.3.0">
+    <link rel="icon" href="/dist/img/logo.ico">
+  <link rel="manifest" href="/dist/manifest.json">
+    
+    <link rel="preload" href="/dist/assets/css/0.styles.35364d6e.css" as="style"><link rel="preload" href="/dist/assets/js/app.c917e6cc.js" as="script"><link rel="preload" href="/dist/assets/js/2.47087845.js" as="script"><link rel="preload" href="/dist/assets/js/20.900a3232.js" as="script"><link rel="prefetch" href="/dist/assets/js/10.272a0d8f.js"><link rel="prefetch" href="/dist/assets/js/11.b18936e9.js"><link rel="prefetch" href="/dist/assets/js/12.e6c034ba.js"><link rel="prefetch" href="/dist/assets/js/13.e6607d61.js"><link rel="prefetch" href="/dist/assets/js/14.3dcb46ff.js"><link rel="prefetch" href="/dist/assets/js/15.c98ab082.js"><link rel="prefetch" href="/dist/assets/js/16.b4d38ade.js"><link rel="prefetch" href="/dist/assets/js/17.99b8ec1e.js"><link rel="prefetch" href="/dist/assets/js/18.7fe5e6e5.js"><link rel="prefetch" href="/dist/assets/js/19.7a75dd83.js"><link rel="prefetch" href="/dist/assets/js/21.829fa9a5.js"><link rel="prefetch" href="/dist/assets/js/22.a9af6621.js"><link rel="prefetch" href="/dist/assets/js/23.931d5e65.js"><link rel="prefetch" href="/dist/assets/js/24.b81fd765.js"><link rel="prefetch" href="/dist/assets/js/25.ade77fd1.js"><link rel="prefetch" href="/dist/assets/js/26.57bd2b69.js"><link rel="prefetch" href="/dist/assets/js/27.e432c17e.js"><link rel="prefetch" href="/dist/assets/js/28.770b7223.js"><link rel="prefetch" href="/dist/assets/js/29.a1c0088d.js"><link rel="prefetch" href="/dist/assets/js/3.63fad206.js"><link rel="prefetch" href="/dist/assets/js/30.7e308595.js"><link rel="prefetch" href="/dist/assets/js/31.2d3f011a.js"><link rel="prefetch" href="/dist/assets/js/32.84c6baee.js"><link rel="prefetch" href="/dist/assets/js/33.746c8544.js"><link rel="prefetch" href="/dist/assets/js/34.d2e3b45c.js"><link rel="prefetch" href="/dist/assets/js/35.54e93ddf.js"><link rel="prefetch" href="/dist/assets/js/36.fd9a8d86.js"><link rel="prefetch" href="/dist/assets/js/37.b656b7e3.js"><link rel="prefetch" href="/dist/assets/js/38.7598d92e.js"><link rel="prefetch" href="/dist/assets/js/39.b235fd2a.js"><link rel="prefetch" href="/dist/assets/js/4.bd5c7804.js"><link rel="prefetch" href="/dist/assets/js/40.5b412597.js"><link rel="prefetch" href="/dist/assets/js/41.10e71457.js"><link rel="prefetch" href="/dist/assets/js/42.2adc995a.js"><link rel="prefetch" href="/dist/assets/js/43.7fb986a0.js"><link rel="prefetch" href="/dist/assets/js/44.221d507c.js"><link rel="prefetch" href="/dist/assets/js/45.c01a5315.js"><link rel="prefetch" href="/dist/assets/js/46.27464cbe.js"><link rel="prefetch" href="/dist/assets/js/47.cda53af1.js"><link rel="prefetch" href="/dist/assets/js/48.a97682dd.js"><link rel="prefetch" href="/dist/assets/js/49.31315172.js"><link rel="prefetch" href="/dist/assets/js/5.28d23724.js"><link rel="prefetch" href="/dist/assets/js/50.55f5cfd4.js"><link rel="prefetch" href="/dist/assets/js/51.6dfcf284.js"><link rel="prefetch" href="/dist/assets/js/52.30f62370.js"><link rel="prefetch" href="/dist/assets/js/53.870a03f6.js"><link rel="prefetch" href="/dist/assets/js/54.79e4283b.js"><link rel="prefetch" href="/dist/assets/js/55.d6541f26.js"><link rel="prefetch" href="/dist/assets/js/56.7656c52b.js"><link rel="prefetch" href="/dist/assets/js/57.3155b432.js"><link rel="prefetch" href="/dist/assets/js/58.aa9e6022.js"><link rel="prefetch" href="/dist/assets/js/59.ace2375a.js"><link rel="prefetch" href="/dist/assets/js/6.24776c69.js"><link rel="prefetch" href="/dist/assets/js/60.bbca0748.js"><link rel="prefetch" href="/dist/assets/js/61.4885868f.js"><link rel="prefetch" href="/dist/assets/js/62.adb1f4a1.js"><link rel="prefetch" href="/dist/assets/js/63.42890dc8.js"><link rel="prefetch" href="/dist/assets/js/64.2563c169.js"><link rel="prefetch" href="/dist/assets/js/65.9113a683.js"><link rel="prefetch" href="/dist/assets/js/66.75f88a90.js"><link rel="prefetch" href="/dist/assets/js/67.5ec328fe.js"><link rel="prefetch" href="/dist/assets/js/68.389976e3.js"><link rel="prefetch" href="/dist/assets/js/69.64bb83b1.js"><link rel="prefetch" href="/dist/assets/js/7.5f367344.js"><link rel="prefetch" href="/dist/assets/js/70.013210ce.js"><link rel="prefetch" href="/dist/assets/js/71.f310f6e9.js"><link rel="prefetch" href="/dist/assets/js/72.f6b8ca15.js"><link rel="prefetch" href="/dist/assets/js/73.44de2be4.js"><link rel="prefetch" href="/dist/assets/js/74.eedb9492.js"><link rel="prefetch" href="/dist/assets/js/75.c32d2819.js"><link rel="prefetch" href="/dist/assets/js/76.e98765e3.js"><link rel="prefetch" href="/dist/assets/js/77.9b1efc2a.js"><link rel="prefetch" href="/dist/assets/js/78.9ab31ecd.js"><link rel="prefetch" href="/dist/assets/js/8.5b2229dc.js"><link rel="prefetch" href="/dist/assets/js/9.46cc1f89.js">
+    <link rel="stylesheet" href="/dist/assets/css/0.styles.35364d6e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/dist/" class="home-link router-link-active"><!----> <span class="site-name">速度至上</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/dist/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/dist/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dist/language/chinese.html" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/dist/language/english.html" class="nav-link">
+  English
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/dist/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/dist/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dist/language/chinese.html" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/dist/language/english.html" class="nav-link">
+  English
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>js知识点</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/dist/page-1/one/" class="active sidebar-link">数组操作</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/dist/page-1/one/#数组操作" class="sidebar-link">数组操作</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_1-0-push" class="sidebar-link">1.0 push</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_2-0-unshift" class="sidebar-link">2.0 unshift</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_3-0-pop" class="sidebar-link">3.0 pop</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_4-0-shift" class="sidebar-link">4.0 shift</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_5-0-slice" class="sidebar-link">5.0 slice</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_6-0-splice" class="sidebar-link">6.0 splice</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_7-0-reverse" class="sidebar-link">7.0 reverse</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_8-0-sort" class="sidebar-link">8.0 sort</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_9-0-join" class="sidebar-link">9.0 join</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_10-0-concat" class="sidebar-link">10.0 concat</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_11-0-es5-增加的一些数组方法" class="sidebar-link">11.0  es5 增加的一些数组方法</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_12-0-foreach" class="sidebar-link">12.0 forEach()</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_12-0-map" class="sidebar-link">12.0 map()</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_13-0-filter" class="sidebar-link">13.0 filter()</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_14-0-some" class="sidebar-link">14.0 some()</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_14-0-every" class="sidebar-link">14.0 every()</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_15-0-reduce" class="sidebar-link">15.0 reduce()</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_16-0-es6-新增的方法-array-from" class="sidebar-link">16.0 ES6 新增的方法 Array.from()</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_17-0-array-of" class="sidebar-link">17.0 Array.of()</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_18-0-find" class="sidebar-link">18.0 find()</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_19-0-findindex" class="sidebar-link">19.0 findIndex()</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_20-0-includes" class="sidebar-link">20.0 includes()</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_21-0-fill" class="sidebar-link">21.0 fill()</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_22-0-entries" class="sidebar-link">22.0 entries()</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_23-0-keys" class="sidebar-link">23.0 keys()</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_24-0-values" class="sidebar-link">24.0 values()</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_25-0-flat" class="sidebar-link">25.0 flat()</a></li><li class="sidebar-sub-header"><a href="/dist/page-1/one/#_26-0-复制数组" class="sidebar-link">26.0 复制数组</a></li></ul></li><li><a href="/dist/page-1/three/" class="sidebar-link">js基础知识2</a></li><li><a href="/dist/page-1/two/" class="sidebar-link">call apply bind</a></li><li><a href="/dist/page-1/Boolean/" class="sidebar-link">Boolean</a></li><li><a href="/dist/page-1/Object/" class="sidebar-link">js对象</a></li><li><a href="/dist/page-1/RegExp/" class="sidebar-link">js RegExp 对象</a></li><li><a href="/dist/page-1/Date/" class="sidebar-link">Date 对象</a></li><li><a href="/dist/page-1/Math/" class="sidebar-link">Math 对象</a></li><li><a href="/dist/page-1/Number/" class="sidebar-link">Number 对象</a></li><li><a href="/dist/page-1/String/" class="sidebar-link">String 对象</a></li><li><a href="/dist/page-1/Error/" class="sidebar-link">js Error(错误)对象</a></li><li><a href="/dist/page-1/Global/" class="sidebar-link">js 全局</a></li><li><a href="/dist/page-1/Class/" class="sidebar-link">es6 class</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js杂项知识点</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>有待学习的</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>VUE</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTTP</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>es6相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>webpack</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>英语单词</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="数组操作"><a href="#数组操作" class="header-anchor">#</a> 数组操作</h2> <p>数组对象的作用是：使用单独的变量名来存储一系列的值</p> <h2 id="_1-0-push"><a href="#_1-0-push" class="header-anchor">#</a> 1.0 push</h2> <p>push 方法从数组尾部开始添加数据 array.push(item1, item2, …, itemX) <br>
+1.0 返回数组的长度 <br>
+2.0 原数组 发生改变 <br>
+demo:
+<pre><code class="javascript">
+let a = [1,2,3]
+let b = a.push(4,5,6) // a = [1,2,3,4,5,6]   b = 6
+let a = [1,2,3]
+let b = a.push([1,2]) // a = [1,2,3,[1,2]] b = 4
+let a = [1,2,3]
+let b = a.push() // a = [1,2,3] b = 3
+</code></pre></p> <h2 id="_2-0-unshift"><a href="#_2-0-unshift" class="header-anchor">#</a> 2.0 unshift</h2> <p>unshift 方法从数组头部开始添加数据 array.unshift(item1, item2, …, itemX) shift（转移，挪动，变化） <br>
+1.0 返回数组的长度 <br>
+2.0 原数组 发生改变 <br> <pre><code class="javascript">
+let a = [1,2,3]
+let b = a.unshift(4,5,6) // a = [4,5,6,1,2,3]   b = 6
+let a = [1,2,3]
+let b = a.unshift([1,2]) // a = [[1,2],1,2,3] b = 4
+let a = [1,2,3]
+let b = a.unshift() // a = [1,2,3] b = 3
+</code></pre></p> <h2 id="_3-0-pop"><a href="#_3-0-pop" class="header-anchor">#</a> 3.0 pop</h2> <p>pop 方法来删除并返回数组的最后一个元素。 array.pop() 里面没有参数只能操作一个<br>
+1.0 返回删除的值 <br>
+2.0 原数组 发生改变 <br>
+demo:
+<pre><code class="javascript">
+let a = [1,2,3]
+let b = a.pop() // a = [1,2]   b = 2
+</code></pre></p> <h2 id="_4-0-shift"><a href="#_4-0-shift" class="header-anchor">#</a> 4.0 shift</h2> <p>shift 方法来删除并返回数组的第一个元素。 array.shift() 里面没有参数只能操作一个<br>
+1.0 返回删除的值 <br>
+2.0 原数组 发生改变 <br>
+demo:
+<pre><code class="javascript">
+let a = [1,2,3]
+let b = a.shift() // a = [2,3]   b = 1
+</code></pre></p> <h2 id="_5-0-slice"><a href="#_5-0-slice" class="header-anchor">#</a> 5.0 slice</h2> <p>slice 切割数组  arr.slice(start, end) <br>
+1.0 返回切割后的数组 <br>
+2.0 原数组 不改变 <br>
+3.0 都是可选参数  什么都不传的话，返回原数组 并且允许负值 <br>
+4.0 只传一个参数的话 表明从这个下标开始到数组结尾结束<br>
+5.0 传两个值则从 第一个参数下标开始到 第二个参数下标 之前结束 ---重点 不包括第二个参数下标的值<br>
+demo:
+<pre><code class="javascript">
+let a = [1,2,3]
+let b = a.slice() // a = [1,2,3]   b = [1,2,3]
+let a = [1,2,3]
+let b = a.slice() // a = [1,2,3]   b = [1,2,3]
+let a = [1,2,3]
+let b = a.slice(1) // a = [1,2,3] b  = [2,3]
+let a = [1,2,3]
+let b = a.slice(1,2) // a = [1,2,3] b  = [2]
+// 5.1超过的话 截取到最后一个结束
+let a = [1,2,3]
+let b = a.slice(1,5) // a = [1,2,3] b  = [2,3]
+// 5.2 第一个参数为负数
+let a = [1,2,3,4]
+let b = a.slice(-2) // a = [1,2,3,4] b  = [3,4]
+// 5.3 两个都为 负数  -2 从 3开始  2 也是3 并且不能包括它 所以为[]
+let a = [1,2,3,4]
+let b = a.slice(-2,2) // a = [1,2,3,4] b  = []
+let c = a.slice(-2,3) // a = [1,2,3,4]  c = [3]
+let d = a.slice(-3,-1) // a = [1,2,3,4]  c = [2,3]
+let e = a.slice(-1,-4) // 这种乱的情况 返回 []
+</code></pre></p> <h2 id="_6-0-splice"><a href="#_6-0-splice" class="header-anchor">#</a> 6.0 splice</h2> <p>splice 方法 也是修改数组的  语法：array.splice(index,howmany,item1,…,itemX) <br>
+1.0 没有参数的话返回空数组，原数组不变
+<pre><code class="javascript">
+let a = [1,2,3]
+let b = a.splice() // a = [1,2,3]   b = []
+</code></pre>
+2.0 一个参数 ，表示从 该参数索引开始截取，到数组结束，原数组是剩下的
+<pre><code class="javascript">
+let a = [1,2,3]
+let b = a.splice(1) // a = [1]   b = [2,3]
+// 也可是负数
+let b = a.splice(-1) // a = [1,2]   b = [3]
+</code></pre>
+3.0 两个参数 ， 从第一个参数索引开始到，第二个参数表示的是长度意思是1 就截取一个 2 就截取2个
+<pre><code class="javascript">
+let a = [1,2,3]
+let b = a.splice(0,1) // a = [2,3]   b = [1]
+let b = a.splice(1,2) // a = [1]   b = [2,3]
+</code></pre>
+// 4.0 三个参数以上的， 同上 ，后面的参数 就是往数组里面追加的，往原数组截取的位置开始追加 我们这里是a
+<pre><code class="javascript">
+let a = [1,2,3,4]
+let b = a.splice(0,1,5) // a = [5,2,3,4]   b = [1]
+let b = a.splice(1,2,5,6) // a = [1,5,6,4]   b = [2,3]
+</code></pre></p> <h2 id="_7-0-reverse"><a href="#_7-0-reverse" class="header-anchor">#</a> 7.0 reverse</h2> <p>reverse 方法 颠倒数组中元素的顺序，语法 array.reverse()  也有返回值<br> <pre><code class="javascript">
+let a = [1,2,3]
+let b = a.reverse(); // a = [3,2,1] b = [3,2,1]
+</code>
+</pre></p> <h2 id="_8-0-sort"><a href="#_8-0-sort" class="header-anchor">#</a> 8.0 sort</h2> <p>sort 对数组进行排序, 语法 array.sort(sortfunction) <br>
+1.0 基础排序是 从第一位开始的排完之后才排第二个 所以 <br> <pre><code class="javascript">
+let a = [1,3,12,21]
+let b = a.sort(); // a = [1,12,21,3] b = [1,12,21,3]
+</code>
+</pre>
+2.0 添加 排序函数
+<pre><code class="javascript">
+let a = [1,3,12,21]
+let c = a.sort(function(a,b){
+return a - b; // 从小到大排序 a = [1,3,12,21] c = [1,3,12,21]
+return b - a; // 从大到小  a = [21,12,3,1] c = [21,12,3,1]
+}); //
+</code>
+</pre></p> <h2 id="_9-0-join"><a href="#_9-0-join" class="header-anchor">#</a> 9.0 join</h2> <p>join 方法 可以把数组转换成字符串 <br> <pre><code class="javascript">
+let a = [1,2,3]
+let b = a.join(); // a = [1,2,3] b = '1,2,3'
+let b = a.join('+'); // a = [1,2,3] b = 1+2+3
+let b = a.join(''); // a = [1,2,3] b = '123'
+</code>
+</pre></p> <h2 id="_10-0-concat"><a href="#_10-0-concat" class="header-anchor">#</a> 10.0 concat</h2> <p>concat 方法属于字符串的方法，也可以用于数组拼接 语法：string.concat(string1, string2, …, stringX) <br>
+1.0 拼接 多个单个数据的
+<pre><code class="javascript">
+let a = [1,2,3]
+let b = a.concat(4,5,6); // a = [1,2,3] b = [1,2,3,4,5,6]
+</code>
+</pre>
+2.0 一个单数组的情况
+<pre><code class="javascript">
+let a = [1,2,3]
+let b = a.concat([4,5,6]); // a = [1,2,3] b = [1,2,3,4,5,6]
+</code>
+</pre>
+3.0 多个 数组的情况
+<pre><code class="javascript">
+let a = [1,2,3]
+let b = a.concat([4,5,6],[7]); // a = [1,2,3] b = [1,2,3,4,5,6,7]
+</code>
+</pre></p> <h2 id="_11-0-es5-增加的一些数组方法"><a href="#_11-0-es5-增加的一些数组方法" class="header-anchor">#</a> 11.0  es5 增加的一些数组方法</h2> <p>indexOf() 也是字符串的方法 方法 string.indexOf(searchvalue,start) 有返回值<br>
+1.0 传一个参数的话，存在 就返回索引值 ，不存在就返回-1
+<pre><code class="javascript">
+let a = [1,2,3]
+let b = a.indexOf(2); // a = [1,2,3] b = 1
+</code>
+</pre>
+2.0  第二个参数也在的话，就是从第二个下标开始查询
+<pre><code class="javascript">
+let a = [1,2,3]
+let b = a.indexOf(2,2); // a = [1,2,3] b = -1
+let b = a.indexOf(2,1); // a = [1,2,3] b = 1
+</code>
+</pre></p> <h2 id="_12-0-foreach"><a href="#_12-0-foreach" class="header-anchor">#</a> 12.0 forEach()</h2> <p>forEach() 语法: array.forEach(function(currentValue, index, arr), thisValue) <br>
+遍历数组 ，没有返回值或者说是返回值为undefined <br> <pre><code class="javascript">
+let a = [1,2,3]
+arr.forEach((item,index,arr)=&gt;{
+//item 为当前数组元素
+// index 为当前索引
+// arr 为数组名字
+})
+</code>
+</pre></p> <h2 id="_12-0-map"><a href="#_12-0-map" class="header-anchor">#</a> 12.0 map()</h2> <p>map 语法:array.map(function(currentValue,index,arr), thisValue) <br>
+map()  遍历数组 用来接收一个返回值，创建一个新数组 ，不改变原数组
+<pre><code class="javascript">
+let a = [1,2,3]
+let b = a.map((item,index,arr)=&gt;{
+return item*2;
+})
+// a = [1,2,3] b=[2,4,6]
+</code>
+</pre></p> <h2 id="_13-0-filter"><a href="#_13-0-filter" class="header-anchor">#</a> 13.0 filter()</h2> <p>filter 语法:array.filter(function(currentValue,index,arr), thisValue) <br>
+filter()  遍历数组 用来接收一个返回值，创建一个新数组 ，不改变原数组
+<pre><code class="javascript">
+let arr = [1,2,3,4]
+let arr1 = arr.filter(function(item,index){
+return item&gt;=3
+})
+// arr = [1,2,3,4] arr1=[3,4]
+</code>
+</pre></p> <h2 id="_14-0-some"><a href="#_14-0-some" class="header-anchor">#</a> 14.0 some()</h2> <p>some 语法:array.some(function(currentValue,index,arr), thisValue) <br>
+some()  检测数组中是否含有某一个值，返回一个布尔值，如果数组中有任意一个元素满足给定的条件，结果就为 true否则则为false。
+<pre><code class="javascript">
+let arr = [1,2,3,4]
+let arr1 = arr.some(function(item,index){
+return item&gt;=3
+})
+// arr = [1,2,3,4] arr1=true
+</code>
+</pre></p> <h2 id="_14-0-every"><a href="#_14-0-every" class="header-anchor">#</a> 14.0 every()</h2> <p>every 语法:array.every(function(currentValue,index,arr), thisValue) <br>
+every()  方法用于检测数组所有元素是否都符合指定条件（通过函数提供）,返回一个布尔值,结果为 true或false。
+<pre><code class="javascript">
+let arr = [1,2,3,4]
+let arr1 = arr.every(function(item,index){
+return item&gt;=3
+})
+// arr = [1,2,3,4] arr1=false
+</code>
+</pre></p> <h2 id="_15-0-reduce"><a href="#_15-0-reduce" class="header-anchor">#</a> 15.0 reduce()</h2> <p>reduce 语法: array.reduce(function(total, currentValue, currentIndex, arr), initialValue) <br></p> <ul><li>total 必需。初始值, 或者计算结束后的返回值。</li> <li>initialValue	可选。传递给函数的初始值</li> <li>reduce()  对数组中的所有元素调用指定的回调函数，该回调函数的返回值为累计结果。并且把返回值在下一次回调函数时作为参数提供。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1,2,3,4]
+let arr1 = arr.reduce(function(total,num){
+	return total + num ;
+})
+注意： 如果不传 initialValue 则数组的第一位会成为 total 也就是说
+reduc 是从第二位开始 遍历的
+// arr = [1,2,3,4] arr1=10
+
+var arr1 = [1, 2, [3, 4]];
+arr1.flat();
+
+//展开单列矩阵
+arr1.reduce((acc, val) =&gt; acc.concat(val), []);// [1, 2, 3, 4] 
+acc就是 total 
+[] 就是 initialValue
+则acc就是[]
+
+如果是多层的话
+function flattenDeep(arr1) {
+   return arr1.reduce((acc, val) =&gt; Array.isArray(val) ? acc.concat(flattenDeep(val)) : acc.concat(val), []);
+}
+flattenDeep(arr1);
+
+// 递归版本的反嵌套
+function flatten(array) {
+  var flattend = [];
+  (function flat(array) {
+    array.forEach(function(el) {
+      if (Array.isArray(el)) flat(el);
+      else flattend.push(el);
+    });
+  })(array);
+  return flattend;
+}
+</code></pre></div><h2 id="_16-0-es6-新增的方法-array-from"><a href="#_16-0-es6-新增的方法-array-from" class="header-anchor">#</a> 16.0 ES6 新增的方法 Array.from()</h2> <p>语法：Array.from(arrayLike[, mapFn[, thisArg]]) <br>
+Array.from()方法就是将一个类数组对象或者可遍历对象转换成一个真正的数组。<br>
+1.0 Array.from 返回一个真正的数组
+<pre><code class="javascript">
+let a = [1,2,3]
+// 参数为数组，返回和原数组一样的数组
+let b = Array.from(a) // a = [1, 2, 3]  b = [1, 2, 3]
+b[2] = 4 // a = [1, 2, 3]  b = [1, 2, 4]
+// 参数含空位
+let c = Array.from([1, ,3]) // c = [1,undefined,3]
+</code>
+</pre>
+2.0 将字符串转为数组
+<pre><code class="javascript">
+let  str = 'hello world!';
+console.log(Array.from(str)) // [&quot;h&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;, &quot; &quot;, &quot;w&quot;, &quot;o&quot;, &quot;r&quot;, &quot;l&quot;, &quot;d&quot;, &quot;!&quot;]
+</code>
+</pre>
+2.5 将Set结构的数据转换为真正的数组
+<pre><code class="javascript">
+let a = [1,2,3]
+let set = new Set(arr)
+let b = Array.from(set) // a = [1,2,3]  b = [1,2,3]
+</code>
+</pre>
+3.0 Array.from还可以接受第二个参数，作用类似于数组的map方法，用来对每个元素进行处理，将处理后的值放入返回的数组
+<pre><code class="javascript">
+let a = [1,2,3]
+let set = new Set(arr)
+let b = Array.from(set, item =&gt; item + 1) // a = [1,2,3]  b = [2,3,4]
+</code>
+</pre>
+4.0 那么什么是类数组对象呢？所谓类数组对象，最基本的要求就是具有length属性的对象 <br>
+4.1
+<pre><code class="javascript">
+let arrayLike = {
+0: 'tom',
+1: '65',
+2: '男',
+3: ['jane','john','Mary'],
+'length': 4
+}
+let arr = Array.from(arrayLike) // arr =  ['tom','65','男',['jane','john','Mary']]
+</code>
+</pre>
+4.2
+<pre><code class="javascript">
+let arrayLike = {
+'name': 'tom',
+'age': '65',
+'sex': '男',
+'friends': ['jane','john','Mary'],
+length: 4
+}
+let arr = Array.from(arrayLike) // arr= [ undefined, undefined, undefined, undefined ]
+</code>
+</pre>
+总结：要将一个类数组对象转换为一个真正的数组，必须具备以下条件：<br>
+1、该类数组对象必须具有length属性，用于指定数组的长度。如果没有length属性，那么转换后的数组是一个空数组。 <br>
+2、该类数组对象的属性名必须为数值型或字符串型的数字 (ps: 该类数组对象的属性名可以加引号，也可以不加引号)</p> <h2 id="_17-0-array-of"><a href="#_17-0-array-of" class="header-anchor">#</a> 17.0 Array.of()</h2> <p>Array.of() 方法： 数组创建，将参数中所有值作为元素形成数组，如果参数为空，则返回一个空数组。
+<pre><code class="javascript">
+let a = Array.of(1,2,3) // a = [1,2,3]
+let b = Array.of(1,'2',true) // a = [1,'2',true]
+let c = Array.of();// c
+let d = Array.of(1,'',' ',undefined,,2) // 这个是要报错的 参数不能为空(也就是里面的两个,,)
+</code>
+</pre></p> <h2 id="_18-0-find"><a href="#_18-0-find" class="header-anchor">#</a> 18.0 find()</h2> <p>find() 方法查找数组中符合条件的元素，若有多个符合条件的元素，则返回第一个元素。
+<pre><code class="javascript">
+let a = Array.of(1,2,3) // a = [1,2,3]
+let b = a.find(item =&gt; item &gt; 2) //b = 3
+// 数组空位处理为 undefined
+let c = [,1].find(n =&gt; true) // undefined
+console.log([undefined, 1].find(n =&gt; 10)) // undefined
+</code>
+</pre></p> <h2 id="_19-0-findindex"><a href="#_19-0-findindex" class="header-anchor">#</a> 19.0 findIndex()</h2> <p>findIndex() 方法查找数组中符合条件的元素，若有多个符合条件的元素，则返回第一个元素索引。 <br>
+// 参数1：回调函数 <br>
+// 参数2(可选)：指定回调函数中的 this 值 <br> <pre><code class="javascript">
+let a = Array.of(1,2,3) // a = [1,2,3]
+let b = a.findIndex(item =&gt; item === 1) //b = 0
+// 数组空位处理为 undefined
+let c = [,1].findIndex(n =&gt; true) // c = 0
+</code>
+</pre></p> <h2 id="_20-0-includes"><a href="#_20-0-includes" class="header-anchor">#</a> 20.0 includes()</h2> <p>includes()方法：检测数组中是否包含一个值 <br>
+注意:与Set 和Map 的has方法区分;Set 的has 方法用于查找值; <br>
+Map的has方法用于查找键名
+<pre><code class="javascript">
+let a = [1,2,3]
+let b = a.includes(1) //b = true
+// 参数2：可选，搜索的起始索引，默认为0
+let c = a.includes(1,2) //c = false
+// NaN的包含判断
+let d = [1,NaN].includes(NaN) // true
+</code>
+</pre></p> <h2 id="_21-0-fill"><a href="#_21-0-fill" class="header-anchor">#</a> 21.0 fill()</h2> <p>fill()方法：将一定范围索引的数组元素内容填充为单个指定的值 <br> <pre><code class="javascript">
+let a = [1,2,3]
+// 参数1： 用来填充的值
+// 参数2：被填充的起始索引
+// 参数3(可选)： 被填充的结束索引，默认为数组末尾
+let b = a.fill(10,1,2) //a = [1,10,3] b = [1,10,3]
+let b = a.fill(10,1) // a = [1,10,10] b = [1,10,10]
+</code>
+</pre></p> <h2 id="_22-0-entries"><a href="#_22-0-entries" class="header-anchor">#</a> 22.0 entries()</h2> <p>entries()方法：遍历键值对 <br> <pre><code class="javascript">
+let entries = ['a', 'b'].entries();
+console.log(entries.next().value); // [0, &quot;a&quot;]
+console.log(entries.next().value); // [1, &quot;b&quot;]
+// 2.0 使用 for of 循环
+for(let [key, value] of ['a', 'b'].entries()){
+console.log(key, value);
+}
+// 0 ,'a'
+// 1 ,'b'
+// 3.0 数组含空位
+console.log([...[,'a'].entries()]) // [[0,undefined], [1,'a']]
+</code>
+</pre></p> <h2 id="_23-0-keys"><a href="#_23-0-keys" class="header-anchor">#</a> 23.0 keys()</h2> <p>keys() 遍历键名。 (它也有next方法)
+<pre><code class="javascript">
+for(let [key, value] of ['a', 'b'].keys()){
+console.log(key, value);
+}
+// 0
+// 1
+console.log([...[,'a'].keys()]) // [0,1]
+</code>
+</pre></p> <h2 id="_24-0-values"><a href="#_24-0-values" class="header-anchor">#</a> 24.0 values()</h2> <p>values() 方法：遍历键值 (它也有next方法)
+<pre><code class="javascript">
+for(let [key, value] of ['a', 'b'].values()){
+console.log(key, value);
+}
+// 'a'
+// 'b'
+console.log([...[,'a'].values()]) // [undefined,&quot;a&quot;]
+</code>
+</pre></p> <h2 id="_25-0-flat"><a href="#_25-0-flat" class="header-anchor">#</a> 25.0 flat()</h2> <p>嵌套数组转一维 数组  (注意：兼容性很不好)</p> <div class="language- extra-class"><pre class="language-text"><code>console.log([1 ,[2, 3]].flat()); // [1, 2, 3]
+// 指定转换的嵌套层数
+console.log([1, [2, [3, [4, 5]]]].flat(2)); // [1, 2, 3, [4, 5]]
+// 不管嵌套多少层
+console.log([1, [2, [3, [4, 5]]]].flat(Infinity)); // [1, 2, 3, 4, 5]
+// 自动跳过空位
+console.log([1, [2, , 3]].flat()); // [1, 2, 3]
+
+//展开单列矩阵
+arr1.reduce((acc, val) =&gt; acc.concat(val), []);// [1, 2, 3, 4] 
+acc就是 total 
+[] 就是 initialValue
+则acc就是[]
+
+如果是多层的话
+function flattenDeep(arr1) {
+   return arr1.reduce((acc, val) =&gt; Array.isArray(val) ? acc.concat(flattenDeep(val)) : acc.concat(val), []);
+}
+flattenDeep(arr1);
+</code></pre></div><h2 id="_26-0-复制数组"><a href="#_26-0-复制数组" class="header-anchor">#</a> 26.0 复制数组</h2> <p>... 扩展运算符
+<pre><code class="javascript">
+let arr = [1, 2], arr1 = [...arr];
+arr1[0] = 5  // arr = [1, 2] arr1 = [5, 2]
+// 数组含空位
+let arr2 = [1, , 3],
+arr3 = [...arr2]; // arr3 = [1, undefined, 3]
+// 合并数组
+console.log([...[1,2], ...[3,4]]) // [1,2,3,4]
+</code>
+</pre></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/dist/page-1/three/">
+        js基础知识2
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/dist/assets/js/app.c917e6cc.js" defer></script><script src="/dist/assets/js/2.47087845.js" defer></script><script src="/dist/assets/js/20.900a3232.js" defer></script>
+  </body>
+</html>

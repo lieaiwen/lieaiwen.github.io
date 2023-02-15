@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>js的继承 | 速度至上</title>
+    <meta name="description" content="Reggie Study Notes">
+    <meta name="generator" content="VuePress 1.3.0">
+    <link rel="icon" href="/dist/img/logo.ico">
+  <link rel="manifest" href="/dist/manifest.json">
+    
+    <link rel="preload" href="/dist/assets/css/0.styles.35364d6e.css" as="style"><link rel="preload" href="/dist/assets/js/app.c917e6cc.js" as="script"><link rel="preload" href="/dist/assets/js/2.47087845.js" as="script"><link rel="preload" href="/dist/assets/js/63.42890dc8.js" as="script"><link rel="prefetch" href="/dist/assets/js/10.272a0d8f.js"><link rel="prefetch" href="/dist/assets/js/11.b18936e9.js"><link rel="prefetch" href="/dist/assets/js/12.e6c034ba.js"><link rel="prefetch" href="/dist/assets/js/13.e6607d61.js"><link rel="prefetch" href="/dist/assets/js/14.3dcb46ff.js"><link rel="prefetch" href="/dist/assets/js/15.c98ab082.js"><link rel="prefetch" href="/dist/assets/js/16.b4d38ade.js"><link rel="prefetch" href="/dist/assets/js/17.99b8ec1e.js"><link rel="prefetch" href="/dist/assets/js/18.7fe5e6e5.js"><link rel="prefetch" href="/dist/assets/js/19.7a75dd83.js"><link rel="prefetch" href="/dist/assets/js/20.900a3232.js"><link rel="prefetch" href="/dist/assets/js/21.829fa9a5.js"><link rel="prefetch" href="/dist/assets/js/22.a9af6621.js"><link rel="prefetch" href="/dist/assets/js/23.931d5e65.js"><link rel="prefetch" href="/dist/assets/js/24.b81fd765.js"><link rel="prefetch" href="/dist/assets/js/25.ade77fd1.js"><link rel="prefetch" href="/dist/assets/js/26.57bd2b69.js"><link rel="prefetch" href="/dist/assets/js/27.e432c17e.js"><link rel="prefetch" href="/dist/assets/js/28.770b7223.js"><link rel="prefetch" href="/dist/assets/js/29.a1c0088d.js"><link rel="prefetch" href="/dist/assets/js/3.63fad206.js"><link rel="prefetch" href="/dist/assets/js/30.7e308595.js"><link rel="prefetch" href="/dist/assets/js/31.2d3f011a.js"><link rel="prefetch" href="/dist/assets/js/32.84c6baee.js"><link rel="prefetch" href="/dist/assets/js/33.746c8544.js"><link rel="prefetch" href="/dist/assets/js/34.d2e3b45c.js"><link rel="prefetch" href="/dist/assets/js/35.54e93ddf.js"><link rel="prefetch" href="/dist/assets/js/36.fd9a8d86.js"><link rel="prefetch" href="/dist/assets/js/37.b656b7e3.js"><link rel="prefetch" href="/dist/assets/js/38.7598d92e.js"><link rel="prefetch" href="/dist/assets/js/39.b235fd2a.js"><link rel="prefetch" href="/dist/assets/js/4.bd5c7804.js"><link rel="prefetch" href="/dist/assets/js/40.5b412597.js"><link rel="prefetch" href="/dist/assets/js/41.10e71457.js"><link rel="prefetch" href="/dist/assets/js/42.2adc995a.js"><link rel="prefetch" href="/dist/assets/js/43.7fb986a0.js"><link rel="prefetch" href="/dist/assets/js/44.221d507c.js"><link rel="prefetch" href="/dist/assets/js/45.c01a5315.js"><link rel="prefetch" href="/dist/assets/js/46.27464cbe.js"><link rel="prefetch" href="/dist/assets/js/47.cda53af1.js"><link rel="prefetch" href="/dist/assets/js/48.a97682dd.js"><link rel="prefetch" href="/dist/assets/js/49.31315172.js"><link rel="prefetch" href="/dist/assets/js/5.28d23724.js"><link rel="prefetch" href="/dist/assets/js/50.55f5cfd4.js"><link rel="prefetch" href="/dist/assets/js/51.6dfcf284.js"><link rel="prefetch" href="/dist/assets/js/52.30f62370.js"><link rel="prefetch" href="/dist/assets/js/53.870a03f6.js"><link rel="prefetch" href="/dist/assets/js/54.79e4283b.js"><link rel="prefetch" href="/dist/assets/js/55.d6541f26.js"><link rel="prefetch" href="/dist/assets/js/56.7656c52b.js"><link rel="prefetch" href="/dist/assets/js/57.3155b432.js"><link rel="prefetch" href="/dist/assets/js/58.aa9e6022.js"><link rel="prefetch" href="/dist/assets/js/59.ace2375a.js"><link rel="prefetch" href="/dist/assets/js/6.24776c69.js"><link rel="prefetch" href="/dist/assets/js/60.bbca0748.js"><link rel="prefetch" href="/dist/assets/js/61.4885868f.js"><link rel="prefetch" href="/dist/assets/js/62.adb1f4a1.js"><link rel="prefetch" href="/dist/assets/js/64.2563c169.js"><link rel="prefetch" href="/dist/assets/js/65.9113a683.js"><link rel="prefetch" href="/dist/assets/js/66.75f88a90.js"><link rel="prefetch" href="/dist/assets/js/67.5ec328fe.js"><link rel="prefetch" href="/dist/assets/js/68.389976e3.js"><link rel="prefetch" href="/dist/assets/js/69.64bb83b1.js"><link rel="prefetch" href="/dist/assets/js/7.5f367344.js"><link rel="prefetch" href="/dist/assets/js/70.013210ce.js"><link rel="prefetch" href="/dist/assets/js/71.f310f6e9.js"><link rel="prefetch" href="/dist/assets/js/72.f6b8ca15.js"><link rel="prefetch" href="/dist/assets/js/73.44de2be4.js"><link rel="prefetch" href="/dist/assets/js/74.eedb9492.js"><link rel="prefetch" href="/dist/assets/js/75.c32d2819.js"><link rel="prefetch" href="/dist/assets/js/76.e98765e3.js"><link rel="prefetch" href="/dist/assets/js/77.9b1efc2a.js"><link rel="prefetch" href="/dist/assets/js/78.9ab31ecd.js"><link rel="prefetch" href="/dist/assets/js/8.5b2229dc.js"><link rel="prefetch" href="/dist/assets/js/9.46cc1f89.js">
+    <link rel="stylesheet" href="/dist/assets/css/0.styles.35364d6e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/dist/" class="home-link router-link-active"><!----> <span class="site-name">速度至上</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/dist/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/dist/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dist/language/chinese.html" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/dist/language/english.html" class="nav-link">
+  English
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/dist/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/dist/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dist/language/chinese.html" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/dist/language/english.html" class="nav-link">
+  English
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>js知识点</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/dist/page-1/one/" class="sidebar-link">数组操作</a></li><li><a href="/dist/page-1/three/" class="sidebar-link">js基础知识2</a></li><li><a href="/dist/page-1/two/" class="sidebar-link">call apply bind</a></li><li><a href="/dist/page-1/Boolean/" class="sidebar-link">Boolean</a></li><li><a href="/dist/page-1/Object/" class="sidebar-link">js对象</a></li><li><a href="/dist/page-1/RegExp/" class="sidebar-link">js RegExp 对象</a></li><li><a href="/dist/page-1/Date/" class="sidebar-link">Date 对象</a></li><li><a href="/dist/page-1/Math/" class="sidebar-link">Math 对象</a></li><li><a href="/dist/page-1/Number/" class="sidebar-link">Number 对象</a></li><li><a href="/dist/page-1/String/" class="sidebar-link">String 对象</a></li><li><a href="/dist/page-1/Error/" class="sidebar-link">js Error(错误)对象</a></li><li><a href="/dist/page-1/Global/" class="sidebar-link">js 全局</a></li><li><a href="/dist/page-1/Class/" class="sidebar-link">es6 class</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js杂项知识点</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>有待学习的</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>JS</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/dist/page-js/js-0/" class="sidebar-link">js事件循环机制(Event Loop)</a></li><li><a href="/dist/page-js/js-1/" class="sidebar-link">1.0 函数科里化</a></li><li><a href="/dist/page-js/js-2/" class="sidebar-link">js-2面试题+基础知识点</a></li><li><a href="/dist/page-js/js-3/" class="sidebar-link">js中的类型检测（三种）</a></li><li><a href="/dist/page-js/js-4/" class="sidebar-link">1.0 js递归和尾递归</a></li><li><a href="/dist/page-js/js-5/" class="sidebar-link">1.0 小程序</a></li><li><a href="/dist/page-js/js-6/" class="sidebar-link">js 深浅拷贝</a></li><li><a href="/dist/page-js/js-7/" class="sidebar-link">js this 指向问题</a></li><li><a href="/dist/page-js/js-8/" class="sidebar-link">call和apply的模拟实现</a></li><li><a href="/dist/page-js/js-9/" class="active sidebar-link">js的继承</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/dist/page-js/js-9/#js的继承" class="sidebar-link">js的继承</a></li></ul></li><li><a href="/dist/page-js/js-10/" class="sidebar-link">js 原型和原型链</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>VUE</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTTP</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>es6相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>webpack</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>英语单词</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="js的继承"><a href="#js的继承" class="header-anchor">#</a> js的继承</h2> <p><strong>什么是继承:</strong></p> <blockquote><p>你的爸爸姓“张”（对应js的属性）,你爸爸会“开车”（js方法 canCar()）,你也姓“张”，
+你爸爸又教你开车了，为啥要你爸教你呢？（省钱啊）这就是继承（省事）。当然你也可以不姓“张”
+你就叫“狗蛋”，这就叫“重写”。当然了，本文主要介绍js里面的继承。</p></blockquote> <p>总结：继承可以使得子类具有父类的各种方法和属性。以免重复输出很多代码。</p> <p><strong>1.0 原型链继承</strong></p> <div class="language- extra-class"><pre class="language-text"><code>     function Parent(){
+         this.name = &quot;张&quot;
+     }
+     Parent.prototype.getName = function(){
+         console.log(this.name)
+     }
+     function Son(){
+ 
+     }
+     Son.prototype = new Parent();
+     var son1 = new Son();
+     console.log(son1.getName()) // 张
+</code></pre></div><p>问题：</p> <ol><li>引用类型的属性被所有实例共享</li></ol> <div class="language- extra-class"><pre class="language-text"><code>     function Parent(){
+         this.name = [&quot;张&quot;,'大']
+     }
+     Parent.prototype.getName = function(){
+         console.log(this.name)
+     }
+     function Son(){
+ 
+     }
+     Son.prototype = new Parent();
+     var son1 = new Son();
+     son1.name.push('狗蛋')
+     console.log(son1.name) // [&quot;张&quot;,'大','狗蛋']
+     var son2 = new Son();
+     console.log(son2.name) // [&quot;张&quot;,'大','狗蛋']
+</code></pre></div><ol start="2"><li>在创建 Child 的实例时，不能向Parent传参</li></ol> <p><strong>2.0 借用构造函数（call）</strong></p> <div class="language- extra-class"><pre class="language-text"><code> function Parent(){
+         this.name = [&quot;张&quot;,'大']
+     }
+     function Son(){
+         Parent.call(this)
+     }
+     var son1 = new Son();
+     son1.name.push('狗蛋')
+     console.log(son1.name) // [&quot;张&quot;,'大','狗蛋']
+     var son2 = new Son();
+     console.log(son2.name) // [&quot;张&quot;,'大']
+</code></pre></div><p>优点：</p> <ol><li>避免了引用类型的属性被所有实例共享</li> <li>可以在 Child 中向 Parent 传参</li></ol> <div class="language- extra-class"><pre class="language-text"><code> function Parent(name){
+         this.name = name
+     }
+     function Son(name){
+         Parent.call(this,name)
+     }
+     var son1 = new Son('狗蛋');
+     console.log(son1.name) // '狗蛋'
+     var son2 = new Son('张二');
+     console.log(son2.name) // 张二
+</code></pre></div><p>缺点：</p> <ul><li>方法都在构造函数中定义，每次创建实例都会创建一遍方法。</li></ul> <p><strong>3.0 组合继承</strong></p> <p>就是原型链继承和构造函数的合并。</p> <div class="language- extra-class"><pre class="language-text"><code>     function Parent(name){
+         this.name = name;
+         this.colors = ['red', 'blue', 'green'];
+     }
+     Parent.prototype.getName = function () {
+         console.log(this.name)
+     }
+     function Son(name,age){
+         Parent.call(this,name)
+         this.age = age;
+     }
+     Son.prototype = new Parent();
+     Son.prototype.constructor = Son;
+     console.log(Son)
+     var son1 = new Son('狗蛋',18);
+     son1.colors.push('black');
+     console.log(son1.name); // 狗蛋
+     console.log(son1.age); // 18
+     console.log(son1.colors); // [&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;, &quot;black&quot;]
+ 
+     var son2 = new Son('张二',18);
+     son2.colors.push('red');
+     console.log(son2.name); // 张二
+     console.log(son2.age); // 18
+     console.log(son2.colors); // [&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;, &quot;red&quot;]
+</code></pre></div><p>优点：融合原型链继承和构造函数的优点，是 JavaScript 中最常用的继承模式。</p> <p><strong>4.0 原型式继承</strong></p> <div class="language- extra-class"><pre class="language-text"><code> function createObj(o) {
+     function F(){}
+     F.prototype = o;
+     return new F();
+ }
+</code></pre></div><p>就是 ES5 Object.create 的模拟实现，将传入的对象作为创建的对象的原型。
+<br>
+缺点：<br></p> <ul><li>包含引用类型的属性值始终都会共享相应的值，这点跟原型链继承一样</li></ul> <div class="language- extra-class"><pre class="language-text"><code> var person = {
+        name:'小明',
+        friends:['小红','小刘']
+    }
+    var person1 = createObj(person)
+     var person2 = createObj(person)
+     person1.name = &quot;狗蛋&quot;
+     person1.friends.push('小小');
+     console.log(person2.name); // 小明 基本类型没共享
+     console.log(person2.friends); // ['小红','小刘','小小'] // 引用类型共享了
+</code></pre></div><p><strong>5.0 寄生式继承</strong></p> <blockquote><p>创建一个仅用于封装继承过程的函数，该函数在内部以某种形式来做增强对象，最后返回对象</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code> function createObj (o) {
+         var clone = Object.create(o);
+         clone.sayName = function () {
+             console.log('hi');
+         }
+         return clone;
+     }
+    var person = {
+        name:'小明',
+        friends:['小红','小刘']
+    }
+    var person1 = createObj(person)
+     console.log(person1.name); // 小明
+     person1.sayName(); // hi
+</code></pre></div><p>代码中基于person 返回了一个新对象person1，新对象不仅有person的
+所有属性和方法，而且还有自己的sayHi()方法
+<br>
+缺点:跟借用构造函数模式一样，每次创建对象都会创建一遍方法。</p> <p><strong>6.0 寄生组合式继承</strong></p> <p>再看一下组合继承</p> <div class="language- extra-class"><pre class="language-text"><code>  function Parent(name){
+          this.name = name;
+          this.colors = ['red', 'blue', 'green'];
+      }
+      Parent.prototype.getName = function () {
+          console.log(this.name)
+      }
+      function Son(name,age){
+          Parent.call(this,name) // // 第二次调用父构造函数
+          this.age = age;
+      }
+      Son.prototype = new Parent(); // 第一次调用父构造函数
+      Son.prototype.constructor = Son;
+      var son1 = new Son('狗蛋',18);
+      console.log(son1.name); // 狗蛋
+</code></pre></div><p>组合继承最大的缺点是会调用两次父构造函数。
+<br></p> <p>打印Son.prototype 和 son1 都有一个属性为colors，属性值为['red', 'blue', 'green']。
+<br></p> <p>我们能不能避免这一次调用呢？<br>
+如果我们不使用 Son.prototype = new Parent() ，而是间接的让 Son.prototype 访问到 Parent.prototype 呢？</p> <div class="language- extra-class"><pre class="language-text"><code> function Parent(name){
+         this.name = name;
+         this.colors = ['red', 'blue', 'green'];
+     }
+     Parent.prototype.getName = function () {
+         console.log(this.name)
+     }
+     function Son(name,age){
+         Parent.call(this,name) // // 第二次调用父构造函数
+         this.age = age;
+     }
+     var F = function(){}
+     F.prototype = Parent.prototype;
+     Son.prototype = new F(); // 第一次调用父构造函数
+     var son1 = new Son('狗蛋',18);
+     console.log(son1); // {name: &quot;狗蛋&quot;,colors:  [&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;] ,age: &quot;18&quot;}
+</code></pre></div><p>最后封装一下:</p> <div class="language- extra-class"><pre class="language-text"><code> function object(o) {
+     function F() {}
+     F.prototype = o;
+     return new F();
+ }
+ 
+ function prototype(child, parent) {
+     var prototype = object(parent.prototype);
+     prototype.constructor = child;
+     child.prototype = prototype;
+ }
+ 
+ // 当我们使用的时候：
+ prototype(Child, Parent);
+</code></pre></div><p>这种方式的高效率体现它只调用了一次 Parent 构造函数，并且因此避免了在 Parent.prototype 上面创建不必要的、多余的属性。与此同时，原型链还能保持不变；因此，还能够正常使用 instanceof 和 isPrototypeOf。开发人员普遍认为寄生组合式继承是引用类型最理想的继承范式。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/dist/page-js/js-8/" class="prev">
+        call和apply的模拟实现
+      </a></span> <span class="next"><a href="/dist/page-js/js-10/">
+        js 原型和原型链
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/dist/assets/js/app.c917e6cc.js" defer></script><script src="/dist/assets/js/2.47087845.js" defer></script><script src="/dist/assets/js/63.42890dc8.js" defer></script>
+  </body>
+</html>

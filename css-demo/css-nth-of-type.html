@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nth-of-type</title>
+    <style>
+        .one p:nth-child(2){
+            color:red;
+        }
+        .two p:nth-of-type(2){
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <p>我是p1</p>
+        <div>我是div (p:nth-of-type(2)  p元素的父元素的第二个子元素p 不为p则不改变颜色 )</div>
+        <p>我是p2</p>
+    </div>
+    <hr>
+    <div class="two">
+        <p>我是p1</p>
+        <div>我是div</div>
+        <p>我是p2 (p:nth-of-type(2)  p元素的父元素的第二个p元素 )</p>
+    </div>
+</body>
+</html>
