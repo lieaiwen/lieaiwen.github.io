@@ -45,10 +45,13 @@ Object.prototype.__proto__,为null。
 4.0 undefined
 5.0 null
 6.0 object
+7.0 Symble
+什么是symbol？ Symbol是ES6中新增的一种数据类型, 被划分到了基本数据类型中
+Symbol的作用：用来表示一个独一无二的值
 ```
 基本数据类型
 ``` 
-string number null boolean undefined
+string number null boolean undefined Symble
 ```
 引用数据类型
 ``` 
@@ -119,46 +122,21 @@ console.log(obj)
 
 ```
 
-## 6.0 浏览器存储的方式有哪些
-![avatar](/images/js/js-localstorage.jpg)
-<br>
-IndexedDB是一个文档数据库，它在完全内置于浏览器中的一个沙盒环境中（强制依照（浏览器）同源策略）。
-<br>区别： <br>
- 1.0 生命周期的不同 <br>
- 2.0 数据量的大小不同<br>
- 3.0 cookie 主要是跟服务器通信的<br>
- 
- localStorage 只能存字符串，存取 JSON 数据需配合 JSON.stringify() 和 JSON.parse()
-## 7.0 cookie 和session 的区别
-cookie 机制是通过检查客户身上的“通行证”来确定客户身份的话，那么 session 机制就是通过检查服务器上的“客户明细表”来确认客户身份。session 相当于程序在服务器上建立的一份客户档案，客户来访的时候只需要查询客户档案表就可以了。
-``` 
-1.0 存在的位置：
-    cookie 存在于客户端;session 存在于服务器的内存中
-2.0 安全性
-    cookie 是以明文的方式存放在客户端的，安全性低，；session 存放于服务器的内存中，所以安全性好
-3.0 生命周期(以 20 分钟为例)
-    cookie 的生命周期是累计的，从创建时，就开始计时，20 分钟后 cookie 生命周期结束；
-    session 的生命周期是间隔的，从创建时，开始计时如在 20 分钟，没有访问 session，那么 session 生命周期被销毁。
-    但是，如果在 20 分钟内（如在第 19 分钟时）访问过 session，那么，将重新计算 session 的生命周期。
-    关机会造成 session 生命周期的结束，但是对 cookie 没有影响
-4.0 访问范围
-    cookie 为多个用户浏览器共享；session 为一个用户浏览器独享
-```
-## 7.1sessionStorage
-之前一直以为，同一个窗口，只要会话还没有过期，不同标签页之间，相同域名下的sessionStorage是一样的。
-
-正确答案：刷新当前页面，或者通过location.href、window.open、或者通过带target="_blank"的a标签打开新标签，之前的sessionStorage还在，
-但是如果你是主动打开一个新窗口或者新标签，对不起，打开F12你会发现，sessionStorage空空如也。
-
-也就是说，sessionStorage的session仅限当前标签页或者当前标签页打开的新标签页，通过其它方式新开的窗口或标签不认为是同一个session。
-
-大家可以亲自测试一下，手动打开的新标签和点A标签打开的新标签效果完全不一样。
 ## 8.0 js获取程序执行的时间
 ``` 
+方法一
     console.time('global')
     //要执行的代码放中间
     console.timeEnd('global')
-global是标志这两个time是一对的。
+    global是标志这两个time是一对的。
+方法二：
+    // 起始时间
+    let start = Date.now(); 
+    // 调用函数
+    doSomething(); 
+    // 结束时间
+    let stop = Date.now(), 
+    result = stop - start;
 ``` 
 ## 9.0 把一个字符串转换为驼峰命名
 ```
@@ -335,49 +313,9 @@ function arrayNonRepeatfy(arr) {
 ```
 创建一个空Map数据结构，遍历需要去重的数组，把数组的每一个元素作为key存到Map中。由于Map中不会出现相同的key值，所以最终得到的就是去重后的结果。
 
-## 14.0 函数节流和防抖
-**节流**
-> 一个函数执行一次后，只有大于设定的执行周期才会执行第二次
-
-```
-// 有个需要频繁触发函数，处于优化性能角度，在规定时间内，
-// 只让函数触发第一次
-function throttle(fn,delay){
-    // 记录上一次函数触发的时间
-    var lastTime = 0;
-    return function(){
-        // 记录当前函数触发事件
-        var nowTime = Date.now();
-        if(nowTime - lastTime >delay){
-            fn();
-            //同步时间
-            lastTime = nowTime;// 利用了闭包
-        }
-    }
-}
-document.onscroll = throttle(function(){ console.log(Date.now())},500)
- 
-```
-**防抖**
->一个需要频繁触发的函数，在规定时间内，只让最后一次生效，前面的不生效
-
-```
-function debounce(fn,delay){
-    // 记录上一次的延时器
-    var timer = null;
-    return function(){
-        // 清除上一次的延时器
-        clearTimeout(timer);
-        // 重新设置延时器
-        timer = setTimeout(function(){
-            console.log(this)
-            fn.apply(this);
-        },delay)
-    }
-} 
-```
 
 ## 15.0 闭包
+>MDN概念：闭包是函数和声明该函数的词法环境的组合<br>
 >是指有权访问另一个函数作用域中的变量的函数
 
 **形成条件**<br>
@@ -533,8 +471,6 @@ return ++a;
 console.log(goos()); //4 
 ```
 
-## 21.0 作用域链
->当查找变量的时候，会先从当前上下文的变量对象中查找，如果没有找到，就会从父级(词法层面上的父级)执行上下文的变量对象中查找，一直找到全局上下文的变量对象，也就是全局对象。这样由多个执行上下文的变量对象构成的链表就叫做作用域链
 
 ## 22.0 null 和 undefined 区别
 * undefined 一般都来自于某个表达式最原始的状态值，不是人为操作的结果。当然，你也可以手动给一个变量赋值 undefined，但这样做没有意义，因为一个变量不赋值就是 undefined 
@@ -604,18 +540,38 @@ function formattedNumber(num) {
 ```
 
 ## 28.0 栈和堆
-栈(stack)：栈会自动分配内存空间，会自动释放，存放基本类型，简单的数据段，占据固定大小的空间。（基本类型：String，Number，Boolean，Null，Undefined）
+栈(stack)：栈会自动分配内存空间，会自动释放，存放基本类型，简单的数据段，占据固定大小的空间。（基本类型：String，Number，Boolean，Null，Undefined）<br>
 堆(heap)：动态分配的内存，大小不定也不会自动释放，存放引用类型，指那些可能由多个值构成的对象，保存在堆内存中，包含引用类型的变量，实际上保存的不是变量本身，而是指向该对象的指针。（引用类型：Function，Array，Object）
+
 **栈和堆的溢出**
+
 栈：可以递归调用方法，这样随着栈深度的增加，JVM维持着一条长长的方法调用轨迹，知道内存不够分配，产生栈溢出。
+<br>
 堆：循环创建对象，通俗点就是不断的new 一个对象。
+
 **区别**
+
 栈：所有在方法中定义的变量都是放在栈内存中，随着方法的执行结束，这个方法的内存栈也自然销毁。
+<br>
 优点：存取速度比堆快，仅次于直接位于CPU中的寄存器，数据可以共享；
+<br>
 缺点：存在栈中的数据大小与生存期必须是确定的，缺乏灵活性。
+<br>
 堆：堆内存中的对象不会随方法的结束而销毁，即使方法结束后，这个对象还可能被另一个引用变量所引用(参数传递)。创建对象是为了反复利用，这个对象将被保存到运行时数据区
 
+## 29.0 垃圾回收
+>JavaScript 是使用垃圾回收的编程语言，开发者不需要操心内存分配和回收。JavaScript 的垃圾回收
+程序可以总结如下
 
+1. 离开作用域的值会被自动标记为可回收，然后在垃圾回收期间被删除。
+2. 主流的垃圾回收算法是标记清理，即先给当前不使用的值加上标记，再回来回收它们的内存。
+   图灵社区会
+3. 引用计数是另一种垃圾回收策略，需要记录值被引用了多少次。JavaScript 引擎不再使用这种算
+   法，但某些旧版本的 IE 仍然会受这种算法的影响，原因是 JavaScript 会访问非原生 JavaScript 对
+   象（如 DOM 元素）。
+4. 引用计数在代码中存在循环引用时会出现问题。
+5. 解除变量的引用不仅可以消除循环引用，而且对垃圾回收也有帮助。为促进内存回收，全局对
+   象、全局对象的属性和循环引用都应该在不需要时解除引用。
 
 
 

@@ -50,44 +50,8 @@ function(){} 提前定义该函数<br>
 **3.3 if**<br>
 **3.4 || &&**<br>
 
-## 4.0 let var const 区别
-1. let所声明的变量只在let命令所在的代码块内有效
-2. let 不存在变量提升，不能重复定义
-3. const 只读的对于 简单的数据类型，引用类型的话还是可以修改的
-```
-const a = {name:1};
-a.name = 2
-a // {name:2} 
-```
-**经典面试题**
-```
- var arr = [];
- for (var i = 0; i < 3; i++) {
-     arr[i] = function () {
-         console.log(i);
-     };
- }
- arr[0](); // 3
-因为i 是全局变量 然而 arr 里面存的都是 function(){ console.log(i) } // 所以打印的都是3
 
-怎么解决呢？
-for (var i = 0; i < 3; i++) {
-    arr[i] = (function(i){
-        return function() {
-            console.log(i);
-        }
-    }(i))
-}
-arr[0](); // 0
 
-用es6的方法解决
-for (let i = 0; i < 3; i++) {
-    arr[i] = function () {
-        console.log(i);
-    };
-}
-arr[0](); // 0
-```
 
 ## 5.0 new的过程中发生了四步操作：
 ```

@@ -457,7 +457,18 @@ writable : false     // 属性值不可修改
 enumerable : false   // 属性不可枚举
 configurable : false // 属性不可重新配置
 ```
-## Object.defineProperty()
+## Object.assign() 基本方法 拷贝相关
+Object.assign方法用于对象的合并，将源对象（source）的所有可枚举属性，复制到目标对象（target）。
+``` 
+const target = { a: 1 };
+
+const source1 = { b: 2 };
+const source2 = { c: 3 };
+
+Object.assign(target, source1, source2);
+target // {a:1, b:2, c:3}
+```
+
 一个有意思的例子
 ```
 var a = new function() {return "圆心"}; 
@@ -480,18 +491,6 @@ var a = new x();
 只要 new 表达式之后返回（return）一个引用对象（数组，对象，函数等），都将覆盖new创建的匿名对象，如果返回（return）一个原始类型（无 return 时其实为 return 原始类型 undefined），那么就返回 new 创建的匿名对象
 由于 new String 会构造一个对象，而不是一个 string 直接量，且new String(x) 如果带参数，那么alert它的时候就会返回 x。所以 yx01 将返回 new String(”圆心”) 这个对象，而 alert yx01 则显示 “圆心”。
 ```
-## Object.assign() 基本方法 拷贝相关
-Object.assign方法用于对象的合并，将源对象（source）的所有可枚举属性，复制到目标对象（target）。
-``` 
-const target = { a: 1 };
-
-const source1 = { b: 2 };
-const source2 = { c: 3 };
-
-Object.assign(target, source1, source2);
-target // {a:1, b:2, c:3}
-```
-[example](https://www.jianshu.com/p/d5f572dd3776)  <br>
 
 
 

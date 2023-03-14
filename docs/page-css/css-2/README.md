@@ -150,6 +150,11 @@ html{
       background: red
   }
   作用于 P 的父元素的第二个 P 元素(子元素)
+  类似的：
+  1.0 :first-child p:first-child // 作用于 P 的父元素的第一个p元素，如不是p元素，不生效
+  2.0 :first-of-type p:first-of-type // 作用于 P 的父元素的第一个p元素,如果第一个不是p，那就找第二个
+  3.0 :last-child
+  4.0 :last-of-type
   ```
 [demo](http://www.zliel.top/vpdemo/css-demo/css-nth-of-type.html)<br>
 

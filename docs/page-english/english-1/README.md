@@ -55,7 +55,7 @@
 
 27.0 Acknowledgment 确认;承认;应答; 答复
 
-28.0 viewport 视区
+28.0 viewport 视区 电脑屏幕的 视口
 
 29.0 throttle 节流阀 使窒息;掐死;
 
@@ -94,5 +94,27 @@
 46.0 reverse 颠倒;彻底转变;使完全相反
 
 47.0 splice 剪接
+
+48.0 assert 明确肯定;断言
+
+49.0 effective 有效的
+
+50.0 initial 最初的
+
+51.0 iteration 迭代
+
+52.0 Iterable 可迭代的
+
+53.0 Iterator 迭代器模式
+
+54.0 Configurable  可配置
+
+55.0 Enumerable 可枚举的
+
+56.0 Writable 可书写的
+
+57.0 edition 版本
+
+58.0 redefine 重新定义
 ```
 

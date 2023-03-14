@@ -3,11 +3,10 @@
 
 
 
-## 总结
-以上就是Vue Router的基本操作了，希望大家学以致用。
-<br>参考链接
->https://router.vuejs.org/zh/introduction.html<br>
->https://juejin.cn/post/6844903665388486664#heading-44
+## 插件
+
++ 瀑布流插件vue-masonry
+
 
 失败了，不要害怕重新开始，不是从头而是从经验开始。
 

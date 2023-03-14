@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>node 文件操作 | 速度至上</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/dist/img/logo.ico">
+    <link rel="manifest" href="/dist/manifest.json">
+    <meta name="description" content="Reggie Study Notes">
+    <link rel="preload" href="/dist/assets/css/0.styles.ad3a04d5.css" as="style"><link rel="preload" href="/dist/assets/js/app.53aea44e.js" as="script"><link rel="preload" href="/dist/assets/js/2.c8eb3e76.js" as="script"><link rel="preload" href="/dist/assets/js/71.797daea0.js" as="script"><link rel="prefetch" href="/dist/assets/js/10.99b3fe64.js"><link rel="prefetch" href="/dist/assets/js/11.c100e7aa.js"><link rel="prefetch" href="/dist/assets/js/12.f0d4a132.js"><link rel="prefetch" href="/dist/assets/js/13.bc6a69c8.js"><link rel="prefetch" href="/dist/assets/js/14.6d6162b5.js"><link rel="prefetch" href="/dist/assets/js/15.83d7aa42.js"><link rel="prefetch" href="/dist/assets/js/16.a32089be.js"><link rel="prefetch" href="/dist/assets/js/17.e3b40a13.js"><link rel="prefetch" href="/dist/assets/js/18.1014ffe8.js"><link rel="prefetch" href="/dist/assets/js/19.a37c2571.js"><link rel="prefetch" href="/dist/assets/js/20.149cc93b.js"><link rel="prefetch" href="/dist/assets/js/21.e8b8c4b3.js"><link rel="prefetch" href="/dist/assets/js/22.8de8650b.js"><link rel="prefetch" href="/dist/assets/js/23.d0e3d35b.js"><link rel="prefetch" href="/dist/assets/js/24.2a78a121.js"><link rel="prefetch" href="/dist/assets/js/25.900b32bb.js"><link rel="prefetch" href="/dist/assets/js/26.e5d2f5cd.js"><link rel="prefetch" href="/dist/assets/js/27.a4fa92c2.js"><link rel="prefetch" href="/dist/assets/js/28.7224fe30.js"><link rel="prefetch" href="/dist/assets/js/29.5c45df8b.js"><link rel="prefetch" href="/dist/assets/js/3.eccc0c92.js"><link rel="prefetch" href="/dist/assets/js/30.6dad4003.js"><link rel="prefetch" href="/dist/assets/js/31.6cc52e2a.js"><link rel="prefetch" href="/dist/assets/js/32.d071c597.js"><link rel="prefetch" href="/dist/assets/js/33.effa68bc.js"><link rel="prefetch" href="/dist/assets/js/34.39fa8140.js"><link rel="prefetch" href="/dist/assets/js/35.2939c295.js"><link rel="prefetch" href="/dist/assets/js/36.d11b50f9.js"><link rel="prefetch" href="/dist/assets/js/37.9bdbb1f2.js"><link rel="prefetch" href="/dist/assets/js/38.59c5ecd7.js"><link rel="prefetch" href="/dist/assets/js/39.a7a8037c.js"><link rel="prefetch" href="/dist/assets/js/4.acf22840.js"><link rel="prefetch" href="/dist/assets/js/40.c74438e6.js"><link rel="prefetch" href="/dist/assets/js/41.043a6787.js"><link rel="prefetch" href="/dist/assets/js/42.91479794.js"><link rel="prefetch" href="/dist/assets/js/43.5f1e6d5e.js"><link rel="prefetch" href="/dist/assets/js/44.7f595719.js"><link rel="prefetch" href="/dist/assets/js/45.e6fd0721.js"><link rel="prefetch" href="/dist/assets/js/46.62f0e57f.js"><link rel="prefetch" href="/dist/assets/js/47.53195b37.js"><link rel="prefetch" href="/dist/assets/js/48.531f119d.js"><link rel="prefetch" href="/dist/assets/js/49.482fd7b5.js"><link rel="prefetch" href="/dist/assets/js/5.712f13ff.js"><link rel="prefetch" href="/dist/assets/js/50.3b1397f7.js"><link rel="prefetch" href="/dist/assets/js/51.f896dec0.js"><link rel="prefetch" href="/dist/assets/js/52.085cb00f.js"><link rel="prefetch" href="/dist/assets/js/53.823e478a.js"><link rel="prefetch" href="/dist/assets/js/54.e850c0ec.js"><link rel="prefetch" href="/dist/assets/js/55.23da1051.js"><link rel="prefetch" href="/dist/assets/js/56.811da386.js"><link rel="prefetch" href="/dist/assets/js/57.c8a58ee2.js"><link rel="prefetch" href="/dist/assets/js/58.92097436.js"><link rel="prefetch" href="/dist/assets/js/59.5b3c650f.js"><link rel="prefetch" href="/dist/assets/js/6.a9728e43.js"><link rel="prefetch" href="/dist/assets/js/60.755c497b.js"><link rel="prefetch" href="/dist/assets/js/61.0779fc84.js"><link rel="prefetch" href="/dist/assets/js/62.52528737.js"><link rel="prefetch" href="/dist/assets/js/63.ae780dda.js"><link rel="prefetch" href="/dist/assets/js/64.4f4c8894.js"><link rel="prefetch" href="/dist/assets/js/65.1a99cd65.js"><link rel="prefetch" href="/dist/assets/js/66.dc0711ba.js"><link rel="prefetch" href="/dist/assets/js/67.fe4ca852.js"><link rel="prefetch" href="/dist/assets/js/68.e3350852.js"><link rel="prefetch" href="/dist/assets/js/69.f705a2d7.js"><link rel="prefetch" href="/dist/assets/js/7.6f290f44.js"><link rel="prefetch" href="/dist/assets/js/70.d5b3b9e0.js"><link rel="prefetch" href="/dist/assets/js/72.7bce5541.js"><link rel="prefetch" href="/dist/assets/js/73.b22a9a6b.js"><link rel="prefetch" href="/dist/assets/js/74.d2c35b89.js"><link rel="prefetch" href="/dist/assets/js/75.7e379f64.js"><link rel="prefetch" href="/dist/assets/js/76.854f4694.js"><link rel="prefetch" href="/dist/assets/js/77.0b8b3c74.js"><link rel="prefetch" href="/dist/assets/js/78.e5194eb3.js"><link rel="prefetch" href="/dist/assets/js/79.39bb4c79.js"><link rel="prefetch" href="/dist/assets/js/8.144f56e1.js"><link rel="prefetch" href="/dist/assets/js/80.c5b13a5f.js"><link rel="prefetch" href="/dist/assets/js/81.a6a1661a.js"><link rel="prefetch" href="/dist/assets/js/82.f95f29fd.js"><link rel="prefetch" href="/dist/assets/js/83.f45c0790.js"><link rel="prefetch" href="/dist/assets/js/84.3ce8f8ae.js"><link rel="prefetch" href="/dist/assets/js/85.0af8d964.js"><link rel="prefetch" href="/dist/assets/js/86.ad33b21e.js"><link rel="prefetch" href="/dist/assets/js/87.d70bb385.js"><link rel="prefetch" href="/dist/assets/js/88.fa542aee.js"><link rel="prefetch" href="/dist/assets/js/89.c26ab82e.js"><link rel="prefetch" href="/dist/assets/js/9.4375f41a.js"><link rel="prefetch" href="/dist/assets/js/90.8640bff5.js"><link rel="prefetch" href="/dist/assets/js/91.f4c9a3e7.js"><link rel="prefetch" href="/dist/assets/js/92.19bdeba2.js"><link rel="prefetch" href="/dist/assets/js/93.55d42cd8.js">
+    <link rel="stylesheet" href="/dist/assets/css/0.styles.ad3a04d5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/dist/" class="home-link router-link-active"><!----> <span class="site-name">速度至上</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/dist/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/dist/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dist/language/chinese.html" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/dist/language/english.html" class="nav-link">
+  English
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/dist/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/dist/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dist/language/chinese.html" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/dist/language/english.html" class="nav-link">
+  English
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>node</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/dist/page-node/node-1/" class="sidebar-link">Node</a></li><li><a href="/dist/page-node/node-2/" class="active sidebar-link">node 文件操作</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/dist/page-node/node-2/#node-文件操作" class="sidebar-link">node 文件操作</a></li></ul></li><li><a href="/dist/page-node/node-3/" class="sidebar-link">网络操作</a></li><li><a href="/dist/page-node/node-4/" class="sidebar-link">进程管理</a></li><li><a href="/dist/page-node/node-5/" class="sidebar-link">异步编程</a></li><li><a href="/dist/page-node/node-6/" class="sidebar-link">大示例</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js知识点</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js杂项知识点</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js函数（方法）</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>有待学习的</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>VUE</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTTP</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>es6相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>webpack</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>英语单词</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="node-文件操作"><a href="#node-文件操作" class="header-anchor">#</a> node 文件操作</h2> <p>终于要开始可以写一点代码了，手都开始痒了，最近几天有些懈怠了，可能是天气热的原因吧！多好的借口，是不（狗蛋）。</p> <blockquote><p>几乎也只需要一些数据处理逻辑，再加上一些文件操作，就能编写出大部分前端工具，
+所以node里面很神奇也是我梦寐以求的一个功能，操作文件，node就可以实现。赶快尝鲜，滋溜，滋溜</p></blockquote> <p>NodeJS提供了基本的文件操作API，但是像文件拷贝这种高级功能就没有提供，因此我们先拿文件拷贝程序练手。与copy命令类似，我们的程序需要能接受源文件路径与目标文件路径两个参数。</p> <p><strong>小文件拷贝</strong></p> <div class="language- extra-class"><pre class="language-text"><code>var fs = require('fs');
+
+function copy(src, dst) {
+    fs.writeFileSync(dst, fs.readFileSync(src));
+}
+
+function main(argv) {
+    copy(argv[0], argv[1]);
+}
+ // main(process.argv.slice(2));
+main(['lib/input.txt','./ii.txt']); // 拷贝lib目录下的input.txt 到当前文件夹下的ii.txt 文档中
+</code></pre></div><p>以上程序使用fs.readFileSync从源路径读取文件内容，并使用fs.writeFileSync将文件内容写入目标路径。</p> <blockquote><p>process 是一个全局变量，可通过 process.argv 获得命令行参数。由于 argv[0] 固定等于 NodeJS 执行程序的绝对路径，argv[1] 固定等于主模块的绝对路径，因此第一个命令行参数从 argv[2] 这个位置开始。</p></blockquote> <p><strong>大文件拷贝</strong></p> <p>上边的程序拷贝一些小文件没啥问题，但这种一次性把所有文件内容都读取到内存中后再一次性写入磁盘的方式不适合拷贝大文件，内存会爆仓。对于大文件，我们只能读一点写一点，直到完成拷贝。因此上边的程序需要改造如下。</p> <div class="language- extra-class"><pre class="language-text"><code> var fs = require('fs');
+ 
+ function copy(src, dst) {
+     fs.createReadStream(src).pipe(fs.createWriteStream(dst));
+ }
+ 
+ function main(argv) {
+     copy(argv[0], argv[1]);
+ }
+ 
+ main(process.argv.slice(2));
+</code></pre></div><p>以上程序使用 fs.createReadStream 创建了一个源文件的只读数据流，并使用 fs.createWriteStream 创建了一个目标文件的只写数据流，并且用 pipe 方法把两个数据流连接了起来。连接起来后发生的事情，说得抽象点的话，水顺着水管从一个桶流到了另一个桶。</p> <p><strong>API</strong></p> <p><em><strong>1.0 Buffer(数据块)</strong></em>
+JS语言自身只有字符串数据类型，没有二进制数据类型，因此NodeJS提供了一个与String对等的全局构造函数Buffer来提供对二进制数据的操作。除了可以读取文件得到Buffer的实例外，还能够直接构造，例如：</p> <blockquote><p>var bin = new Buffer([ 0x68, 0x65, 0x6c, 0x6c, 0x6f ]);</p></blockquote> <p>Buffer与字符串类似，除了可以用.length属性得到字节长度外，还可以用[index]方式读取指定位置的字节，例如：</p> <blockquote><p>bin[0]; // =&gt; 0x68;</p></blockquote> <p>Buffer与字符串能够互相转化，例如可以使用指定编码将二进制数据转化为字符串：</p> <blockquote><p>var str = bin.toString('utf-8'); // =&gt; &quot;hello&quot;</p></blockquote> <p>或者反过来，将字符串转换为指定编码下的二进制数据：</p> <blockquote><p>var bin = new Buffer('hello', 'utf-8'); // =&gt; &lt;Buffer 68 65 6c 6c 6f&gt;</p></blockquote> <p>Buffer与字符串有一个重要区别。字符串是只读的，并且对字符串的任何修改得到的都是一个新字符串，原字符串保持不变。至于Buffer，更像是可以做指针操作的C语言数组。例如，可以用[index]方式直接修改某个位置的字节。</p> <blockquote><p>bin[0] = 0x48;</p></blockquote> <p>而.slice方法也不是返回一个新的Buffer，而更像是返回了指向原Buffer中间的某个位置的指针，如下所示。</p> <div class="language- extra-class"><pre class="language-text"><code> [ 0x68, 0x65, 0x6c, 0x6c, 0x6f ]
+      ^           ^
+      |           |
+     bin     bin.slice(2)
+</code></pre></div><p>因此对.slice方法返回的Buffer的修改会作用于原Buffer，例如：</p> <div class="language- extra-class"><pre class="language-text"><code> var bin = new Buffer([ 0x68, 0x65, 0x6c, 0x6c, 0x6f ]);
+ var sub = bin.slice(2);
+ 
+ sub[0] = 0x65;
+ console.log(bin); // =&gt; &lt;Buffer 68 65 65 6c 6f&gt;
+</code></pre></div><p>也因此，如果想要拷贝一份Buffer，得首先创建一个新的Buffer，并通过.copy方法把原Buffer中的数据复制过去。这个类似于申请一块新的内存，并把已有内存中的数据复制过去。以下是一个例子。</p> <div class="language- extra-class"><pre class="language-text"><code>var bin = new Buffer([ 0x68, 0x65, 0x6c, 0x6c, 0x6f ]);
+var dup = new Buffer(bin.length);
+
+bin.copy(dup);
+dup[0] = 0x48;
+console.log(bin); // =&gt; &lt;Buffer 68 65 6c 6c 6f&gt;
+console.log(dup); // =&gt; &lt;Buffer 48 65 65 6c 6f&gt;
+</code></pre></div><p>总之，Buffer将JS的数据处理能力从字符串扩展到了任意二进制数据。</p> <p><strong>2.0 Stream(数据流)</strong></p> <blockquote><p>过 暂且不是很理解 需要实际例子更确切的理解和运用</p></blockquote> <p><strong>3.0 File System（文件系统）</strong></p> <blockquote><p>NodeJS通过fs内置模块提供对文件的操作。fs模块提供的API基本上可以分为以下三类：</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code> -文件属性读写。
+ 
+ 其中常用的有fs.stat、fs.chmod、fs.chown等等。
+ 
+ -文件内容读写。
+ 
+ 其中常用的有fs.readFile、fs.readdir、fs.writeFile、fs.mkdir等等。
+ 
+ -底层文件操作。
+ 
+ 其中常用的有fs.open、fs.read、fs.write、fs.close等等。
+</code></pre></div><p>NodeJS最精华的异步IO模型在fs模块里有着充分的体现，例如上边提到的这些API都通过回调函数传递结果。以fs.readFile为例：</p> <div class="language- extra-class"><pre class="language-text"><code> fs.readFile(pathname, function(err, data){
+    if(err){
+        // deal width error
+    } else { 
+        // deal with data.
+    }
+ })
+</code></pre></div><p>如上边代码所示，基本上所有fs模块API的回调参数都有两个。第一个参数在有错误发生时等于异常对象，第二个参数始终用于返回API方法执行结果。</p> <p>此外，fs模块的所有异步API都有对应的同步版本，用于无法使用异步操作时，或者同步操作更方便时的情况。同步API除了方法名的末尾多了一个Sync之外，异常对象与执行结果的传递方式也有相应变化。同样以fs.readFileSync为例：</p> <div class="language- extra-class"><pre class="language-text"><code>try {
+    var data = fs.readFileSync(pathname);
+    // Deal with data.
+} catch (err) {
+    // Deal with error.
+} 
+</code></pre></div><p>fs模块提供的API很多，这里不一一介绍，需要时请自行查阅官方文档。</p> <p><strong>path(路径)</strong></p> <p>path 模块提供了一些实用工具，用于处理文件和目录的路径。 可以使用以下方式访问它：</p> <blockquote><p>const path = require('path');</p></blockquote> <p>path.basename() 方法会返回 path 的最后一部分，类似于 Unix 的 basename 命令</p> <blockquote><p>let name = path.basename('./input.txt') // input.txt</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>path.normalize() 方法规范化给定的 path，解析 '..' 和 '.' 片段。
+
+当找到多个连续的路径段分隔字符时（例如 POSIX 上的 /、Windows 上的 \ 或 /），则它们将被替换为单个平台特定的路径段分隔符（POSIX 上的 /、Windows 上的 \）。 尾部的分隔符会保留。
+
+如果 path 是零长度的字符串，则返回 '.'，表示当前工作目录。
+var cache = {};
+
+function store(key, value) {
+    cache[path.normalize(key)] = value;
+}
+
+store('foo/bar', 1);
+store('foo//baz//../bar', 2);
+console.log(cache);  // =&gt; { &quot;foo/bar&quot;: 2 }
+</code></pre></div><blockquote><p>注意：标准化之后的路径里的斜杠在Windows系统下是\，而在Linux系统下是/。如果想保证任何系统下都使用/作为路径分隔符的话，需要用.replace(/\/g, '/')再替换一下标准路径。</p></blockquote> <p>#path.join</p> <p>将传入的多个路径拼接为标准路径。该方法可避免手工拼接路径字符串的繁琐，并且能在不同系统下正确使用相应的路径分隔符。以下是一个例子：</p> <blockquote><p>path.join('foo/', 'baz/', '../bar'); // =&gt; &quot;foo/bar&quot;</p></blockquote> <p>#path.extname</p> <p>当我们需要根据不同文件扩展名做不同操作时，该方法就显得很好用。以下是一个例子：</p> <blockquote><p>path.extname('foo/bar.js'); // =&gt; &quot;.js&quot;</p></blockquote></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/dist/page-node/node-1/" class="prev">
+        Node
+      </a></span> <span class="next"><a href="/dist/page-node/node-3/">
+        网络操作
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/dist/assets/js/app.53aea44e.js" defer></script><script src="/dist/assets/js/2.c8eb3e76.js" defer></script><script src="/dist/assets/js/71.797daea0.js" defer></script>
+  </body>
+</html>

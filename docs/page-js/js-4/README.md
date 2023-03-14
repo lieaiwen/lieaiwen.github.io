@@ -40,23 +40,8 @@ fac(3,1)
 依次类推，就不会溢出
 <br>
 尾递归：函数的最后一步是执行一个函数
-## 2.0 方法中的this
-this是一个特殊变量，它始终指向当前对象
-``` 
-var xiaoming = {
-    name: '小明',
-    birth: 1990,
-    age: function () {
-        var y = new Date().getFullYear();
-        return y - this.birth;
-    }
-};
-xiaoming.age()
-    name: "小明"
-    birth: 1990
-    age: ƒ ()
-    __proto__: Object
-```
+
+
 ## 3.0 使用new关键字调用函数（new Person(…)）的具体步骤
 ``` 
 1.0 创建空对象

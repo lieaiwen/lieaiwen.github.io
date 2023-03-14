@@ -7,7 +7,7 @@ npm install -g vuepress
 npm run dev
 
 线上地址
-https://lieaiwen.coding.me/vuepress/dist/index.html
+https://lieaiwen.github.io/dist/
 css,html,js demo 位置
 链接
 http://www.zliel.top/vpdemo/css-demo/css-media.html

@@ -242,9 +242,14 @@ __5.2 通过query进行配置传参:__
 
 在项目里我们可以通过上面提到的params进行传参.同时也可以用query进行传参.
 举个例子:
+```angular2html
 <router-link to="/name?id=1">foo</router-link>
-vue-route会自动将?后的id=1封装进this.$route.query里. 此时,在组件里this.$route.query.id值为'1'.
+
+vue-route会自动将?后的id=1封装进this.$route.query里. 此时,在组件里this.$route.query.id值为'1'
+
 ==除了通过router-link的to属性. query也可以通过后面讲到的编程式导航进行传参==
+```
+
 
 ## 6.0 编程式导航
 
@@ -272,7 +277,7 @@ router.push({ path: '/register', query: { plan: 'private' } })
 router.push({ path: '/about', hash: '#team' }) 
 ```
 
-__注意：__如果提供了 path，params 会被忽略，上述例子中的 query 并不属于这种情况。取而代之的是下面例子的做法，
+__注意：__ 如果提供了 path，params 会被忽略，上述例子中的 query 并不属于这种情况。取而代之的是下面例子的做法，
 你需要提供路由的 name 或手写完整的带有参数的 path ：
 
 __6.2 router.replace方法__
@@ -485,7 +490,7 @@ __10.1 导航守卫分类__
 <br>
 - router.beforeEach 全局前置守卫
 - router.beforeResolve 全局解析守卫(2.5.0+) 在beforeRouteEnter调用之后调用.
-- outer.afterEach 全局后置钩子 进入路由之后 注意:不支持next(),只能写成这种形式router.afterEach((to, from) => {});
+- router.afterEach 全局后置钩子 进入路由之后 注意:不支持next(),只能写成这种形式router.afterEach((to, from) => {});
 
 每个守卫方法接收三个参数：
 

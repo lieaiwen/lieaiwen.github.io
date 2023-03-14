@@ -171,5 +171,36 @@ apply跟call的区别就是 参数的不同而已 一个是多个参数一个是
    } 
  测试： 不用测试了 的有点自信吧！
 ```
+最后直接上bind的
+```js
+// bind要考虑返回的函数，作为构造函数被调用的情况
+Function.prototype.Bind = function(context, ...args) {
+  if (context === undefined || context === null) {
+    context = window;
+  }
+  let fn = this;
+  let f = Symbol();
+  const result = function(...args1) {
+    if (this instanceof fn) {
+      // result如果作为构造函数被调用，this指向的是new出来的对象
+      // this instanceof fn，判断new出来的对象是否为fn的实例
+      this[f] = fn;
+      let res = this[f](...args, ...args1);
+      delete this[f];
+      return res;
+    } else {
+      // bind返回的函数作为普通函数被调用时
+      context[f] = fn;
+      let res = context[f](...args, ...args1);
+      delete context[f];
+      return res;
+    }
+  };
+  // 如果绑定的是构造函数 那么需要继承构造函数原型属性和方法
+  // 实现继承的方式: 使用Object.create
+  result.prototype = Object.create(fn.prototype);
+  return result;
+};
+```
 参考链接：[冴羽的博客]() https://github.com/mqyqingfeng/Blog/issues/11<br>
 

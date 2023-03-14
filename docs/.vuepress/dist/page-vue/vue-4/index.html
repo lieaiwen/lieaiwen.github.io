@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vuex实战 | 速度至上</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/dist/img/logo.ico">
+    <link rel="manifest" href="/dist/manifest.json">
+    <meta name="description" content="Reggie Study Notes">
+    <link rel="preload" href="/dist/assets/css/0.styles.ad3a04d5.css" as="style"><link rel="preload" href="/dist/assets/js/app.53aea44e.js" as="script"><link rel="preload" href="/dist/assets/js/2.c8eb3e76.js" as="script"><link rel="preload" href="/dist/assets/js/5.712f13ff.js" as="script"><link rel="prefetch" href="/dist/assets/js/10.99b3fe64.js"><link rel="prefetch" href="/dist/assets/js/11.c100e7aa.js"><link rel="prefetch" href="/dist/assets/js/12.f0d4a132.js"><link rel="prefetch" href="/dist/assets/js/13.bc6a69c8.js"><link rel="prefetch" href="/dist/assets/js/14.6d6162b5.js"><link rel="prefetch" href="/dist/assets/js/15.83d7aa42.js"><link rel="prefetch" href="/dist/assets/js/16.a32089be.js"><link rel="prefetch" href="/dist/assets/js/17.e3b40a13.js"><link rel="prefetch" href="/dist/assets/js/18.1014ffe8.js"><link rel="prefetch" href="/dist/assets/js/19.a37c2571.js"><link rel="prefetch" href="/dist/assets/js/20.149cc93b.js"><link rel="prefetch" href="/dist/assets/js/21.e8b8c4b3.js"><link rel="prefetch" href="/dist/assets/js/22.8de8650b.js"><link rel="prefetch" href="/dist/assets/js/23.d0e3d35b.js"><link rel="prefetch" href="/dist/assets/js/24.2a78a121.js"><link rel="prefetch" href="/dist/assets/js/25.900b32bb.js"><link rel="prefetch" href="/dist/assets/js/26.e5d2f5cd.js"><link rel="prefetch" href="/dist/assets/js/27.a4fa92c2.js"><link rel="prefetch" href="/dist/assets/js/28.7224fe30.js"><link rel="prefetch" href="/dist/assets/js/29.5c45df8b.js"><link rel="prefetch" href="/dist/assets/js/3.eccc0c92.js"><link rel="prefetch" href="/dist/assets/js/30.6dad4003.js"><link rel="prefetch" href="/dist/assets/js/31.6cc52e2a.js"><link rel="prefetch" href="/dist/assets/js/32.d071c597.js"><link rel="prefetch" href="/dist/assets/js/33.effa68bc.js"><link rel="prefetch" href="/dist/assets/js/34.39fa8140.js"><link rel="prefetch" href="/dist/assets/js/35.2939c295.js"><link rel="prefetch" href="/dist/assets/js/36.d11b50f9.js"><link rel="prefetch" href="/dist/assets/js/37.9bdbb1f2.js"><link rel="prefetch" href="/dist/assets/js/38.59c5ecd7.js"><link rel="prefetch" href="/dist/assets/js/39.a7a8037c.js"><link rel="prefetch" href="/dist/assets/js/4.acf22840.js"><link rel="prefetch" href="/dist/assets/js/40.c74438e6.js"><link rel="prefetch" href="/dist/assets/js/41.043a6787.js"><link rel="prefetch" href="/dist/assets/js/42.91479794.js"><link rel="prefetch" href="/dist/assets/js/43.5f1e6d5e.js"><link rel="prefetch" href="/dist/assets/js/44.7f595719.js"><link rel="prefetch" href="/dist/assets/js/45.e6fd0721.js"><link rel="prefetch" href="/dist/assets/js/46.62f0e57f.js"><link rel="prefetch" href="/dist/assets/js/47.53195b37.js"><link rel="prefetch" href="/dist/assets/js/48.531f119d.js"><link rel="prefetch" href="/dist/assets/js/49.482fd7b5.js"><link rel="prefetch" href="/dist/assets/js/50.3b1397f7.js"><link rel="prefetch" href="/dist/assets/js/51.f896dec0.js"><link rel="prefetch" href="/dist/assets/js/52.085cb00f.js"><link rel="prefetch" href="/dist/assets/js/53.823e478a.js"><link rel="prefetch" href="/dist/assets/js/54.e850c0ec.js"><link rel="prefetch" href="/dist/assets/js/55.23da1051.js"><link rel="prefetch" href="/dist/assets/js/56.811da386.js"><link rel="prefetch" href="/dist/assets/js/57.c8a58ee2.js"><link rel="prefetch" href="/dist/assets/js/58.92097436.js"><link rel="prefetch" href="/dist/assets/js/59.5b3c650f.js"><link rel="prefetch" href="/dist/assets/js/6.a9728e43.js"><link rel="prefetch" href="/dist/assets/js/60.755c497b.js"><link rel="prefetch" href="/dist/assets/js/61.0779fc84.js"><link rel="prefetch" href="/dist/assets/js/62.52528737.js"><link rel="prefetch" href="/dist/assets/js/63.ae780dda.js"><link rel="prefetch" href="/dist/assets/js/64.4f4c8894.js"><link rel="prefetch" href="/dist/assets/js/65.1a99cd65.js"><link rel="prefetch" href="/dist/assets/js/66.dc0711ba.js"><link rel="prefetch" href="/dist/assets/js/67.fe4ca852.js"><link rel="prefetch" href="/dist/assets/js/68.e3350852.js"><link rel="prefetch" href="/dist/assets/js/69.f705a2d7.js"><link rel="prefetch" href="/dist/assets/js/7.6f290f44.js"><link rel="prefetch" href="/dist/assets/js/70.d5b3b9e0.js"><link rel="prefetch" href="/dist/assets/js/71.797daea0.js"><link rel="prefetch" href="/dist/assets/js/72.7bce5541.js"><link rel="prefetch" href="/dist/assets/js/73.b22a9a6b.js"><link rel="prefetch" href="/dist/assets/js/74.d2c35b89.js"><link rel="prefetch" href="/dist/assets/js/75.7e379f64.js"><link rel="prefetch" href="/dist/assets/js/76.854f4694.js"><link rel="prefetch" href="/dist/assets/js/77.0b8b3c74.js"><link rel="prefetch" href="/dist/assets/js/78.e5194eb3.js"><link rel="prefetch" href="/dist/assets/js/79.39bb4c79.js"><link rel="prefetch" href="/dist/assets/js/8.144f56e1.js"><link rel="prefetch" href="/dist/assets/js/80.c5b13a5f.js"><link rel="prefetch" href="/dist/assets/js/81.a6a1661a.js"><link rel="prefetch" href="/dist/assets/js/82.f95f29fd.js"><link rel="prefetch" href="/dist/assets/js/83.f45c0790.js"><link rel="prefetch" href="/dist/assets/js/84.3ce8f8ae.js"><link rel="prefetch" href="/dist/assets/js/85.0af8d964.js"><link rel="prefetch" href="/dist/assets/js/86.ad33b21e.js"><link rel="prefetch" href="/dist/assets/js/87.d70bb385.js"><link rel="prefetch" href="/dist/assets/js/88.fa542aee.js"><link rel="prefetch" href="/dist/assets/js/89.c26ab82e.js"><link rel="prefetch" href="/dist/assets/js/9.4375f41a.js"><link rel="prefetch" href="/dist/assets/js/90.8640bff5.js"><link rel="prefetch" href="/dist/assets/js/91.f4c9a3e7.js"><link rel="prefetch" href="/dist/assets/js/92.19bdeba2.js"><link rel="prefetch" href="/dist/assets/js/93.55d42cd8.js">
+    <link rel="stylesheet" href="/dist/assets/css/0.styles.ad3a04d5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/dist/" class="home-link router-link-active"><!----> <span class="site-name">速度至上</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/dist/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/dist/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dist/language/chinese.html" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/dist/language/english.html" class="nav-link">
+  English
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/dist/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/dist/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dist/language/chinese.html" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/dist/language/english.html" class="nav-link">
+  English
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>node</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js知识点</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js杂项知识点</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js函数（方法）</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>有待学习的</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>VUE</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/dist/page-vue/vue-1/" class="sidebar-link">vue 知识点1</a></li><li><a href="/dist/page-vue/vue-2/" class="sidebar-link">vue面试题</a></li><li><a href="/dist/page-vue/vue-3/" class="sidebar-link">虚拟Dom（Virtual Dom）</a></li><li><a href="/dist/page-vue/vue-4/" class="active sidebar-link">Vuex实战</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/dist/page-vue/vue-4/#vuex实战" class="sidebar-link">Vuex实战</a></li><li class="sidebar-sub-header"><a href="/dist/page-vue/vue-4/#_1-0-安装" class="sidebar-link">1.0 安装</a></li><li class="sidebar-sub-header"><a href="/dist/page-vue/vue-4/#_2-0-创建文件" class="sidebar-link">2.0 创建文件</a></li><li class="sidebar-sub-header"><a href="/dist/page-vue/vue-4/#_3-0-简单使用" class="sidebar-link">3.0  简单使用</a></li><li class="sidebar-sub-header"><a href="/dist/page-vue/vue-4/#_4-0-getter修饰器" class="sidebar-link">4.0 Getter修饰器</a></li><li class="sidebar-sub-header"><a href="/dist/page-vue/vue-4/#_5-0-了解如何修改值：mutation" class="sidebar-link">5.0 了解如何修改值：Mutation</a></li><li class="sidebar-sub-header"><a href="/dist/page-vue/vue-4/#_6-0-了解一步操作-actions" class="sidebar-link">6.0 了解一步操作 Actions</a></li><li class="sidebar-sub-header"><a href="/dist/page-vue/vue-4/#_7-0-项目结构" class="sidebar-link">7.0 项目结构</a></li><li class="sidebar-sub-header"><a href="/dist/page-vue/vue-4/#总结" class="sidebar-link">总结</a></li></ul></li><li><a href="/dist/page-vue/vue-5/" class="sidebar-link">Vue Router(路由)</a></li><li><a href="/dist/page-vue/vue-6/" class="sidebar-link">vue权限控制之路由动态加载</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTTP</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>es6相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>webpack</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>英语单词</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="vuex实战"><a href="#vuex实战" class="header-anchor">#</a> Vuex实战</h2> <p>Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。
+<br>英译：</p> <blockquote><p>dispatch 派遣;调遣;派出;发出，发送 <br>
+state 状态<br>
+actions 行动 所做之事<br>
+mutations 变异，突变<br>
+commit 承诺，保证(做某事、遵守协议或遵从安排等)<br>
+payload 有效载荷 装载量<br></p></blockquote> <h2 id="_1-0-安装"><a href="#_1-0-安装" class="header-anchor">#</a> 1.0 安装</h2> <p>npm install vuex --save<br>
+注意版本，我第一次安装的时候版本就过高导致出错，后来就删除了，从新装了一下npm install vuex@2.0 --save</p> <h2 id="_2-0-创建文件"><a href="#_2-0-创建文件" class="header-anchor">#</a> 2.0 创建文件</h2> <p>在src文件夹下创建 store文件，然后创建index.js 里面内容如下</p> <div class="language- extra-class"><pre class="language-text"><code>import Vue from 'vue'
+import Vuex from 'vuex'
+Vue.use(Vuex);
+
+const store = new Vuex.Store({
+  state:{
+    count:1
+  },
+  mutations:{
+    increment(state){
+      state.count++
+    }
+  }
+});
+export default store 
+</code></pre></div><p>再然后在 main.js里面引入</p> <div class="language- extra-class"><pre class="language-text"><code>import Vue from 'vue'
+import App from './App'
+import router from './router'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+import store from './store/index'
+Vue.use(ElementUI);
+Vue.config.productionTip = false
+
+new Vue({
+  el: '#app',
+  router,
+  store,
+  components: { App },
+  template: '&lt;App/&gt;'
+})
+</code></pre></div><h2 id="_3-0-简单使用"><a href="#_3-0-简单使用" class="header-anchor">#</a> 3.0  简单使用</h2> <p>你可以通过 store.state 来获取状态对象，以及通过 store.commit 方法触发状态变更：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div class=&quot;hello&quot;&gt;
+    &lt;div&gt;{{num}}&lt;/div&gt;
+    &lt;el-button type=&quot;primary&quot; @click=&quot;look()&quot;&gt;点我看看&lt;/el-button&gt;
+&lt;/div&gt;
+data () {
+    return {
+      msg: 'Welcome to Your Vue.js App',
+      num:null,
+    }
+  },
+  created(){
+    console.log(this.$store)
+    this.num = this.$store.state.count;
+  },
+  methods:{
+      look(){
+        this.$store.commit('increment')
+        console.log(this.$store.state)
+        this.num = this.$store.state.count; // 注意 改变之后得赋值要不然怎么取到呢，得从新取一下
+      },
+  },
+</code></pre></div><p>每点击一次就能加1，大家可以试一试。<br>
+上面步骤略显繁琐，那我们直接放在计算属性里面</p> <div class="language- extra-class"><pre class="language-text"><code>data () {
+    return {
+      msg: 'Welcome to Your Vue.js App',
+      // num:null,
+    }
+  },
+computed:{
+    num(){ // 放在计算属性 data里面的 num 是需要删除的
+      return this.$store.state.count
+    }
+},
+created(){
+},
+methods:{
+  look(){
+    this.$store.commit('increment')
+  },
+},
+</code></pre></div><p>当然了 每次都 this.$store.state.xxx 不符合我们程序员的 “懒散”，上</p> <div class="language- extra-class"><pre class="language-text"><code>import { mapState } from 'vuex';
+computed: {
+    ...mapState(['count']), 
+},
+如果你指写上面的话，我们的程序指定有问题，因为我们渲染的值是num
+所以就需要该名字了，
+computed: {
+    ...mapState({num:'count'}), 
+},
+</code></pre></div><h2 id="_4-0-getter修饰器"><a href="#_4-0-getter修饰器" class="header-anchor">#</a> 4.0 Getter修饰器</h2> <p>比如我们上面的count，需要我们在前面全部加一个字符串“hello”，当然我们在页面就可以直接加，但是如果页面很多，我们就要修改很多次，
+如果要把“hello”，变成“fuck”了，我们又要去多个页面修改。所有就出现了Getter这个修饰器。</p> <div class="language- extra-class"><pre class="language-text"><code>const store = new Vuex.Store({
+  state:{
+    count:1,
+    name:'小红'
+  },
+  mutations:{
+    increment(state){
+      state.count++
+    }
+  },
+  getters:{
+    getCount(state){
+      return 'hello '+state.count
+    },
+  }
+});
+// 每次获取的时候
+created(){
+    console.log(this.$store.getters.getCount) // hello 1
+},
+// 当然这样太多字了
+用mapGetters去结构
+import {mapState,mapGetters} from 'vuex'
+computed:{
+    ...mapState({num:'count'}), //
+    ...mapGetters(['getCount']) // 注意用的时候名字 就叫 ‘getCount’
+}, 
+当然 我们可以修改它的名
+...mapGetters({ otherCount: 'getCount' }) // 页面这样用就可以了{{otherCount}}
+</code></pre></div><h2 id="_5-0-了解如何修改值：mutation"><a href="#_5-0-了解如何修改值：mutation" class="header-anchor">#</a> 5.0 了解如何修改值：Mutation</h2> <p>更改 Vuex 的 store 中的状态的唯一方法是提交 mutation。<br>
+我们上面已经用过mutation了，下面讲mutation的进阶，传参，这跟我们函数传参一样一样的</p> <div class="language- extra-class"><pre class="language-text"><code>mutations:{
+    increment(state,n){
+      state.count += n  
+    }
+}, 
+页面方法
+look(){
+    this.$store.commit('increment',2) // 每次都加2 触发一次变成3 再触发变成5 然后7
+},
+但是呢 参数这边官方建议传递一个对象，而不是一个值，这样更美观，其实我觉的是后面人看代码更好理解
+mutations:{
+    increment(state,payload){
+      state.count += payload.number
+    }
+},
+页面方法
+look(){
+    this.$store.commit('increment',{number:666}) //每次都加666
+},
+当然也有对应的 mapMutations 但是我个人建议不用
+</code></pre></div><h2 id="_6-0-了解一步操作-actions"><a href="#_6-0-了解一步操作-actions" class="header-anchor">#</a> 6.0 了解一步操作 Actions</h2> <p>在 mutation 中混合异步调用会导致你的程序很难调试。例如，当你调用了两个包含异步回调的 mutation 来改变状态，你怎么知道什么时候回调和哪个先回调呢？这就是为什么我们要区分这两个概念。在 Vuex 中，mutation 都是同步事务：
+<br> 修改store/index.js</p> <div class="language- extra-class"><pre class="language-text"><code>const store = new Vuex.Store({
+  state:{
+    count:1,
+    name:'小红'
+  },
+  mutations:{
+    increment(state,payload){
+      state.count += payload.number
+    }
+  },
+  getters:{
+    getCount(state){
+      return 'hello '+state.count
+    },
+  },
+  actions:{
+      setNum(content){ // content 默认参数 与 store 实例具有相同方法和属性
+        return new Promise((resolve,reject)=&gt;{
+          setTimeout(()=&gt;{
+            content.commit('increment',{number:100})
+            resolve()
+          },1000)
+        })
+      }
+  },
+});
+export default store
+
+async created(){
+    console.log('旧值:',this.$store.state.count) //  1
+    await this.$store.dispatch('setNum');
+    console.log('新值:',this.$store.state.count) // 101
+},
+</code></pre></div><p>看了例子，是不是明白了，action就是去提交mutation的，什么异步操作都在action中消化了，最后再去提交mutation的。<br>
+简化写法</p> <div class="language- extra-class"><pre class="language-text"><code>actions 稍作修改
+actions:{
+      setNum(content,payLoad){
+        return new Promise((resolve,reject)=&gt;{
+          setTimeout(()=&gt;{
+            content.commit('increment',{number:payLoad.number})
+            resolve()
+          },1000)
+        })
+      }
+  },
+  页面修改如下
+import { mapActions } from 'vuex';
+ async created(){
+    await this.setNum({ number: 101 })
+    console.log(this.$store.state.count) //102
+  },
+  methods:{
+    ...mapActions(['setNum']),
+  },
+  当然我们也可以 修改这个名字
+  ...mapActions({ OthersetNum: 'setNum' }), // 调用this.OthersetNum()
+</code></pre></div><p>看到这里，你应该明白action在vuex的位置了吧，什么时候该用action，什么时候不用它，你肯定有了自己的判断，最主要的判断条件就是我要做的操作是不是异步，这也是action存在的本质。当然，你不要将action和mutation混为一谈，action其实就是mutation的上一级，在action这里处理完异步的一些操作后，后面的修改state就交给mutation去做了</p> <h2 id="_7-0-项目结构"><a href="#_7-0-项目结构" class="header-anchor">#</a> 7.0 项目结构</h2> <p>我们目前就这一个index.js 假设如果我们这个页面内容很多很多，那以后看起来或者维护起来就麻烦了，所以我们把这个页面拆分一下
+<img src="/dist/assets/img/1.8415b8e8.jpg" alt="avatar"><br>
+index.js里面大致包含state/getters/mutations/actions这四个属性，我们可以彻底点，index.js里面就保持这个架子，把里面的内容四散到其他文件中。
+<br>
+state.js</p> <div class="language- extra-class"><pre class="language-text"><code>export const state = {
+  count:1,
+  name:'小红'
+}
+</code></pre></div><p>getters.js</p> <div class="language- extra-class"><pre class="language-text"><code>export const getters = {
+    getCount(state){
+    return 'hello '+state.count
+  },
+}
+</code></pre></div><p>mutations.js</p> <div class="language- extra-class"><pre class="language-text"><code>export const mutations = {
+  increment(state,payload){
+    state.count += payload.number
+  }
+}
+</code></pre></div><p>actions.js</p> <div class="language- extra-class"><pre class="language-text"><code>export const actions =  {
+  setNum(content,payLoad){
+    return new Promise((resolve,reject)=&gt;{
+      setTimeout(()=&gt;{
+        content.commit('increment',{number:payLoad.number})
+        resolve()
+      },1000)
+    })
+  }
+}
+</code></pre></div><p>最后我们的index.js</p> <div class="language- extra-class"><pre class="language-text"><code>import Vue from 'vue'
+import Vuex from 'vuex'
+import {state} from './state'
+import {getters} from &quot;./getters&quot;;
+import {mutations} from &quot;./mutations&quot;;
+import {actions} from &quot;./actions&quot;;
+
+Vue.use(Vuex);
+
+const store = new Vuex.Store({
+  state:state,
+  getters:getters,
+  mutations:mutations,
+  actions:actions
+});
+export default store
+</code></pre></div><p>以上就是简单的进行了按属性进行拆分store里面的代码，这样就比较清晰了哈，你需要加什么就去哪里加，大家各干各的，互不影响。<br>
+当然，你完全可以不这么做，引用官方文档中的一句话，“需要多人协作的大型项目中，这会很有帮助。但如果你不喜欢，你完全可以不这样做”。
+<br></p> <h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <p>以上就是vuex的基本操作了，希望大家学以致用。
+<br>参考链接</p> <blockquote><p>https://vuex.vuejs.org/zh/installation.html<br>
+https://juejin.cn/post/6928468842377117709</p></blockquote> <p>你要克服懒惰，你要克服游手好闲，你要克服漫长的白日梦，你要克服一蹴而就的妄想，你要克服自以为是浅薄的幽默感。你要独立生长在这世上，不寻找不依靠，因为冷漠寡情的人孤独一生。你要坚强，振作，自立，不能软弱，逃避，害怕。不要沉溺在消极负面得情绪里，要正面阳光得对待生活和爱你的人。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/dist/page-vue/vue-3/" class="prev">
+        虚拟Dom（Virtual Dom）
+      </a></span> <span class="next"><a href="/dist/page-vue/vue-5/">
+        Vue Router(路由)
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/dist/assets/js/app.53aea44e.js" defer></script><script src="/dist/assets/js/2.c8eb3e76.js" defer></script><script src="/dist/assets/js/5.712f13ff.js" defer></script>
+  </body>
+</html>

@@ -48,6 +48,8 @@ module.exports = {
 				children: [
 					'/page-2/one/',
 					'/page-2/two/',
+					'/page-2/console/',
+					'/page-2/model/',
 				]
 			},
 			{

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>sleep休眠或等待函数 | 速度至上</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/dist/img/logo.ico">
+    <link rel="manifest" href="/dist/manifest.json">
+    <meta name="description" content="Reggie Study Notes">
+    <link rel="preload" href="/dist/assets/css/0.styles.ad3a04d5.css" as="style"><link rel="preload" href="/dist/assets/js/app.53aea44e.js" as="script"><link rel="preload" href="/dist/assets/js/2.c8eb3e76.js" as="script"><link rel="preload" href="/dist/assets/js/57.c8a58ee2.js" as="script"><link rel="prefetch" href="/dist/assets/js/10.99b3fe64.js"><link rel="prefetch" href="/dist/assets/js/11.c100e7aa.js"><link rel="prefetch" href="/dist/assets/js/12.f0d4a132.js"><link rel="prefetch" href="/dist/assets/js/13.bc6a69c8.js"><link rel="prefetch" href="/dist/assets/js/14.6d6162b5.js"><link rel="prefetch" href="/dist/assets/js/15.83d7aa42.js"><link rel="prefetch" href="/dist/assets/js/16.a32089be.js"><link rel="prefetch" href="/dist/assets/js/17.e3b40a13.js"><link rel="prefetch" href="/dist/assets/js/18.1014ffe8.js"><link rel="prefetch" href="/dist/assets/js/19.a37c2571.js"><link rel="prefetch" href="/dist/assets/js/20.149cc93b.js"><link rel="prefetch" href="/dist/assets/js/21.e8b8c4b3.js"><link rel="prefetch" href="/dist/assets/js/22.8de8650b.js"><link rel="prefetch" href="/dist/assets/js/23.d0e3d35b.js"><link rel="prefetch" href="/dist/assets/js/24.2a78a121.js"><link rel="prefetch" href="/dist/assets/js/25.900b32bb.js"><link rel="prefetch" href="/dist/assets/js/26.e5d2f5cd.js"><link rel="prefetch" href="/dist/assets/js/27.a4fa92c2.js"><link rel="prefetch" href="/dist/assets/js/28.7224fe30.js"><link rel="prefetch" href="/dist/assets/js/29.5c45df8b.js"><link rel="prefetch" href="/dist/assets/js/3.eccc0c92.js"><link rel="prefetch" href="/dist/assets/js/30.6dad4003.js"><link rel="prefetch" href="/dist/assets/js/31.6cc52e2a.js"><link rel="prefetch" href="/dist/assets/js/32.d071c597.js"><link rel="prefetch" href="/dist/assets/js/33.effa68bc.js"><link rel="prefetch" href="/dist/assets/js/34.39fa8140.js"><link rel="prefetch" href="/dist/assets/js/35.2939c295.js"><link rel="prefetch" href="/dist/assets/js/36.d11b50f9.js"><link rel="prefetch" href="/dist/assets/js/37.9bdbb1f2.js"><link rel="prefetch" href="/dist/assets/js/38.59c5ecd7.js"><link rel="prefetch" href="/dist/assets/js/39.a7a8037c.js"><link rel="prefetch" href="/dist/assets/js/4.acf22840.js"><link rel="prefetch" href="/dist/assets/js/40.c74438e6.js"><link rel="prefetch" href="/dist/assets/js/41.043a6787.js"><link rel="prefetch" href="/dist/assets/js/42.91479794.js"><link rel="prefetch" href="/dist/assets/js/43.5f1e6d5e.js"><link rel="prefetch" href="/dist/assets/js/44.7f595719.js"><link rel="prefetch" href="/dist/assets/js/45.e6fd0721.js"><link rel="prefetch" href="/dist/assets/js/46.62f0e57f.js"><link rel="prefetch" href="/dist/assets/js/47.53195b37.js"><link rel="prefetch" href="/dist/assets/js/48.531f119d.js"><link rel="prefetch" href="/dist/assets/js/49.482fd7b5.js"><link rel="prefetch" href="/dist/assets/js/5.712f13ff.js"><link rel="prefetch" href="/dist/assets/js/50.3b1397f7.js"><link rel="prefetch" href="/dist/assets/js/51.f896dec0.js"><link rel="prefetch" href="/dist/assets/js/52.085cb00f.js"><link rel="prefetch" href="/dist/assets/js/53.823e478a.js"><link rel="prefetch" href="/dist/assets/js/54.e850c0ec.js"><link rel="prefetch" href="/dist/assets/js/55.23da1051.js"><link rel="prefetch" href="/dist/assets/js/56.811da386.js"><link rel="prefetch" href="/dist/assets/js/58.92097436.js"><link rel="prefetch" href="/dist/assets/js/59.5b3c650f.js"><link rel="prefetch" href="/dist/assets/js/6.a9728e43.js"><link rel="prefetch" href="/dist/assets/js/60.755c497b.js"><link rel="prefetch" href="/dist/assets/js/61.0779fc84.js"><link rel="prefetch" href="/dist/assets/js/62.52528737.js"><link rel="prefetch" href="/dist/assets/js/63.ae780dda.js"><link rel="prefetch" href="/dist/assets/js/64.4f4c8894.js"><link rel="prefetch" href="/dist/assets/js/65.1a99cd65.js"><link rel="prefetch" href="/dist/assets/js/66.dc0711ba.js"><link rel="prefetch" href="/dist/assets/js/67.fe4ca852.js"><link rel="prefetch" href="/dist/assets/js/68.e3350852.js"><link rel="prefetch" href="/dist/assets/js/69.f705a2d7.js"><link rel="prefetch" href="/dist/assets/js/7.6f290f44.js"><link rel="prefetch" href="/dist/assets/js/70.d5b3b9e0.js"><link rel="prefetch" href="/dist/assets/js/71.797daea0.js"><link rel="prefetch" href="/dist/assets/js/72.7bce5541.js"><link rel="prefetch" href="/dist/assets/js/73.b22a9a6b.js"><link rel="prefetch" href="/dist/assets/js/74.d2c35b89.js"><link rel="prefetch" href="/dist/assets/js/75.7e379f64.js"><link rel="prefetch" href="/dist/assets/js/76.854f4694.js"><link rel="prefetch" href="/dist/assets/js/77.0b8b3c74.js"><link rel="prefetch" href="/dist/assets/js/78.e5194eb3.js"><link rel="prefetch" href="/dist/assets/js/79.39bb4c79.js"><link rel="prefetch" href="/dist/assets/js/8.144f56e1.js"><link rel="prefetch" href="/dist/assets/js/80.c5b13a5f.js"><link rel="prefetch" href="/dist/assets/js/81.a6a1661a.js"><link rel="prefetch" href="/dist/assets/js/82.f95f29fd.js"><link rel="prefetch" href="/dist/assets/js/83.f45c0790.js"><link rel="prefetch" href="/dist/assets/js/84.3ce8f8ae.js"><link rel="prefetch" href="/dist/assets/js/85.0af8d964.js"><link rel="prefetch" href="/dist/assets/js/86.ad33b21e.js"><link rel="prefetch" href="/dist/assets/js/87.d70bb385.js"><link rel="prefetch" href="/dist/assets/js/88.fa542aee.js"><link rel="prefetch" href="/dist/assets/js/89.c26ab82e.js"><link rel="prefetch" href="/dist/assets/js/9.4375f41a.js"><link rel="prefetch" href="/dist/assets/js/90.8640bff5.js"><link rel="prefetch" href="/dist/assets/js/91.f4c9a3e7.js"><link rel="prefetch" href="/dist/assets/js/92.19bdeba2.js"><link rel="prefetch" href="/dist/assets/js/93.55d42cd8.js">
+    <link rel="stylesheet" href="/dist/assets/css/0.styles.ad3a04d5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/dist/" class="home-link router-link-active"><!----> <span class="site-name">速度至上</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/dist/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/dist/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dist/language/chinese.html" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/dist/language/english.html" class="nav-link">
+  English
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/dist/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/dist/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dist/language/chinese.html" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/dist/language/english.html" class="nav-link">
+  English
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>node</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js知识点</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js杂项知识点</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>js函数（方法）</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/dist/page-js-fun/fun-sleep/" class="active sidebar-link">sleep休眠或等待函数</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/dist/page-js-fun/fun-sleep/#sleep休眠或等待函数" class="sidebar-link">sleep休眠或等待函数</a></li><li class="sidebar-sub-header"><a href="/dist/page-js-fun/fun-sleep/#sleep函数" class="sidebar-link">sleep函数</a></li><li class="sidebar-sub-header"><a href="/dist/page-js-fun/fun-sleep/#_1-0-settimeout实现" class="sidebar-link">1.0 setTimeOut实现</a></li><li class="sidebar-sub-header"><a href="/dist/page-js-fun/fun-sleep/#_2-0-使用promise实现" class="sidebar-link">2.0 使用promise实现</a></li><li class="sidebar-sub-header"><a href="/dist/page-js-fun/fun-sleep/#_3-0-使用promise和await实现" class="sidebar-link">3.0 使用promise和await实现</a></li><li class="sidebar-sub-header"><a href="/dist/page-js-fun/fun-sleep/#_4-0-while实现" class="sidebar-link">4.0 while实现</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>有待学习的</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>VUE</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTTP</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>es6相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>webpack</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>英语单词</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="sleep休眠或等待函数"><a href="#sleep休眠或等待函数" class="header-anchor">#</a> sleep休眠或等待函数</h2> <h2 id="sleep函数"><a href="#sleep函数" class="header-anchor">#</a> sleep函数</h2> <p>JavaScript是单线程运行的，没有内置的sleep函数，现在模拟实现sleep延迟执行的效果。<br>
+使用休眠函数实现页面改变背景颜色，黑色2秒，蓝色3秒，黄色4秒，循环改变颜色。</p> <h2 id="_1-0-settimeout实现"><a href="#_1-0-settimeout实现" class="header-anchor">#</a> 1.0 setTimeOut实现</h2> <p>直接使用setTimeout实现sleep()的方法，兼容性最好，但是使用了回调函数的实现方式，代码的可读性和维护性不是很好。<br>
+废话少说直接上代码，我们来看</p> <div class="language- extra-class"><pre class="language-text"><code>var bg = document.getElementsByTagName('body')[0]
+
+function changeColor(color) {
+	bg.style.backgroundColor=color
+}
+
+function sleepHandle(){
+	changeColor('black');
+	setTimeout(()=&gt;{
+		changeColor('blue');
+		setTimeout(()=&gt;{
+			changeColor('yellow');
+			setTimeout(()=&gt;{
+				sleepHandle()
+			},4000)
+		},3000)
+	},2000)
+}
+sleepHandle()
+</code></pre></div><p>是不是很简单，这可读性和可维护性也不差呀，怎么就不友好了，那是因为我们做的简单，假设改变颜色需要10种呢，一下就能感受出来了，当然了
+可能自己写的没问题，但是你让其他同事看这代码，估计是想揍人的啦。</p> <h2 id="_2-0-使用promise实现"><a href="#_2-0-使用promise实现" class="header-anchor">#</a> 2.0 使用promise实现</h2> <p>在ES6的语法中，Promise是sleep方法异步的实现一种方式，借助Promise方法可以优雅的构建sleep实现方法，避免了出现函数回调‘地狱’。<br></p> <blockquote><p>使用Promise，把下一次的颜色改变写在then里面，最后同样使用递归完成循环。
+使用promise代替setTimeout，利用链式调用以及then来实现颜色的转换，then返回一个promise对象，当这个对象为resolve状态then可以持续调用。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>var bg = document.getElementsByTagName('body')[0]
+
+function changeColor(color,time) {
+	return new Promise((resolve,reject)=&gt;{
+		bg.style.backgroundColor=color
+		setTimeout(()=&gt;{
+			resolve()
+		},time)
+	})
+}
+
+function main(){
+	Promise.resolve().then(()=&gt;{
+		return changeColor('black',2000)
+	}).then(()=&gt;{
+		return changeColor('blue',3000)
+	}).then(()=&gt;{
+		return changeColor('yellow',4000)
+	}).then(()=&gt;{
+		main()
+	})
+}
+main()
+</code></pre></div><p>你看看,你看看是不是清晰很多了，等等似乎也不是那么清晰了，好多.then.then的，不要慌我们继续往下看</p> <h2 id="_3-0-使用promise和await实现"><a href="#_3-0-使用promise和await实现" class="header-anchor">#</a> 3.0 使用promise和await实现</h2> <p>async await实际上是generator和promise的语法糖，在提供同步编程方式实现异步调用的基础上，同时满足对sleep函数语义化的支持，也是常用的sleep的实现方式。</p> <div class="language- extra-class"><pre class="language-text"><code>var bg = document.getElementsByTagName('body')[0]
+
+ function changeColor(color, time) {
+	return new Promise((resolve,reject)=&gt;{
+		bg.style.backgroundColor=color
+		setTimeout(()=&gt;{
+			resolve()
+		},time)
+	})
+}
+
+async function main() {
+	await changeColor('black', 2000);
+	console.log(2)
+	await changeColor('blue', 3000);
+	console.log(3)
+	await changeColor('yellow', 4000);
+	console.log(4)
+	main()
+}
+main() 
+</code></pre></div><p>2s后输出2 3s后输出3 4s后输出4 然后继续循环往复的进行。<br>
+这样逻辑和功能就分开，是不是更清晰了一点了。所以以后再有需要写等一会儿再执行的情况，我们这个方法完全可以胜任的。</p> <h2 id="_4-0-while实现"><a href="#_4-0-while实现" class="header-anchor">#</a> 4.0 while实现</h2> <p>while的语法我们都知道，当满足某些条件的时候，while里面的内容会一直执行，所以如下面只有当超过500毫秒才能执行后面的逻辑</p> <div class="language- extra-class"><pre class="language-text"><code> let sleep = (delay = 500) =&gt; {
+    let t = Date.now();
+    while(Date.now() - t &lt;= delay) {
+        continue;
+    }
+    doSomeThing
+};
+</code></pre></div><p>我们就叫上面的代码为阻塞主进程之休眠。<br></p> <p>通宵复习是因为平时没听过课，拼命减肥是因为吃零食从来不会控制，分手了才开始后悔是因为之前没有给足够的关心。于是别人开始敬佩你的勤奋，同情你的遭遇，可是只有你知道，你的痛苦都是罪有应得。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/dist/page-js-design/design-11/" class="prev">
+        装饰器模式
+      </a></span> <span class="next"><a href="/dist/page-a/">
+        js 轮询
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/dist/assets/js/app.53aea44e.js" defer></script><script src="/dist/assets/js/2.c8eb3e76.js" defer></script><script src="/dist/assets/js/57.c8a58ee2.js" defer></script>
+  </body>
+</html>

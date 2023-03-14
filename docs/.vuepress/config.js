@@ -58,6 +58,16 @@ module.exports = {
 				title: 'js杂项知识点',
 				children: [
 					'/page-2/one/',
+					'/page-2/console/',
+					'/page-2/model/',
+					'/page-2/actionScope/',
+					'/page-2/variable/',
+					'/page-2/json-server/',
+					'/page-2/js-7/',
+					'/page-2/js-8/',
+					'/page-2/js-9/',
+					'/page-2/js-10/',
+					'/page-2/js-11/',
 					'/page-2/two/',
 				]
 			},
@@ -82,7 +92,7 @@ module.exports = {
 				title: 'js函数（方法）',
 				// collapsable: false,
 				children: [
-					'/page-js-fun/fun-sleep/',
+					'/page-js-fun/function-1/',
 				]
 			},
 			{
@@ -95,7 +105,6 @@ module.exports = {
 				title: 'HTML',
 				children: [
 					'/page-html/html-1/',
-					'/page-html/html-2/',
 				]
 			},
 			{
@@ -117,7 +126,6 @@ module.exports = {
 					'/page-js/js-4/',
 					'/page-js/js-5/',
 					'/page-js/js-6/',
-					'/page-js/js-7/',
 					'/page-js/js-8/',
 					'/page-js/js-9/',
 					'/page-js/js-10/',
@@ -179,6 +187,18 @@ module.exports = {
                     '/page-webpack/',
                 ]
             },
+			{
+				title: '数据结构与算法',
+				children: [
+					'/page-structure/structure-1/',
+				]
+			},
+			{
+				title: 'javaScript函数式编程（美）',
+				children: [
+					'/page-js-function/function-1/',
+				]
+			},
 			{
 				title: '英语单词',
 				children: [
