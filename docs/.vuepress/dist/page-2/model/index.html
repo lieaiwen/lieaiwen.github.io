@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>3.0 模块导入导出大全 | 速度至上</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/dist/img/logo.ico">
+    <link rel="manifest" href="/dist/manifest.json">
+    <meta name="description" content="Reggie Study Notes">
+    <link rel="preload" href="/dist/assets/css/0.styles.ad3a04d5.css" as="style"><link rel="preload" href="/dist/assets/js/app.d79bc38e.js" as="script"><link rel="preload" href="/dist/assets/js/2.a6a1bbd9.js" as="script"><link rel="preload" href="/dist/assets/js/39.d59b15d2.js" as="script"><link rel="prefetch" href="/dist/assets/js/10.6f1128cd.js"><link rel="prefetch" href="/dist/assets/js/100.11170ca4.js"><link rel="prefetch" href="/dist/assets/js/101.df4256bb.js"><link rel="prefetch" href="/dist/assets/js/102.73c0978a.js"><link rel="prefetch" href="/dist/assets/js/103.c3f70e3b.js"><link rel="prefetch" href="/dist/assets/js/104.80e8d438.js"><link rel="prefetch" href="/dist/assets/js/105.7fcc574d.js"><link rel="prefetch" href="/dist/assets/js/106.f2b6dd5e.js"><link rel="prefetch" href="/dist/assets/js/107.387c438d.js"><link rel="prefetch" href="/dist/assets/js/108.84876aec.js"><link rel="prefetch" href="/dist/assets/js/109.be9663a4.js"><link rel="prefetch" href="/dist/assets/js/11.f0b2e5ad.js"><link rel="prefetch" href="/dist/assets/js/110.6fc9fd7b.js"><link rel="prefetch" href="/dist/assets/js/111.f0f30997.js"><link rel="prefetch" href="/dist/assets/js/12.5f83c13d.js"><link rel="prefetch" href="/dist/assets/js/13.5302d541.js"><link rel="prefetch" href="/dist/assets/js/14.6d385b49.js"><link rel="prefetch" href="/dist/assets/js/15.180126ec.js"><link rel="prefetch" href="/dist/assets/js/16.279dd344.js"><link rel="prefetch" href="/dist/assets/js/17.b3411b71.js"><link rel="prefetch" href="/dist/assets/js/18.df40f619.js"><link rel="prefetch" href="/dist/assets/js/19.3d5204a0.js"><link rel="prefetch" href="/dist/assets/js/20.9529900c.js"><link rel="prefetch" href="/dist/assets/js/21.d5e6a04b.js"><link rel="prefetch" href="/dist/assets/js/22.c2f2de64.js"><link rel="prefetch" href="/dist/assets/js/23.65cd84c0.js"><link rel="prefetch" href="/dist/assets/js/24.d195bc64.js"><link rel="prefetch" href="/dist/assets/js/25.00e36db3.js"><link rel="prefetch" href="/dist/assets/js/26.82157dcf.js"><link rel="prefetch" href="/dist/assets/js/27.d423e5b0.js"><link rel="prefetch" href="/dist/assets/js/28.6af5f0cc.js"><link rel="prefetch" href="/dist/assets/js/29.a789eb6b.js"><link rel="prefetch" href="/dist/assets/js/3.41915d9e.js"><link rel="prefetch" href="/dist/assets/js/30.a2c5a2b3.js"><link rel="prefetch" href="/dist/assets/js/31.b5837568.js"><link rel="prefetch" href="/dist/assets/js/32.c0e493bb.js"><link rel="prefetch" href="/dist/assets/js/33.6876c260.js"><link rel="prefetch" href="/dist/assets/js/34.c963248f.js"><link rel="prefetch" href="/dist/assets/js/35.793f7af6.js"><link rel="prefetch" href="/dist/assets/js/36.359336bf.js"><link rel="prefetch" href="/dist/assets/js/37.e4288439.js"><link rel="prefetch" href="/dist/assets/js/38.f187f4aa.js"><link rel="prefetch" href="/dist/assets/js/4.d2c0f82f.js"><link rel="prefetch" href="/dist/assets/js/40.c0e8642a.js"><link rel="prefetch" href="/dist/assets/js/41.417cec39.js"><link rel="prefetch" href="/dist/assets/js/42.e67adf7d.js"><link rel="prefetch" href="/dist/assets/js/43.b0c59c1d.js"><link rel="prefetch" href="/dist/assets/js/44.844d5752.js"><link rel="prefetch" href="/dist/assets/js/45.1688c285.js"><link rel="prefetch" href="/dist/assets/js/46.c938498a.js"><link rel="prefetch" href="/dist/assets/js/47.d16a2de7.js"><link rel="prefetch" href="/dist/assets/js/48.0f6ccef5.js"><link rel="prefetch" href="/dist/assets/js/49.83c72d63.js"><link rel="prefetch" href="/dist/assets/js/5.eef27408.js"><link rel="prefetch" href="/dist/assets/js/50.d75aa61b.js"><link rel="prefetch" href="/dist/assets/js/51.7a3fc515.js"><link rel="prefetch" href="/dist/assets/js/52.964c0d40.js"><link rel="prefetch" href="/dist/assets/js/53.6e60e28c.js"><link rel="prefetch" href="/dist/assets/js/54.5531b960.js"><link rel="prefetch" href="/dist/assets/js/55.c61acf00.js"><link rel="prefetch" href="/dist/assets/js/56.e7d0f61d.js"><link rel="prefetch" href="/dist/assets/js/57.0bd4a98c.js"><link rel="prefetch" href="/dist/assets/js/58.96197d13.js"><link rel="prefetch" href="/dist/assets/js/59.67effb16.js"><link rel="prefetch" href="/dist/assets/js/6.3e0d7e62.js"><link rel="prefetch" href="/dist/assets/js/60.a6e7f59c.js"><link rel="prefetch" href="/dist/assets/js/61.9a50da49.js"><link rel="prefetch" href="/dist/assets/js/62.c7cd0bab.js"><link rel="prefetch" href="/dist/assets/js/63.65162c49.js"><link rel="prefetch" href="/dist/assets/js/64.4bc8c61b.js"><link rel="prefetch" href="/dist/assets/js/65.39864fc0.js"><link rel="prefetch" href="/dist/assets/js/66.11ecd0d0.js"><link rel="prefetch" href="/dist/assets/js/67.b24d0a8f.js"><link rel="prefetch" href="/dist/assets/js/68.908c8aa2.js"><link rel="prefetch" href="/dist/assets/js/69.308baca4.js"><link rel="prefetch" href="/dist/assets/js/7.64ed6c1b.js"><link rel="prefetch" href="/dist/assets/js/70.a9ad4f9b.js"><link rel="prefetch" href="/dist/assets/js/71.4fb4daef.js"><link rel="prefetch" href="/dist/assets/js/72.e9061cad.js"><link rel="prefetch" href="/dist/assets/js/73.5b57c759.js"><link rel="prefetch" href="/dist/assets/js/74.7177e34d.js"><link rel="prefetch" href="/dist/assets/js/75.b9757d9a.js"><link rel="prefetch" href="/dist/assets/js/76.8e17deca.js"><link rel="prefetch" href="/dist/assets/js/77.b80787b3.js"><link rel="prefetch" href="/dist/assets/js/78.a06065c1.js"><link rel="prefetch" href="/dist/assets/js/79.f4fe4f81.js"><link rel="prefetch" href="/dist/assets/js/8.ba3e1811.js"><link rel="prefetch" href="/dist/assets/js/80.52c9f2d0.js"><link rel="prefetch" href="/dist/assets/js/81.a547eb77.js"><link rel="prefetch" href="/dist/assets/js/82.803609b2.js"><link rel="prefetch" href="/dist/assets/js/83.3971ea93.js"><link rel="prefetch" href="/dist/assets/js/84.ad2251d2.js"><link rel="prefetch" href="/dist/assets/js/85.0a3a1c82.js"><link rel="prefetch" href="/dist/assets/js/86.ef50644d.js"><link rel="prefetch" href="/dist/assets/js/87.591ab72e.js"><link rel="prefetch" href="/dist/assets/js/88.95bd02d7.js"><link rel="prefetch" href="/dist/assets/js/89.e886825f.js"><link rel="prefetch" href="/dist/assets/js/9.e8c6ade8.js"><link rel="prefetch" href="/dist/assets/js/90.81128d8d.js"><link rel="prefetch" href="/dist/assets/js/91.39a085a4.js"><link rel="prefetch" href="/dist/assets/js/92.3abf3774.js"><link rel="prefetch" href="/dist/assets/js/93.83d6f081.js"><link rel="prefetch" href="/dist/assets/js/94.225523c5.js"><link rel="prefetch" href="/dist/assets/js/95.d223e4e7.js"><link rel="prefetch" href="/dist/assets/js/96.0b2eb068.js"><link rel="prefetch" href="/dist/assets/js/97.e5459491.js"><link rel="prefetch" href="/dist/assets/js/98.367e8e8f.js"><link rel="prefetch" href="/dist/assets/js/99.f4c11ed0.js">
+    <link rel="stylesheet" href="/dist/assets/css/0.styles.ad3a04d5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/dist/" class="home-link router-link-active"><!----> <span class="site-name">速度至上</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/dist/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/dist/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dist/language/chinese.html" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/dist/language/english.html" class="nav-link">
+  English
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/dist/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/dist/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dist/language/chinese.html" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/dist/language/english.html" class="nav-link">
+  English
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>node</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js知识点</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>js杂项知识点</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/dist/page-2/one/" class="sidebar-link">1.0 DOM 事件机制</a></li><li><a href="/dist/page-2/console/" class="sidebar-link">2.0 console的几个常用方法</a></li><li><a href="/dist/page-2/model/" class="active sidebar-link">3.0 模块导入导出大全</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/dist/page-2/model/#_3-0-模块导入导出大全" class="sidebar-link">3.0 模块导入导出大全</a></li><li class="sidebar-sub-header"><a href="/dist/page-2/model/#介绍" class="sidebar-link">介绍</a></li><li class="sidebar-sub-header"><a href="/dist/page-2/model/#_1-0-module-exports-和-exports的使用" class="sidebar-link">1.0 module.exports 和 exports的使用</a></li><li class="sidebar-sub-header"><a href="/dist/page-2/model/#_2-0-module-exports-和exports的区别" class="sidebar-link">2.0 module.exports 和exports的区别</a></li><li class="sidebar-sub-header"><a href="/dist/page-2/model/#_3-0-export和export-default-的使用" class="sidebar-link">3.0 export和export default 的使用</a></li></ul></li><li><a href="/dist/page-2/actionScope/" class="sidebar-link">4.0 作用域</a></li><li><a href="/dist/page-2/variable/" class="sidebar-link">5.0 js变量提升</a></li><li><a href="/dist/page-2/json-server/" class="sidebar-link">6.0 超简单的前端接口神器</a></li><li><a href="/dist/page-2/js-7/" class="sidebar-link">7.0 js防抖和节流</a></li><li><a href="/dist/page-2/js-8/" class="sidebar-link">8.0 执行上下文和执行栈</a></li><li><a href="/dist/page-2/js-9/" class="sidebar-link">9.0 this 指向问题</a></li><li><a href="/dist/page-2/js-10/" class="sidebar-link">10.0 call,apply 和bind方法</a></li><li><a href="/dist/page-2/js-11/" class="sidebar-link">11.0 理解js的对象</a></li><li><a href="/dist/page-2/two/" class="sidebar-link">Hybrid</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js函数（方法）</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>有待学习的</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>VUE</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTTP</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>es6相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>webpack</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构与算法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>javaScript函数式编程（美）</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>英语单词</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="_3-0-模块导入导出大全"><a href="#_3-0-模块导入导出大全" class="header-anchor">#</a> 3.0 模块导入导出大全</h2> <h2 id="介绍"><a href="#介绍" class="header-anchor">#</a> 介绍</h2> <blockquote><p>module.exports 和exports 是commonjs的规范 --模块的导出 <br>
+require 是amd规范 --模块的导入
+export 和export default 是es6 规范 --模块的导出 <br>
+import 是es6 的一个语法标准 --模块的导入</p></blockquote> <p>require: node 和 es6 都支持的引入 <br>
+export / import : 只有es6 支持的导出引入<br>
+module.exports / exports: 只有 node 支持的导出<br></p> <h2 id="_1-0-module-exports-和-exports的使用"><a href="#_1-0-module-exports-和-exports的使用" class="header-anchor">#</a> 1.0 module.exports 和 exports的使用</h2> <blockquote><p>module 变量代表当前模块，这是个对象，会创建exports的属性，属性的默认值是空对象</p></blockquote> <p>我们新建两个文件</p> <div class="language-angular2html extra-class"><pre class="language-text"><code>//until.js
+module.exports = {a:1,b:2}
+// main.js
+let req = require('./until.js')
+console.log(req) // 结果 {a:1,b:2}
+</code></pre></div><p>继续修改until.js</p> <div class="language-angular2html extra-class"><pre class="language-text"><code>module.exports = {a:1,b:2}
+module.exports = function (name){
+console.log('名字是'+name)
+}
+// main.js
+let req = require('./until.js')
+console.log(req,req('小红')) // 结果 名字是小红
+</code></pre></div><p>总结：一个js文件里面只有一个 module.exports，如果重复会被覆盖</p> <hr> <p>我们继续修改until.js</p> <div class="language-angular2html extra-class"><pre class="language-text"><code>function add(a,b){
+console.log(a+b)
+}
+let a = 1;
+module.exports = {add,a}
+
+// main.js
+let req = require('./until.js')
+console.log(req,req('小红'))   // 结果 { add: [Function: add], a: 1 }
+
+当然了 main.js 也可以这样 解构用
+let {add,a} = require('./until.js')
+console.log(add(1,2),a) // 结果  3  1
+</code></pre></div><blockquote><p>exports 是module.exports的一个引用，可以认为是 var exports = module.exports = {}</p></blockquote> <div class="language-angular2html extra-class"><pre class="language-text"><code>// until.js
+function add(a,b){
+console.log(a+b)
+}
+exports.a = 1;
+exports.add = add;
+exports.isPeople = true;
+
+// main.js
+let msg = require('./until.js')
+console.log(msg) // 结果 { a: 1, add: [Function: add], isPeople: true }
+
+</code></pre></div><p>继续修改</p> <div class="language-angular2html extra-class"><pre class="language-text"><code>let a = 100;
+
+console.log(module.exports); //能打印出结果为：{}
+console.log(exports); //能打印出结果为：{}
+
+exports.a = 200; // module.exports 的内容给改成 {a : 200}
+
+exports = '指向其他内存区'; //这里把exports的指向指走
+
+main.js
+var a = require('./until.js');
+console.log(a) // 结果 {a : 200}
+</code></pre></div><div class="language-angular2html extra-class"><pre class="language-text"><code>module.exports = {name: '叔叔'};
+exports = {name: '阿姨'}
+
+//main.js
+var obj = require('./until.js');
+console.log(obj) // 结果 { name: '叔叔' }
+</code></pre></div><h2 id="_2-0-module-exports-和exports的区别"><a href="#_2-0-module-exports-和exports的区别" class="header-anchor">#</a> 2.0 module.exports 和exports的区别</h2> <p>1.0 相对而已，exports不能导出匿名函数（比如没有变量名的函数）也不能写 exports = {add};<br>
+2.0 其实require导出的内容是module.exports的指向的内存块内容，并不是exports的。
+简而言之，区分他们之间的区别就是 exports 只是 module.exports的引用，辅助后者添加内容用的</p> <h2 id="_3-0-export和export-default-的使用"><a href="#_3-0-export和export-default-的使用" class="header-anchor">#</a> 3.0 export和export default 的使用</h2> <blockquote><p>export 用于对外输出本模块（一个文件可以理解为一个模块）变量的接口，import 用于在一个模块中加载另一个含有export接口的模块。也就是说使用export命令定义了模块的对外接口以后，其他JS文件就可以通过import命令加载这个模块（文件）。这几个都是ES6的语法。</p></blockquote> <p>demo1 export 导出的例子</p> <div class="language-angular2html extra-class"><pre class="language-text"><code>// until.js
+
+    let age = 11;
+    let name = &quot;小红&quot;;
+    function add(){
+        console.log('123321')
+    }
+    
+    export {age}
+    export {name}
+    export {add}
+
+// main.js
+     //导入方法 对应导入的变量或函数，一定要花括号
+    import {age,name,add} from './until.js'  // 花括号里面的值必须与暴露的变量相同
+    
+    console.log(age,name,add()) // 结果 11 小红 123321
+
+// until.js 导出部分也可以这样写
+    export {age,name,add}
+
+    还可以这样写
+    export let old = 'uuww'
+
+// 注意当我们导出一个函数的时候
+    export function add(){  // 正确的
+        console.log(123)
+    }
+
+    export function(){  // 错误的
+        console.log(123)
+    }
+
+
+</code></pre></div><p>demo2 export default导出的例子</p> <div class="language-angular2html extra-class"><pre class="language-text"><code>// until.js
+    let age = 11;
+    let name = &quot;小红&quot;;
+    
+    export default age
+    export default name 
+    // 注意这时候就会报错，因为一个页面只能export default一个
+    所以我们修改成
+    export default {age,name}
+
+//main.js 引入的时候也是有所区别的
+    import {age,name} from './until.js'
+    
+    console.log(age,name) // 结果 11 小红
+    
+    也可以这样写
+    import {age as age1,name as name1} from './until.js' // 取了一个别名
+    
+    console.log(age1,name1) // 结果 11 小红
+    
+    还可以这样
+    import test from './until.js' // 当一个整体的时候名字随便取，不要花括号
+
+    console.log(test.age,test.name) // 结果 11 小红
+
+    或者这样
+    import * as test from './until.js' 
+    
+    console.log(test.age,test.name) // 结果 11 小红
+    
+
+// 注意当我们导出一个函数的时候
+    export default function(){ // 正确
+        console.log(123)
+    }
+    export default function add(){ // 正确
+        console.log(123)
+    }
+    
+    import add from './until.js'
+</code></pre></div><p>总结：<br>
+1.0 在一个文件或模块中，export、import可以有多个，export default仅有一个 <br>
+2.0 export default 的对象、变量、函数、类、 可以没有名字，但export导出的必须有名字 <br>
+3.0 通过export方式导出，在导入时要加{ }(如果用 import * as ... from 也可以不用 {})，export default则不需要
+4.0 export default与export可以在同一个js文件中同时使用
+5.0 模块的导入导出意义在于将类聚的方法和变量等限定在私有的作用域中，同时支持引入和导出功能以顺畅地连接上下游依赖，使得用户完全不必考虑变量污染。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/dist/page-2/console/" class="prev">
+        2.0 console的几个常用方法
+      </a></span> <span class="next"><a href="/dist/page-2/actionScope/">
+        4.0 作用域
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/dist/assets/js/app.d79bc38e.js" defer></script><script src="/dist/assets/js/2.a6a1bbd9.js" defer></script><script src="/dist/assets/js/39.d59b15d2.js" defer></script>
+  </body>
+</html>
