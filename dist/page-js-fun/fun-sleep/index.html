@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>sleep休眠或等待函数 | 速度至上</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/dist/img/logo.ico">
+    <link rel="manifest" href="/dist/manifest.json">
+    <meta name="description" content="Reggie Study Notes">
+    <link rel="preload" href="/dist/assets/css/0.styles.ad3a04d5.css" as="style"><link rel="preload" href="/dist/assets/js/app.d79bc38e.js" as="script"><link rel="preload" href="/dist/assets/js/2.a6a1bbd9.js" as="script"><link rel="preload" href="/dist/assets/js/70.a9ad4f9b.js" as="script"><link rel="prefetch" href="/dist/assets/js/10.6f1128cd.js"><link rel="prefetch" href="/dist/assets/js/100.11170ca4.js"><link rel="prefetch" href="/dist/assets/js/101.df4256bb.js"><link rel="prefetch" href="/dist/assets/js/102.73c0978a.js"><link rel="prefetch" href="/dist/assets/js/103.c3f70e3b.js"><link rel="prefetch" href="/dist/assets/js/104.80e8d438.js"><link rel="prefetch" href="/dist/assets/js/105.7fcc574d.js"><link rel="prefetch" href="/dist/assets/js/106.f2b6dd5e.js"><link rel="prefetch" href="/dist/assets/js/107.387c438d.js"><link rel="prefetch" href="/dist/assets/js/108.84876aec.js"><link rel="prefetch" href="/dist/assets/js/109.be9663a4.js"><link rel="prefetch" href="/dist/assets/js/11.f0b2e5ad.js"><link rel="prefetch" href="/dist/assets/js/110.6fc9fd7b.js"><link rel="prefetch" href="/dist/assets/js/111.f0f30997.js"><link rel="prefetch" href="/dist/assets/js/12.5f83c13d.js"><link rel="prefetch" href="/dist/assets/js/13.5302d541.js"><link rel="prefetch" href="/dist/assets/js/14.6d385b49.js"><link rel="prefetch" href="/dist/assets/js/15.180126ec.js"><link rel="prefetch" href="/dist/assets/js/16.279dd344.js"><link rel="prefetch" href="/dist/assets/js/17.b3411b71.js"><link rel="prefetch" href="/dist/assets/js/18.df40f619.js"><link rel="prefetch" href="/dist/assets/js/19.3d5204a0.js"><link rel="prefetch" href="/dist/assets/js/20.9529900c.js"><link rel="prefetch" href="/dist/assets/js/21.d5e6a04b.js"><link rel="prefetch" href="/dist/assets/js/22.c2f2de64.js"><link rel="prefetch" href="/dist/assets/js/23.65cd84c0.js"><link rel="prefetch" href="/dist/assets/js/24.d195bc64.js"><link rel="prefetch" href="/dist/assets/js/25.00e36db3.js"><link rel="prefetch" href="/dist/assets/js/26.82157dcf.js"><link rel="prefetch" href="/dist/assets/js/27.d423e5b0.js"><link rel="prefetch" href="/dist/assets/js/28.6af5f0cc.js"><link rel="prefetch" href="/dist/assets/js/29.a789eb6b.js"><link rel="prefetch" href="/dist/assets/js/3.41915d9e.js"><link rel="prefetch" href="/dist/assets/js/30.a2c5a2b3.js"><link rel="prefetch" href="/dist/assets/js/31.b5837568.js"><link rel="prefetch" href="/dist/assets/js/32.c0e493bb.js"><link rel="prefetch" href="/dist/assets/js/33.6876c260.js"><link rel="prefetch" href="/dist/assets/js/34.c963248f.js"><link rel="prefetch" href="/dist/assets/js/35.793f7af6.js"><link rel="prefetch" href="/dist/assets/js/36.359336bf.js"><link rel="prefetch" href="/dist/assets/js/37.e4288439.js"><link rel="prefetch" href="/dist/assets/js/38.f187f4aa.js"><link rel="prefetch" href="/dist/assets/js/39.d59b15d2.js"><link rel="prefetch" href="/dist/assets/js/4.d2c0f82f.js"><link rel="prefetch" href="/dist/assets/js/40.c0e8642a.js"><link rel="prefetch" href="/dist/assets/js/41.417cec39.js"><link rel="prefetch" href="/dist/assets/js/42.e67adf7d.js"><link rel="prefetch" href="/dist/assets/js/43.b0c59c1d.js"><link rel="prefetch" href="/dist/assets/js/44.844d5752.js"><link rel="prefetch" href="/dist/assets/js/45.1688c285.js"><link rel="prefetch" href="/dist/assets/js/46.c938498a.js"><link rel="prefetch" href="/dist/assets/js/47.d16a2de7.js"><link rel="prefetch" href="/dist/assets/js/48.0f6ccef5.js"><link rel="prefetch" href="/dist/assets/js/49.83c72d63.js"><link rel="prefetch" href="/dist/assets/js/5.eef27408.js"><link rel="prefetch" href="/dist/assets/js/50.d75aa61b.js"><link rel="prefetch" href="/dist/assets/js/51.7a3fc515.js"><link rel="prefetch" href="/dist/assets/js/52.964c0d40.js"><link rel="prefetch" href="/dist/assets/js/53.6e60e28c.js"><link rel="prefetch" href="/dist/assets/js/54.5531b960.js"><link rel="prefetch" href="/dist/assets/js/55.c61acf00.js"><link rel="prefetch" href="/dist/assets/js/56.e7d0f61d.js"><link rel="prefetch" href="/dist/assets/js/57.0bd4a98c.js"><link rel="prefetch" href="/dist/assets/js/58.96197d13.js"><link rel="prefetch" href="/dist/assets/js/59.67effb16.js"><link rel="prefetch" href="/dist/assets/js/6.3e0d7e62.js"><link rel="prefetch" href="/dist/assets/js/60.a6e7f59c.js"><link rel="prefetch" href="/dist/assets/js/61.9a50da49.js"><link rel="prefetch" href="/dist/assets/js/62.c7cd0bab.js"><link rel="prefetch" href="/dist/assets/js/63.65162c49.js"><link rel="prefetch" href="/dist/assets/js/64.4bc8c61b.js"><link rel="prefetch" href="/dist/assets/js/65.39864fc0.js"><link rel="prefetch" href="/dist/assets/js/66.11ecd0d0.js"><link rel="prefetch" href="/dist/assets/js/67.b24d0a8f.js"><link rel="prefetch" href="/dist/assets/js/68.908c8aa2.js"><link rel="prefetch" href="/dist/assets/js/69.308baca4.js"><link rel="prefetch" href="/dist/assets/js/7.64ed6c1b.js"><link rel="prefetch" href="/dist/assets/js/71.4fb4daef.js"><link rel="prefetch" href="/dist/assets/js/72.e9061cad.js"><link rel="prefetch" href="/dist/assets/js/73.5b57c759.js"><link rel="prefetch" href="/dist/assets/js/74.7177e34d.js"><link rel="prefetch" href="/dist/assets/js/75.b9757d9a.js"><link rel="prefetch" href="/dist/assets/js/76.8e17deca.js"><link rel="prefetch" href="/dist/assets/js/77.b80787b3.js"><link rel="prefetch" href="/dist/assets/js/78.a06065c1.js"><link rel="prefetch" href="/dist/assets/js/79.f4fe4f81.js"><link rel="prefetch" href="/dist/assets/js/8.ba3e1811.js"><link rel="prefetch" href="/dist/assets/js/80.52c9f2d0.js"><link rel="prefetch" href="/dist/assets/js/81.a547eb77.js"><link rel="prefetch" href="/dist/assets/js/82.803609b2.js"><link rel="prefetch" href="/dist/assets/js/83.3971ea93.js"><link rel="prefetch" href="/dist/assets/js/84.ad2251d2.js"><link rel="prefetch" href="/dist/assets/js/85.0a3a1c82.js"><link rel="prefetch" href="/dist/assets/js/86.ef50644d.js"><link rel="prefetch" href="/dist/assets/js/87.591ab72e.js"><link rel="prefetch" href="/dist/assets/js/88.95bd02d7.js"><link rel="prefetch" href="/dist/assets/js/89.e886825f.js"><link rel="prefetch" href="/dist/assets/js/9.e8c6ade8.js"><link rel="prefetch" href="/dist/assets/js/90.81128d8d.js"><link rel="prefetch" href="/dist/assets/js/91.39a085a4.js"><link rel="prefetch" href="/dist/assets/js/92.3abf3774.js"><link rel="prefetch" href="/dist/assets/js/93.83d6f081.js"><link rel="prefetch" href="/dist/assets/js/94.225523c5.js"><link rel="prefetch" href="/dist/assets/js/95.d223e4e7.js"><link rel="prefetch" href="/dist/assets/js/96.0b2eb068.js"><link rel="prefetch" href="/dist/assets/js/97.e5459491.js"><link rel="prefetch" href="/dist/assets/js/98.367e8e8f.js"><link rel="prefetch" href="/dist/assets/js/99.f4c11ed0.js">
+    <link rel="stylesheet" href="/dist/assets/css/0.styles.ad3a04d5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/dist/" class="home-link router-link-active"><!----> <span class="site-name">速度至上</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/dist/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/dist/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dist/language/chinese.html" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/dist/language/english.html" class="nav-link">
+  English
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/dist/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/dist/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dist/language/chinese.html" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/dist/language/english.html" class="nav-link">
+  English
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>node</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/dist/page-node/node-1/" class="sidebar-link">Node</a></li><li><a href="/dist/page-node/node-2/" class="sidebar-link">node 文件操作</a></li><li><a href="/dist/page-node/node-3/" class="sidebar-link">网络操作</a></li><li><a href="/dist/page-node/node-4/" class="sidebar-link">进程管理</a></li><li><a href="/dist/page-node/node-5/" class="sidebar-link">异步编程</a></li><li><a href="/dist/page-node/node-6/" class="sidebar-link">大示例</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js知识点</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js杂项知识点</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js函数（方法）</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>有待学习的</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>VUE</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTTP</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>es6相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>webpack</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构与算法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>javaScript函数式编程（美）</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>英语单词</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="sleep休眠或等待函数"><a href="#sleep休眠或等待函数" class="header-anchor">#</a> sleep休眠或等待函数</h2> <h2 id="sleep函数"><a href="#sleep函数" class="header-anchor">#</a> sleep函数</h2> <p>JavaScript是单线程运行的，没有内置的sleep函数，现在模拟实现sleep延迟执行的效果。<br>
+使用休眠函数实现页面改变背景颜色，黑色2秒，蓝色3秒，黄色4秒，循环改变颜色。</p> <h2 id="_1-0-settimeout实现"><a href="#_1-0-settimeout实现" class="header-anchor">#</a> 1.0 setTimeOut实现</h2> <p>直接使用setTimeout实现sleep()的方法，兼容性最好，但是使用了回调函数的实现方式，代码的可读性和维护性不是很好。<br>
+废话少说直接上代码，我们来看</p> <div class="language- extra-class"><pre class="language-text"><code>var bg = document.getElementsByTagName('body')[0]
+
+function changeColor(color) {
+	bg.style.backgroundColor=color
+}
+
+function sleepHandle(){
+	changeColor('black');
+	setTimeout(()=&gt;{
+		changeColor('blue');
+		setTimeout(()=&gt;{
+			changeColor('yellow');
+			setTimeout(()=&gt;{
+				sleepHandle()
+			},4000)
+		},3000)
+	},2000)
+}
+sleepHandle()
+</code></pre></div><p>是不是很简单，这可读性和可维护性也不差呀，怎么就不友好了，那是因为我们做的简单，假设改变颜色需要10种呢，一下就能感受出来了，当然了
+可能自己写的没问题，但是你让其他同事看这代码，估计是想揍人的啦。</p> <h2 id="_2-0-使用promise实现"><a href="#_2-0-使用promise实现" class="header-anchor">#</a> 2.0 使用promise实现</h2> <p>在ES6的语法中，Promise是sleep方法异步的实现一种方式，借助Promise方法可以优雅的构建sleep实现方法，避免了出现函数回调‘地狱’。<br></p> <blockquote><p>使用Promise，把下一次的颜色改变写在then里面，最后同样使用递归完成循环。
+使用promise代替setTimeout，利用链式调用以及then来实现颜色的转换，then返回一个promise对象，当这个对象为resolve状态then可以持续调用。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>var bg = document.getElementsByTagName('body')[0]
+
+function changeColor(color,time) {
+	return new Promise((resolve,reject)=&gt;{
+		bg.style.backgroundColor=color
+		setTimeout(()=&gt;{
+			resolve()
+		},time)
+	})
+}
+
+function main(){
+	Promise.resolve().then(()=&gt;{
+		return changeColor('black',2000)
+	}).then(()=&gt;{
+		return changeColor('blue',3000)
+	}).then(()=&gt;{
+		return changeColor('yellow',4000)
+	}).then(()=&gt;{
+		main()
+	})
+}
+main()
+</code></pre></div><p>你看看,你看看是不是清晰很多了，等等似乎也不是那么清晰了，好多.then.then的，不要慌我们继续往下看</p> <h2 id="_3-0-使用promise和await实现"><a href="#_3-0-使用promise和await实现" class="header-anchor">#</a> 3.0 使用promise和await实现</h2> <p>async await实际上是generator和promise的语法糖，在提供同步编程方式实现异步调用的基础上，同时满足对sleep函数语义化的支持，也是常用的sleep的实现方式。</p> <div class="language- extra-class"><pre class="language-text"><code>var bg = document.getElementsByTagName('body')[0]
+
+ function changeColor(color, time) {
+	return new Promise((resolve,reject)=&gt;{
+		bg.style.backgroundColor=color
+		setTimeout(()=&gt;{
+			resolve()
+		},time)
+	})
+}
+
+async function main() {
+	await changeColor('black', 2000);
+	console.log(2)
+	await changeColor('blue', 3000);
+	console.log(3)
+	await changeColor('yellow', 4000);
+	console.log(4)
+	main()
+}
+main() 
+</code></pre></div><p>2s后输出2 3s后输出3 4s后输出4 然后继续循环往复的进行。<br>
+这样逻辑和功能就分开，是不是更清晰了一点了。所以以后再有需要写等一会儿再执行的情况，我们这个方法完全可以胜任的。</p> <h2 id="_4-0-while实现"><a href="#_4-0-while实现" class="header-anchor">#</a> 4.0 while实现</h2> <p>while的语法我们都知道，当满足某些条件的时候，while里面的内容会一直执行，所以如下面只有当超过500毫秒才能执行后面的逻辑</p> <div class="language- extra-class"><pre class="language-text"><code> let sleep = (delay = 500) =&gt; {
+    let t = Date.now();
+    while(Date.now() - t &lt;= delay) {
+        continue;
+    }
+    doSomeThing
+};
+</code></pre></div><p>我们就叫上面的代码为阻塞主进程之休眠。<br></p> <p>通宵复习是因为平时没听过课，拼命减肥是因为吃零食从来不会控制，分手了才开始后悔是因为之前没有给足够的关心。于是别人开始敬佩你的勤奋，同情你的遭遇，可是只有你知道，你的痛苦都是罪有应得。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/dist/assets/js/app.d79bc38e.js" defer></script><script src="/dist/assets/js/2.a6a1bbd9.js" defer></script><script src="/dist/assets/js/70.a9ad4f9b.js" defer></script>
+  </body>
+</html>
