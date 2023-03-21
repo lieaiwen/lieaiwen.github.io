@@ -191,5 +191,46 @@ pms().then(res=>{
     console.info('不管成功与失败，最后我都要执行干其它的事情');
 })
 ```
-
+## 7.0 Promise 的模拟实现
+```js
+function myPromise(fun){
+        var that = this;
+        that.status = "pending";
+        that.value = undefined;
+        that.reason = undefined;
+        function resolve(value){
+            if(that.status === "pending"){
+                that.value = value;
+                that.status = "resolved";
+            }
+        }
+        function reject(reason){
+            if(that.status === "pending"){
+                that.reason = reason;
+                that.status = "rejected";
+            }
+        }
+        //捕获构造异常
+        try{
+            fun(resolve,reject);
+        }catch(e){
+            reject(e);
+        }
+    }
+    myPromise.prototype.then=function(onFullfilled,onRejected){
+        let self=this;
+        switch(self.status){
+            case "resolved":
+                onFullfilled(self.value);
+                break;
+            case "rejected":
+                onRejected(self.reason);
+                break;
+            default:
+        }
+    }
+    var aa = new myPromise(function(resolve,reject){ resolve(1)});
+    console.log(aa)
+    aa.then(function(res){console.log(res)}) 
+```
 悲观的人，先被自己打败，然后才被生活打败；乐观的人，先战胜自己，然后才战胜生活。——汪国真

@@ -15,7 +15,7 @@ module.exports / exports: 只有 node 支持的导出<br>
 >module 变量代表当前模块，这是个对象，会创建exports的属性，属性的默认值是空对象
 
 我们新建两个文件
-```angular2html
+```js
 //until.js
 module.exports = {a:1,b:2}
 // main.js
@@ -24,7 +24,7 @@ console.log(req) // 结果 {a:1,b:2}
 ```
 
 继续修改until.js
-```angular2html
+```js
 module.exports = {a:1,b:2}
 module.exports = function (name){
 console.log('名字是'+name)
@@ -39,7 +39,7 @@ console.log(req,req('小红')) // 结果 名字是小红
 
 我们继续修改until.js
 
-```angular2html
+```js
 function add(a,b){
 console.log(a+b)
 }
@@ -57,7 +57,7 @@ console.log(add(1,2),a) // 结果  3  1
 
 >exports 是module.exports的一个引用，可以认为是 var exports = module.exports = {}
 
-```angular2html
+```js
 // until.js
 function add(a,b){
 console.log(a+b)
@@ -72,7 +72,7 @@ console.log(msg) // 结果 { a: 1, add: [Function: add], isPeople: true }
 
 ```
 继续修改
-```angular2html
+```js
 let a = 100;
 
 console.log(module.exports); //能打印出结果为：{}
@@ -87,7 +87,7 @@ var a = require('./until.js');
 console.log(a) // 结果 {a : 200}
 ```
 
-```angular2html
+```js
 module.exports = {name: '叔叔'};
 exports = {name: '阿姨'}
 
@@ -106,7 +106,7 @@ console.log(obj) // 结果 { name: '叔叔' }
 >export 用于对外输出本模块（一个文件可以理解为一个模块）变量的接口，import 用于在一个模块中加载另一个含有export接口的模块。也就是说使用export命令定义了模块的对外接口以后，其他JS文件就可以通过import命令加载这个模块（文件）。这几个都是ES6的语法。
 
 demo1 export 导出的例子
-```angular2html
+```js
 // until.js
 
     let age = 11;
@@ -143,7 +143,7 @@ demo1 export 导出的例子
 
 ```
 demo2 export default导出的例子
-```angular2html
+```js
 // until.js
     let age = 11;
     let name = "小红";

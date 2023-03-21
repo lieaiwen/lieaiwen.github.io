@@ -1,6 +1,6 @@
 ## js中的类型检测（三种）
 1.0 typeof：主要用于检测基本类型
-``` 
+```js
 typeof undefined // 'undefined'
 typeof 'a';//=> string
 typeof 1;//=> number
@@ -11,11 +11,11 @@ typeof null;//=> object
 typeof function() {};//=> function
 ```
 判断一个变量是否存在 我们是用
-``` 
+```js
 if(typeof a!= "undefined"){
     alert('ok')
 }
-不用 if(a) 因为 a 不存在(未声明)则会出错。
+//不用 if(a) 因为 a 不存在(未声明)则会出错。
 ```
 注意：<br>
 对于 Array,Null 等特殊对象使用 typeof 一律返回 object，这正是 typeof 的局限性。

@@ -22,6 +22,71 @@ let {a = 10, b = 5} = {a: 3};
 let {data:[list],status} = {data:[{name:'1'}],status:0}
 list // [{name:'1'}]
 ``` 
+## 2.0 对象的扩展
+2.1 对象简写
+```js
+let name = "xiaoming"
+let obj = {
+    name
+}
+```
+2.2 对象属性表达式
+```js
+let name = "a";
+let obj = {
+    [name]:'小红',
+    [name+'bb']:'销量'
+}
+```
+2.3 扩展运算符 (es2018才支持)
+```js
+let obj = {name:'123'}
+let obj2 = {...obj}
+obj2.name = '2222'
+console.log(obj2.name) // 2222
+console.log(obj.name) // 123
+//合并
+let obj1 = {age:12}
+let obj2 = {name:'xiaoming'}
+let obj = {
+    ...obj1,
+    ...obj2
+}
+console.log(obj) // {age:12,name:'xiaoming'}
+```
+2.4 Object.assign()合并对象 才是es6的
+```js
+let obj1 = {age:12}
+let obj2 = {name:'xiaoming'}
+let obj3 = {name:'小亮'}
+Object.assign(obj1,obj2,obj3)
+console.log(obj1) // {age:12,name:'小亮'}
+console.log(obj2) // {name:'xiaoming'}
+console.log(obj3) // {name:'小亮'}
+//会影响了obj1
+```
+2.5 Object.is() 判断两个对象是否相等
+```js
+NaN == NaN // false
+NaN === NaN // false
+Object.is(5,5) //true
+Object.is(5,'5') //false
+Object.is({},{}) // false
+Object.is(NaN,NaN) // true
+Object.is(parseInt('wweer'),NaN) // true 比如第一个是某个函数的返回值，用这个判断是很好的
+```
+
+**扩展**
+
+判断指定参数是否是一个数字值？
+```js
+
+function isTNumber(value){
+    return !isNaN(parseFloat(value)) && isFinite(value);
+}
+// 就是jq的源码 $.isNumeric
+```
+
 ## 3.0 promise
 是异步编程的一种解决方案。<br>
 
@@ -40,11 +105,40 @@ Promise 对象只有：从 pending 变为 fulfilled 和从 pending 变为 reject
 当处于 pending 状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）。
 <br>
 
-## Generator
-ES6 新引入了 Generator 函数，可以通过 yield 关键字，把函数的执行流挂起，为改变执行流程提供了可能，从而为异步编程提供解决方案。 基本用法
-## 4.0 async
-async 函数返回一个 Promise 对象，可以使用 then 方法添加回调函数。
+## 4.0 Generator
+ Generator 函数，可以通过 yield 关键字，把函数的执行流挂起，为改变执行流程提供了可能，从而为异步编程提供解决方案。 基本用法
+```js
+function *gen(){
+    console.log(1)
+    yield 'aaa'// 产出
+    console.log(2)
+    yield 'bbb'
+    console.log(3)
+}
+let g = gen() //
+g.next() // 1
+g.next() // 2
+g.next() // 3
+
+function *gen(){
+    console.log(1)
+    yield 'aaa'// 产出
+    console.log(2)
+    yield 'bbb'
+    console.log(3)
+}
+let g = gen() //
+let res1 = g.next() //  {value: 'aaa', done: false}
+let res2 = g.next() // {value: 'bbb', done: false}
+let res3 = g.next() // {value: undefined, done: true}
+for(let i of g){
+    console.log(i) // aaa //bbb //undefined
+}
 ```
+
+## 5.0 async
+async 函数返回一个 Promise 对象，可以使用 then 方法添加回调函数。
+```js
  function testAwait(){
     return new Promise((resolve) => {
         setTimeout(function(){
@@ -64,9 +158,9 @@ async 函数返回一个 Promise 对象，可以使用 then 方法添加回调�
 ```
 await 关键字仅在 async function 中有效。如果在 async function 函数体外使用 await ，你只会得到一个语法错误。
 
-## 5.0 函数
-```
- 1.0 函数参数的扩展  默认参数
+## 6.0 函数的扩展
+```js
+ //1.0 函数参数的扩展  默认参数
 function fn(name,age=17){
  console.log(name+","+age);
 }
@@ -74,19 +168,26 @@ fn("Amy",18);  // Amy,18
 fn("Amy","");  // Amy,
 fn("Amy");     // Amy,17
 
-2.0 不定参数
+//2.0 不定参数
 function f(...values){
     console.log(values.length);
 }
 f(1,2);      //2
 f(1,2,3,4);  //4
 
-3.0 箭头函数
+//3.0 函数的name属性
+function test(){ }
+console.log(test.name) //test
+
+// 3.0 箭头函数
+//  3.1 简洁
+//  3.2 没有arguments 参数 不能new
+//  3.3 没有this
 ```
-## 4.0 Symbol 数据类型
+## 7.0 Symbol 数据类型
 >ES6 引入了一种新的原始数据类型 Symbol ，表示独一无二的值，最大的用法是用来定义对象的唯一属性名。
 
-``` 
+```js
 let sy = Symbol("KK");
 console.log(sy);   // Symbol(KK)
 typeof(sy);        // "symbol"
@@ -96,13 +197,13 @@ let sy1 = Symbol("kk");
 sy === sy1;       // false
 ```
 **用法**
-```
+```js
 let sy = Symbol("key1");
  
 // 写法1
 let syObject = {};
 syObject[sy] = "kk";
-console.log(syObject);    // {Symbol(key1): "kk"}
+console.log(syObject,syObject[sy]);    // {Symbol(key1): "kk"} kk
  
 // 写法2
 let syObject = {
@@ -118,21 +219,24 @@ console.log(syObject);   // {Symbol(key1): "kk"}
 **注意点**
 
 Symbol 值作为属性名时，该属性是公有属性不是私有属性，可以在类的外部访问。但是不会出现在 for...in 、 for...of 的循环中，也不会被 Object.keys() 、 Object.getOwnPropertyNames() 返回。如果要读取到一个对象的 Symbol 属性，可以通过 Object.getOwnPropertySymbols() 和 Reflect.ownKeys() 取到。
-```
- let syObject = {};
+```js
+ let syObject = {
+    name:'ll'
+};
  syObject[sy] = "kk";
- console.log(syObject);
+ console.log(syObject); // {name: 'll', Symbol(key1): 'kk'}
   
  for (let i in syObject) {
    console.log(i);
  }    // 无输出
   
- Object.keys(syObject);                     // []
+ Object.keys(syObject);                     // ['name']
  Object.getOwnPropertySymbols(syObject);    // [Symbol(key1)]
- Reflect.ownKeys(syObject);                 // [Symbol(key1)]
+// 映射
+ Reflect.ownKeys(syObject);                 // ['name',Symbol(key1)]
 ```
 
-## 5.0 Set 对象 和map对象
+## 8.0 Set 对象 和map对象
 
 >Set 对象允许你存储任何类型的唯一值，无论是原始值或者是对象引用。<br>
 Set 中的特殊值<br>
@@ -142,7 +246,7 @@ Set 对象存储的值总是唯一的，所以需要判断两个值是否恒等�
 *undefined 与 undefined 是恒等的，所以不重复；
 * NaN 与 NaN 是不恒等的，但是在 Set 中只能存一个，不重复。
 
-```
+```js
  let mySet = new Set();
   
  mySet.add(1); // Set(1) {1}
@@ -157,7 +261,7 @@ Set 对象存储的值总是唯一的，所以需要判断两个值是否恒等�
  // 这里体现了对象之间引用不同不恒等，即使值相同，Set 也能存储
 ```
 **类型转换**
-```
+```js
  // Array 转 Set
  var mySet = new Set(["value1", "value2", "value3"]);
  // 用...操作符，将 Set 转 Array
@@ -168,23 +272,23 @@ Set 对象存储的值总是唯一的，所以需要判断两个值是否恒等�
  // 注：Set 中 toString 方法是不能将 Set 转换成 String
 ```
 **Set 对象作用**
-```
- 1.0 数组去重
+```js
+ //1.0 数组去重
 var mySet = new Set([1, 2, 3, 4, 4]);
 [...mySet]; // [1, 2, 3, 4]
 
-2.0 并集
+//2.0 并集
 var a = new Set([1, 2, 3]);
 var b = new Set([4, 3, 2]);
 var union = new Set([...a, ...b]); // {1, 2, 3, 4}
 
-3.0 交集
+//3.0 交集
 
 var a = new Set([1, 2, 3]);
 var b = new Set([4, 3, 2]);
 var intersect = new Set([...a].filter(x => b.has(x))); // {2, 3}
 
-4.0 差集
+//4.0 差集
 var a = new Set([1, 2, 3]);
 var b = new Set([4, 3, 2]);
 var difference = new Set([...a].filter(x => !b.has(x))); // {1}
@@ -197,7 +301,7 @@ Set常用属性及增删改查方法:
 * has(value)方法: 判断value是否在集合中，返回true或false.
 * clear()方法: 清空集合。
 
-```
+```js
  let mySet = new Set([1, 2, 3, 2, 1]);
  console.log(mySet.size);   //3
  console.log(...mySet);      //1,2,3
@@ -209,6 +313,27 @@ Set常用属性及增删改查方法:
  mySet.clear();
  console.log(mySet.size);  //0
 ```
+**稍微复杂点的去重**
+```js
+let arr = ['xiao',1,2,2,{name:'qq'},{age:12},{name:'qq'},[1,2],[3,4],[1,2]]
+
+function uni(arr){
+    let res = new Set();
+    return arr.filter((item)=>{
+        let data = JSON.stringify(item)
+        if(res.has(data)){
+            return false
+        }else{
+            res.add(data)
+            return true
+        }
+    })
+}
+let oArr = uni(arr);
+console.log(aArr) //['xiao',1,2,{name:'qq'},{age:12},[1,2],[3,4]]
+```
+
+
 **Map(字典)：**
 集合与字典的区别:
 
@@ -224,8 +349,8 @@ Map 对象保存键值对。任何值(对象或者原始值) 都可以作为一�
 * Object 都有自己的原型，原型链上的键名有可能和你自己在对象上的设置的键名产生冲突。
 
 **Map 中的 key**
-```
-1. key 是字符串
+```js
+//1. key 是字符串
 var myMap = new Map();
 var keyString = "a string"; 
  
@@ -235,25 +360,24 @@ myMap.get(keyString);    // "和键'a string'关联的值"
 myMap.get("a string");   // "和键'a string'关联的值"
                          // 因为 keyString === 'a string'
 
-2.0 key 是对象
+//2.0 key 是对象
 var myMap = new Map();
-var keyObj = {}, 
+var keyObj = {};
  
 myMap.set(keyObj, "和键 keyObj 关联的值");
-﻿
 myMap.get(keyObj); // "和键 keyObj 关联的值"
 myMap.get({}); // undefined, 因为 keyObj !== {}
 
-3.0 key 是函数
+//3.0 key 是函数
 var myMap = new Map();
-var keyFunc = function () {}, // 函数
+var keyFunc = function () {}; // 函数
  
 myMap.set(keyFunc, "和键 keyFunc 关联的值");
  
 myMap.get(keyFunc); // "和键 keyFunc 关联的值"
 myMap.get(function() {}) // undefined, 因为 keyFunc !== function () {}
 
-4.0 key 是 NaN
+//4.0 key 是 NaN
 var myMap = new Map();
 myMap.set(NaN, "not a number");
  
@@ -261,11 +385,11 @@ myMap.get(NaN); // "not a number"
  
 var otherNaN = Number("foo");
 myMap.get(otherNaN); // "not a number"
-虽然 NaN 和任何值甚至和自己都不相等(NaN !== NaN 返回true)，NaN作为Map的键来说是没有区别的。
+//虽然 NaN 和任何值甚至和自己都不相等(NaN !== NaN 返回true)，NaN作为Map的键来说是没有区别的。
 ```
 **Map 的迭代**
-```
- 1.0 for...of
+```js
+ //1.0 for...of
 var myMap = new Map();
 myMap.set(0, "zero");
 myMap.set(1, "one");
@@ -291,7 +415,7 @@ for (var value of myMap.values()) {
 }
 /* 这个 values 方法返回一个新的 Iterator 对象，它按插入顺序包含了 Map 对象中每个元素的值。 */
 
-2.0 forEach()
+//2.0 forEach()
 var myMap = new Map();
 myMap.set(0, "zero");
 myMap.set(1, "one");
@@ -302,8 +426,8 @@ myMap.forEach(function(value, key) {
 }, myMap)
 ```
 **Map 对象的操作**
-```
-1.0 Map 与 Array的转换
+```js
+//1.0 Map 与 Array的转换
 var kvArray = [["key1", "value1"], ["key2", "value2"]];
  
 // Map 构造函数可以将一个 二维 键值对数组转换成一个 Map 对象
@@ -312,14 +436,14 @@ var myMap = new Map(kvArray);
 // 使用 Array.from 函数可以将一个 Map 对象转换成一个二维键值对数组
 var outArray = Array.from(myMap);
 
-2.0 Map 的克隆
+//2.0 Map 的克隆
 var myMap1 = new Map([["key1", "value1"], ["key2", "value2"]]);
 var myMap2 = new Map(myMap1);
  
 console.log(original === clone); 
 // 打印 false。 Map 对象构造函数生成实例，迭代出新的对象。
 
-3.0 Map 的合并
+//3.0 Map 的合并
 var first = new Map([[1, 'one'], [2, 'two'], [3, 'three'],]);
 var second = new Map([[1, 'uno'], [2, 'dos']]);
  
@@ -334,7 +458,7 @@ Map常用属性及增删改查方法:
 * has(key)：方法，判断字典中是否存在键key
 * delete(key)：方法，通过键 key 从字典中移除对应的数据
 * clear()：方法，将这个字典中的所有元素删除
-```
+```js
  let myMap = new Map();
  myMap.set("name","Jack");    
  myMap.set("age","18");     //添加元素
@@ -352,7 +476,7 @@ Map常用遍历方法:
 * values()：将字典中包含的所有数值以迭代器形式返回
 * entries()：返回所有成员的迭代器
 * forEach()：遍历字典的所有成员
-```
+```js
  let myMap = new Map();
  myMap.set("name","Jack");
  myMap.set("age","18");
@@ -366,8 +490,10 @@ Map常用遍历方法:
    }
  )
 ```
-## 6.0 ES6 Reflect 与 Proxy
+## 9.0 ES6 Reflect 与 Proxy
 Proxy 与 Reflect 是 ES6 为了操作对象引入的 API 。
+<br>
+Proxy 对象用于创建一个对象的代理，从而实现基本操作的拦截和自定义（如属性查找、赋值、枚举、函数调用等）。
 <br>
 Proxy 可以对目标对象的读取、函数调用等操作进行拦截，然后进行操作处理。它不直接操作对象，而是像代理模式，通过对象的代理对象进行操作，在进行这些操作时，可以添加一些需要的额外操作。
 <br>
@@ -762,10 +888,36 @@ Object.keys(proxy)
  proxy.name 
  // TypeError: Cannot perform 'get' on a proxy that has been revoked
 ```
+**Reflect映射**
+
+与obj的区别
+```js
+//1.0 需要用try 和 catch 捕获
+try{
+    Object.defineProperties(obj,'data',{})
+}catch (e){
+    throw e
+}
+if(Reflect.defineProperties(obj,'data',{})){
+    // success
+}else{
+    // fail
+}
+// 2.0 命令式变成函数行为
+let obj = {name:'123'}
+console.log('name' in obj) // true
+console.log(Reflect.has(obj,'name')) //true
+
+delete obj.name
+Reflect.deleteProperty(obj,'name')
+
+Reflect.set(obj,'age',88)
+Reflect.get(obj,'age')
+```
 
 
-## 7.0 ES6 迭代器
-**iterator**<br>
+## 10.0 ES6 迭代器 iterator
+
 iterator 是 ES6 引入的一种新的遍历机制，迭代器有两个核心概念：
 * 迭代器是一个统一的接口，它的作用是使各种数据结构可被便捷的访问，它是通过一个键为Symbol.iterator 的方法来实现。<br>
 * 迭代器是用于遍历数据结构元素的指针（如数据库中的游标）。<br>
@@ -794,17 +946,63 @@ it.next();
 2. String
 3. Map
 4. Set
-5. arguments
+5. arguments 对象
+6. nodeList 对象
 
-**for...of 循环对数据结构进行迭代**
-```
+**for...of 与for in区别**
+``` js
 for (let item of ["zero", "one", "two"]) {
-  console.log(item);
+  console.log(item); // zero // one // two 
 }
-// zero
-// one
-// two 
+for (let item in ["zero", "one", "two"]) {
+  console.log(item); // 0 // 1 // 2
+}
 for in 不能遍历 map set结构
 for of 不能遍历对象
 for…of循环的是的是可迭代对象的value（值），in循环的是可迭代对象的key（属性）
 ```
+**我非得遍历对象**
+
+1.0 线性化
+```js
+let obj = {
+    0:'xiaohua',
+    1:'小白',
+    2:'小黑',
+    length:3,
+    [Symbol.iterator]:Array.prototype[Symbol.iterator]
+}
+for(let i of obj){
+    console.log(i) //xiaohua // 小白 //小黑
+}
+```
+2.0 还是需要埋迭代器
+```js
+    let obj = {
+    code:200,
+    name:'obj',
+    list:['everyOne','erveyTime','toduy'],
+    // 迭代器
+    [Symbol.iterator](){
+        let index = 0;
+        return {
+            next:()=>{
+                return {
+                    value:this.list[index++],
+                    done:index>=(this.list.length +1 ) ? true :false
+                }
+            }
+        }
+    }
+}
+for(let i of obj){
+    console.log(i)
+}
+let iter = obj[Symbol.iterator]()
+console.log(iter.next())
+console.log(iter.next())
+console.log(iter.next())
+console.log(iter.next())
+console.log(iter.next())
+```
+

@@ -8,34 +8,6 @@
 * this
 
 
-## 2.0 原型和原型链
-2.1 原型 <br>
-每一个函数创建的时候，都会给函数设置一个prototype（原型）属性，
-这个属性是一个指针对象，对象包含所有共享的属性和方法，
-默认情况都会为prototype对象添加一个constructor属性，指向该函数
->prototype就是调用构造函数所创建的那个实例对象的原型（proto）。
-
-``` 
-function Person(){}
-
-Person.prototype 
-    {constructor: ƒ}
-        constructor: ƒ Person()
-        __proto__: Object
-
-Person.prototype.constructor = Person;
-```
-2.2 原型链<br>
-对象具有属性__proto__，可称为隐式原型，一个对象的隐式原型指向构造该对象的构造函数的原型，
-这也保证了实例能够访问在构造函数原型中定义的属性和方法<br>
-每个对象（obj）都有一个__proto__属性,当你调用obj对象的某个属性的时候
-自身没有他就会找obj.__proto__有木有这个属性 有的话就使用，没得话话
-继续找obj.__proto__.__proto__直到找到为止 或者到顶层 Object 
-Object.prototype.__proto__,为null。
-<br/>
-这种由 __proto__ 组成的链子就是原型链 <br>
-参考这个图： <br>
-![avatar](/images/proto.jpg)
 ## 3.0 js 数据类型
 6种数据类型
 ``` 

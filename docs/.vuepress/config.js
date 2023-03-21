@@ -11,27 +11,107 @@ module.exports = {
 	evergreen: true,
 	themeConfig: {
 		nav: [
-			{ text: 'Home', link: '/' },
-			{ text: 'Guide', link: '/guide/' },
+			{ text: '首页', link: '/' },
 			{
-				text: 'Languages',
+				text: '文档',
 				items: [
-					{ text: 'Chinese', link: '/language/chinese' },
-					{ text: 'English', link: '/language/english' }
+					{
+						text:'框架文档',
+						items:[
+							{ text: 'vue2', link: 'https://v2.cn.vuejs.org/' },
+							{ text: 'vue3', link: 'https://cn.vuejs.org/' },
+							{ text: 'element', link: 'https://element.eleme.io/#/zh-CN/component/installation' },
+							{ text: 'element-plus', link: 'https://doc-archive.element-plus.org/#/zh-CN/component/installation' },
+							{ text: 'axios', link: 'https://www.axios-http.cn/' },
+							{ text: 'webpack', link: 'https://www.webpackjs.com/' },
+							{ text: 'vite', link: 'https://vitejs.cn/' },
+							{ text: 'vuex', link: 'https://vuex.vuejs.org/zh/' },
+							{ text: 'pinia', link: 'https://pinia.vuejs.org/zh/' },
+							{ text: 'Lodash 中文文档', link: 'https://www.lodashjs.com/' },
+							{ text: '微信官方文档', link: 'https://developers.weixin.qq.com/doc/' },
+							{ text: 'uniapp', link: 'https://uniapp.dcloud.net.cn/' },
+							{ text: 'jQueryApi', link: 'https://jquery.cuishifeng.cn/' },
+							{ text: 'Electron', link: 'https://www.electronjs.org/zh/docs/latest/' },
+						]
+					},
+					{
+						text:'node相关',
+						items:[
+							{ text: 'node', link: 'https://nodejs.org/en/' },
+							{ text: 'express', link: 'https://www.expressjs.com.cn/' },
+							{ text: 'koa', link: 'https://koa.bootcss.com/' },
+							{ text: 'egg', link: 'https://www.eggjs.org/zh-CN/intro/egg-and-koa' },
+							{ text: 'npm', link: 'https://www.npmjs.com/' },
+						]
+					},
+					{
+						text:'文档教程',
+						items:[
+							{ text: 'Devdocs有可能是全球最全的文档库', link: 'https://devdocs.io/' },
+							{ text: 'Overapi', link: 'https://overapi.com/' },
+							{ text: 'JavaScript 标准参考教程', link: 'http://javascript.ruanyifeng.com/' },
+							{ text: 'es6', link: 'https://es6.ruanyifeng.com/' },
+							{ text: 'MND在线文档', link: 'https://developer.mozilla.org/zh-CN/docs/Web/JavaScript' },
+							{ text: 'JavaScript Promise迷你书（中文版）', link: 'http://liubin.org/promises-book/#introductiono' },
+
+						]
+					},
+					{
+						text:'可视化',
+						items:[
+							{ text: 'Echarts', link: 'https://echarts.apache.org/zh/index.html' },
+							{ text: 'AntV', link: 'https://antv.gitee.io/zh' },
+						]
+					},
+
 				]
 			},
-			{ text: 'External', link: 'https://www.baidu.com' },
+			{
+				text: '工具',
+				items: [
+					{ text: '实用工具',
+						items: [
+							{ text: '可以在线看代码流程的网站：loupe', link: 'JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7' },
+							{ text: '在线JSON解析', link: 'https://www.json.cn/' },
+							{ text: '在线MD5编码工具', link: 'https://www.zxgj.cn/g/md5' },
+							{ text: '在线JWT解码工具', link: 'http://jwt.calebb.net/' },
+							{ text: '在线JS代码格式化', link: 'https://prettier.io/playground/' },
+						]
+					},
+					{ text: '创作必备',
+						items: [
+							{ text: '在线markdown排版1', link: 'https://mdnice.com/?category=frontend' },
+							{ text: '在线markdown排版2', link: 'http://tools.jb51.net/static/markdown/' },
+							{ text: '在线markdown排版3', link: 'http://md.aclickall.com/' },
+						]
+					},
+					{ text: 'css相关',
+						items: [
+							{ text: 'w3c教程', link: 'https://www.w3school.com.cn/css/index.asp' },
+							{ text: '提供了CSS相关属性的浏览器兼容表', link: 'https://caniuse.com/' },
+							{ text: 'sass官网', link: 'https://www.sass.hk/' },
+							{ text: 'SCSS在线转CSS', link: 'https://www.sassmeister.com/' },
+						]
+					},
+				]
+			},
+			// { text: 'External', link: 'https://github.com/lieaiwen' },
 		],
 		sidebar: [
 			{
-				title: 'node',
+				title: 'HTML',
 				children: [
-					'/page-node/node-1/',
-					'/page-node/node-2/',
-					'/page-node/node-3/',
-					'/page-node/node-4/',
-					'/page-node/node-5/',
-					'/page-node/node-6/',
+					'/page-html/html-1/',
+				]
+			},
+			{
+				title: 'CSS',
+				children: [
+					'/page-css/css-1/',
+					'/page-css/BFC/',
+					'/page-css/css-2/',
+					'/page-css/css-3/',
+
 				]
 			},
 			{
@@ -68,7 +148,17 @@ module.exports = {
 					'/page-2/js-9/',
 					'/page-2/js-10/',
 					'/page-2/js-11/',
+					'/page-2/js-12/',
+					'/page-2/js-13/',
 					'/page-2/two/',
+				]
+			},
+			{
+				title: 'es6+',
+				children: [
+					'/page-es6/es6-1/',
+					'/page-es6/es6-2/',
+					'/page-es6/es6-3/',
 				]
 			},
 			{
@@ -92,28 +182,14 @@ module.exports = {
 				title: 'js函数（方法）',
 				// collapsable: false,
 				children: [
-					'/page-js-fun/function-1/',
+					'/page-js-fun/fun-sleep/',
+					// '/page-js-fun/function-1/',
 				]
 			},
 			{
 				title: '有待学习的',
 				children: [
 					'/page-a/',
-				]
-			},
-			{
-				title: 'HTML',
-				children: [
-					'/page-html/html-1/',
-				]
-			},
-			{
-				title: 'CSS',
-				children: [
-					'/page-css/css-1/',
-					'/page-css/css-2/',
-					'/page-css/css-3/',
-					'/page-css/BFC/',
 				]
 			},
 			{
@@ -126,9 +202,7 @@ module.exports = {
 					'/page-js/js-4/',
 					'/page-js/js-5/',
 					'/page-js/js-6/',
-					'/page-js/js-8/',
 					'/page-js/js-9/',
-					'/page-js/js-10/',
 					'/page-js/js-11/',
 				]
 			},
@@ -141,6 +215,12 @@ module.exports = {
 					'/page-vue/vue-4/',
 					'/page-vue/vue-5/',
 					'/page-vue/vue-6/',
+				]
+			},
+			{
+				title: 'VUE3',
+				children: [
+					'/page-vue3/vue3-1/',
 				]
 			},
 			// { 先隐藏掉
@@ -167,14 +247,7 @@ module.exports = {
 					'/page-http/http-4/',
 				]
 			},
-			{
-				title: 'es6相关',
-				children: [
-					'/page-es6/es6-1/',
-					'/page-es6/es6-2/',
-					'/page-es6/es6-3/',
-				]
-			},
+
             {
                 title: 'Git',
                 children: [
@@ -187,6 +260,26 @@ module.exports = {
                     '/page-webpack/',
                 ]
             },
+			{
+				title: 'node',
+				children: [
+					'/page-node/node-1/',
+					'/page-node/node-2/',
+					'/page-node/node-3/',
+					'/page-node/node-4/',
+					'/page-node/node-5/',
+					'/page-node/node-6/',
+					'/page-node/zz-template/',
+				]
+			},
+			{
+				title: 'mysql',
+				children: [
+					'/page-mysql/mysql-1/',
+					'/page-mysql/mysql-2/',
+					'/page-mysql/mysql-3/',
+				]
+			},
 			{
 				title: '数据结构与算法',
 				children: [

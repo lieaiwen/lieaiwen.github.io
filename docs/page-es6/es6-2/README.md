@@ -1,45 +1,21 @@
-## es6 相关知识点2
+## es6+ 相关知识点
 
-## 1.0 Promise 的模拟实现
-1.0 简易版
+### 1.0 字符串填充
+>str.padStart(),str.padEnd()方法可以使得字符串达到固定长度，接受两个参数
+```js
+let str = "reggie"
+console.log(str.padStart(10,'x')) // reggiexxxx
+console.log(str.padEnd(10,'x')) // xxxxreggie
+console.log(str.padStart(5,'x')) // reggie
+console.log(str.padStart(5,'x')) // reggie
 ```
-function myPromise(fun){
-        var that = this;
-        that.status = "pending";
-        that.value = undefined;
-        that.reason = undefined;
-        function resolve(value){
-            if(that.status === "pending"){
-                that.value = value;
-                that.status = "resolved";
-            }
-        }
-        function reject(reason){
-            if(that.status === "pending"){
-                that.reason = reason;
-                that.status = "rejected";
-            }
-        }
-        //捕获构造异常
-        try{
-            fun(resolve,reject);
-        }catch(e){
-            reject(e);
-        }
-    }
-    myPromise.prototype.then=function(onFullfilled,onRejected){
-        let self=this;
-        switch(self.status){
-            case "resolved":
-                onFullfilled(self.value);
-                break;
-            case "rejected":
-                onRejected(self.reason);
-                break;
-            default:
-        }
-    }
-    var aa = new myPromise(function(resolve,reject){ resolve(1)});
-    console.log(aa)
-    aa.then(function(res){console.log(res)}) 
+用处：比如月份填充
+```js
+let list = []
+for(let i = 1; i<13; i++){
+    list.push((i+'').padStart(2,'0'))
+}
 ```
+
+
+
