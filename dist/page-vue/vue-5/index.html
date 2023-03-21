@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue Router(路由) | 速度至上</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/dist/img/logo.ico">
+    <link rel="manifest" href="/dist/manifest.json">
+    <meta name="description" content="Reggie Study Notes">
+    <link rel="preload" href="/dist/assets/css/0.styles.ad3a04d5.css" as="style"><link rel="preload" href="/dist/assets/js/app.33525d97.js" as="script"><link rel="preload" href="/dist/assets/js/2.e62be646.js" as="script"><link rel="preload" href="/dist/assets/js/111.9e370421.js" as="script"><link rel="prefetch" href="/dist/assets/js/10.f5968d91.js"><link rel="prefetch" href="/dist/assets/js/100.54dfe21b.js"><link rel="prefetch" href="/dist/assets/js/101.0c4f19cb.js"><link rel="prefetch" href="/dist/assets/js/102.422fac80.js"><link rel="prefetch" href="/dist/assets/js/103.c4669ec6.js"><link rel="prefetch" href="/dist/assets/js/104.3bee5b92.js"><link rel="prefetch" href="/dist/assets/js/105.b19db9b9.js"><link rel="prefetch" href="/dist/assets/js/106.26e68178.js"><link rel="prefetch" href="/dist/assets/js/107.150fd70e.js"><link rel="prefetch" href="/dist/assets/js/108.beacbbdb.js"><link rel="prefetch" href="/dist/assets/js/109.efcb4b8c.js"><link rel="prefetch" href="/dist/assets/js/11.a0d3eeeb.js"><link rel="prefetch" href="/dist/assets/js/110.fe87fe06.js"><link rel="prefetch" href="/dist/assets/js/112.6c8f0121.js"><link rel="prefetch" href="/dist/assets/js/113.745b237f.js"><link rel="prefetch" href="/dist/assets/js/114.285c64d8.js"><link rel="prefetch" href="/dist/assets/js/115.9251baa3.js"><link rel="prefetch" href="/dist/assets/js/12.ca7a28a6.js"><link rel="prefetch" href="/dist/assets/js/13.c4204dee.js"><link rel="prefetch" href="/dist/assets/js/14.bde26eb2.js"><link rel="prefetch" href="/dist/assets/js/15.0cd823a5.js"><link rel="prefetch" href="/dist/assets/js/16.3befa646.js"><link rel="prefetch" href="/dist/assets/js/17.8f6afa4a.js"><link rel="prefetch" href="/dist/assets/js/18.d26e3084.js"><link rel="prefetch" href="/dist/assets/js/19.e693faff.js"><link rel="prefetch" href="/dist/assets/js/20.1aa80c00.js"><link rel="prefetch" href="/dist/assets/js/21.88711b61.js"><link rel="prefetch" href="/dist/assets/js/22.b80be4a1.js"><link rel="prefetch" href="/dist/assets/js/23.4505f7fd.js"><link rel="prefetch" href="/dist/assets/js/24.a7f58b42.js"><link rel="prefetch" href="/dist/assets/js/25.b81668f3.js"><link rel="prefetch" href="/dist/assets/js/26.6907290f.js"><link rel="prefetch" href="/dist/assets/js/27.fc2a4dd9.js"><link rel="prefetch" href="/dist/assets/js/28.401381a3.js"><link rel="prefetch" href="/dist/assets/js/29.ef69671a.js"><link rel="prefetch" href="/dist/assets/js/3.a924d643.js"><link rel="prefetch" href="/dist/assets/js/30.e9537b9d.js"><link rel="prefetch" href="/dist/assets/js/31.60c4bec3.js"><link rel="prefetch" href="/dist/assets/js/32.941acf6a.js"><link rel="prefetch" href="/dist/assets/js/33.796a6a01.js"><link rel="prefetch" href="/dist/assets/js/34.da2e2315.js"><link rel="prefetch" href="/dist/assets/js/35.65fa8e0d.js"><link rel="prefetch" href="/dist/assets/js/36.92513a9a.js"><link rel="prefetch" href="/dist/assets/js/37.cc8e58db.js"><link rel="prefetch" href="/dist/assets/js/38.2eb9bb35.js"><link rel="prefetch" href="/dist/assets/js/39.34c47145.js"><link rel="prefetch" href="/dist/assets/js/4.08fbc4e1.js"><link rel="prefetch" href="/dist/assets/js/40.a273131e.js"><link rel="prefetch" href="/dist/assets/js/41.83377b97.js"><link rel="prefetch" href="/dist/assets/js/42.2c922935.js"><link rel="prefetch" href="/dist/assets/js/43.b161cc2b.js"><link rel="prefetch" href="/dist/assets/js/44.98a8afcc.js"><link rel="prefetch" href="/dist/assets/js/45.43adbd95.js"><link rel="prefetch" href="/dist/assets/js/46.64479baa.js"><link rel="prefetch" href="/dist/assets/js/47.8718987b.js"><link rel="prefetch" href="/dist/assets/js/48.b0e4ac8c.js"><link rel="prefetch" href="/dist/assets/js/49.752ab729.js"><link rel="prefetch" href="/dist/assets/js/5.97d6f282.js"><link rel="prefetch" href="/dist/assets/js/50.bae0e88a.js"><link rel="prefetch" href="/dist/assets/js/51.8f0a7aab.js"><link rel="prefetch" href="/dist/assets/js/52.9d203162.js"><link rel="prefetch" href="/dist/assets/js/53.253f46f7.js"><link rel="prefetch" href="/dist/assets/js/54.437a03ca.js"><link rel="prefetch" href="/dist/assets/js/55.74effd3d.js"><link rel="prefetch" href="/dist/assets/js/56.e2f95e99.js"><link rel="prefetch" href="/dist/assets/js/57.79964b8a.js"><link rel="prefetch" href="/dist/assets/js/58.caf088da.js"><link rel="prefetch" href="/dist/assets/js/59.ceb25c17.js"><link rel="prefetch" href="/dist/assets/js/6.6a21475c.js"><link rel="prefetch" href="/dist/assets/js/60.d0f189e4.js"><link rel="prefetch" href="/dist/assets/js/61.33a8c54a.js"><link rel="prefetch" href="/dist/assets/js/62.efbb3314.js"><link rel="prefetch" href="/dist/assets/js/63.d8b2884a.js"><link rel="prefetch" href="/dist/assets/js/64.7bbe4a7a.js"><link rel="prefetch" href="/dist/assets/js/65.a0c00c0e.js"><link rel="prefetch" href="/dist/assets/js/66.a8c83e47.js"><link rel="prefetch" href="/dist/assets/js/67.9f616d2f.js"><link rel="prefetch" href="/dist/assets/js/68.ebd12612.js"><link rel="prefetch" href="/dist/assets/js/69.b3af83a4.js"><link rel="prefetch" href="/dist/assets/js/7.a36e242c.js"><link rel="prefetch" href="/dist/assets/js/70.4ec28ed4.js"><link rel="prefetch" href="/dist/assets/js/71.a107cd0d.js"><link rel="prefetch" href="/dist/assets/js/72.a2f4af12.js"><link rel="prefetch" href="/dist/assets/js/73.abf5185d.js"><link rel="prefetch" href="/dist/assets/js/74.fac7b81c.js"><link rel="prefetch" href="/dist/assets/js/75.30d2d91a.js"><link rel="prefetch" href="/dist/assets/js/76.2d591912.js"><link rel="prefetch" href="/dist/assets/js/77.bd168033.js"><link rel="prefetch" href="/dist/assets/js/78.85d88ac4.js"><link rel="prefetch" href="/dist/assets/js/79.2e5a945a.js"><link rel="prefetch" href="/dist/assets/js/8.ca01f44c.js"><link rel="prefetch" href="/dist/assets/js/80.0d9bfa17.js"><link rel="prefetch" href="/dist/assets/js/81.56876d90.js"><link rel="prefetch" href="/dist/assets/js/82.eabe3f94.js"><link rel="prefetch" href="/dist/assets/js/83.a3e5f01f.js"><link rel="prefetch" href="/dist/assets/js/84.ebb76c4e.js"><link rel="prefetch" href="/dist/assets/js/85.958f2ff0.js"><link rel="prefetch" href="/dist/assets/js/86.3e26497c.js"><link rel="prefetch" href="/dist/assets/js/87.6ecce7d4.js"><link rel="prefetch" href="/dist/assets/js/88.06bb49ed.js"><link rel="prefetch" href="/dist/assets/js/89.f1eab75d.js"><link rel="prefetch" href="/dist/assets/js/9.118ad42f.js"><link rel="prefetch" href="/dist/assets/js/90.13692bd3.js"><link rel="prefetch" href="/dist/assets/js/91.f694bb86.js"><link rel="prefetch" href="/dist/assets/js/92.8d72d1a7.js"><link rel="prefetch" href="/dist/assets/js/93.ecf701b8.js"><link rel="prefetch" href="/dist/assets/js/94.d726a20f.js"><link rel="prefetch" href="/dist/assets/js/95.d68846d9.js"><link rel="prefetch" href="/dist/assets/js/96.7ccbd579.js"><link rel="prefetch" href="/dist/assets/js/97.074debce.js"><link rel="prefetch" href="/dist/assets/js/98.db3c0b5a.js"><link rel="prefetch" href="/dist/assets/js/99.0d980c31.js">
+    <link rel="stylesheet" href="/dist/assets/css/0.styles.ad3a04d5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/dist/" class="home-link router-link-active"><!----> <span class="site-name">速度至上</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/dist/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文档" class="dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架文档
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://v2.cn.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vue2
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://cn.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vue3
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://element.eleme.io/#/zh-CN/component/installation" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  element
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://doc-archive.element-plus.org/#/zh-CN/component/installation" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  element-plus
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.axios-http.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  axios
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.webpackjs.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  webpack
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://vitejs.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vite
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://vuex.vuejs.org/zh/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vuex
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://pinia.vuejs.org/zh/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  pinia
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.lodashjs.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Lodash 中文文档
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://developers.weixin.qq.com/doc/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  微信官方文档
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://uniapp.dcloud.net.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  uniapp
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://jquery.cuishifeng.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  jQueryApi
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.electronjs.org/zh/docs/latest/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Electron
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li><li class="dropdown-item"><h4>
+          node相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://nodejs.org/en/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  node
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.expressjs.com.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  express
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://koa.bootcss.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  koa
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.eggjs.org/zh-CN/intro/egg-and-koa" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  egg
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.npmjs.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  npm
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li><li class="dropdown-item"><h4>
+          文档教程
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://devdocs.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Devdocs有可能是全球最全的文档库
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://overapi.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Overapi
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="http://javascript.ruanyifeng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  JavaScript 标准参考教程
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://es6.ruanyifeng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  es6
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MND在线文档
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="http://liubin.org/promises-book/#introductiono" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  JavaScript Promise迷你书（中文版）
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li><li class="dropdown-item"><h4>
+          可视化
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://echarts.apache.org/zh/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Echarts
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://antv.gitee.io/zh" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AntV
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          实用工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/dist/page-vue/vue-5/JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7.html" class="nav-link">
+  可以在线看代码流程的网站：loupe
+</a></li><li class="dropdown-subitem"><a href="https://www.json.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线JSON解析
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.zxgj.cn/g/md5" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线MD5编码工具
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="http://jwt.calebb.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线JWT解码工具
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://prettier.io/playground/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线JS代码格式化
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li><li class="dropdown-item"><h4>
+          创作必备
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://mdnice.com/?category=frontend" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线markdown排版1
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="http://tools.jb51.net/static/markdown/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线markdown排版2
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="http://md.aclickall.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线markdown排版3
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li><li class="dropdown-item"><h4>
+          css相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.w3school.com.cn/css/index.asp" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  w3c教程
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://caniuse.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  提供了CSS相关属性的浏览器兼容表
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.sass.hk/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  sass官网
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.sassmeister.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  SCSS在线转CSS
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/dist/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文档" class="dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架文档
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://v2.cn.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vue2
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://cn.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vue3
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://element.eleme.io/#/zh-CN/component/installation" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  element
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://doc-archive.element-plus.org/#/zh-CN/component/installation" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  element-plus
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.axios-http.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  axios
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.webpackjs.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  webpack
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://vitejs.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vite
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://vuex.vuejs.org/zh/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vuex
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://pinia.vuejs.org/zh/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  pinia
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.lodashjs.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Lodash 中文文档
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://developers.weixin.qq.com/doc/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  微信官方文档
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://uniapp.dcloud.net.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  uniapp
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://jquery.cuishifeng.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  jQueryApi
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.electronjs.org/zh/docs/latest/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Electron
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li><li class="dropdown-item"><h4>
+          node相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://nodejs.org/en/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  node
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.expressjs.com.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  express
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://koa.bootcss.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  koa
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.eggjs.org/zh-CN/intro/egg-and-koa" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  egg
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.npmjs.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  npm
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li><li class="dropdown-item"><h4>
+          文档教程
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://devdocs.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Devdocs有可能是全球最全的文档库
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://overapi.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Overapi
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="http://javascript.ruanyifeng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  JavaScript 标准参考教程
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://es6.ruanyifeng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  es6
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MND在线文档
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="http://liubin.org/promises-book/#introductiono" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  JavaScript Promise迷你书（中文版）
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li><li class="dropdown-item"><h4>
+          可视化
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://echarts.apache.org/zh/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Echarts
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://antv.gitee.io/zh" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AntV
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          实用工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/dist/page-vue/vue-5/JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7.html" class="nav-link">
+  可以在线看代码流程的网站：loupe
+</a></li><li class="dropdown-subitem"><a href="https://www.json.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线JSON解析
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.zxgj.cn/g/md5" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线MD5编码工具
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="http://jwt.calebb.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线JWT解码工具
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://prettier.io/playground/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线JS代码格式化
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li><li class="dropdown-item"><h4>
+          创作必备
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://mdnice.com/?category=frontend" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线markdown排版1
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="http://tools.jb51.net/static/markdown/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线markdown排版2
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="http://md.aclickall.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线markdown排版3
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li><li class="dropdown-item"><h4>
+          css相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.w3school.com.cn/css/index.asp" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  w3c教程
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://caniuse.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  提供了CSS相关属性的浏览器兼容表
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.sass.hk/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  sass官网
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.sassmeister.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  SCSS在线转CSS
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js知识点</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js杂项知识点</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>es6+</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js函数（方法）</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>有待学习的</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>VUE</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/dist/page-vue/vue-1/" class="sidebar-link">vue 知识点1</a></li><li><a href="/dist/page-vue/vue-2/" class="sidebar-link">vue面试题</a></li><li><a href="/dist/page-vue/vue-3/" class="sidebar-link">虚拟Dom（Virtual Dom）</a></li><li><a href="/dist/page-vue/vue-4/" class="sidebar-link">Vuex实战</a></li><li><a href="/dist/page-vue/vue-5/" class="active sidebar-link">Vue Router(路由)</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/dist/page-vue/vue-5/#vue-router-路由" class="sidebar-link">Vue Router(路由)</a></li><li class="sidebar-sub-header"><a href="/dist/page-vue/vue-5/#_1-0-vue-路由是什么" class="sidebar-link">1.0 vue 路由是什么</a></li><li class="sidebar-sub-header"><a href="/dist/page-vue/vue-5/#_2-0-为什么要使用路由" class="sidebar-link">2.0 为什么要使用路由</a></li><li class="sidebar-sub-header"><a href="/dist/page-vue/vue-5/#_3-0-入门" class="sidebar-link">3.0 入门</a></li><li class="sidebar-sub-header"><a href="/dist/page-vue/vue-5/#_4-0-vue-router-的两种模式" class="sidebar-link">4.0 vue-router 的两种模式</a></li><li class="sidebar-sub-header"><a href="/dist/page-vue/vue-5/#_5-0-动态路由匹配" class="sidebar-link">5.0 动态路由匹配</a></li><li class="sidebar-sub-header"><a href="/dist/page-vue/vue-5/#_6-0-编程式导航" class="sidebar-link">6.0 编程式导航</a></li><li class="sidebar-sub-header"><a href="/dist/page-vue/vue-5/#_7-0-嵌套路由与单组件多视图" class="sidebar-link">7.0 嵌套路由与单组件多视图</a></li><li class="sidebar-sub-header"><a href="/dist/page-vue/vue-5/#_8-0-重定向和别名" class="sidebar-link">8.0 重定向和别名</a></li><li class="sidebar-sub-header"><a href="/dist/page-vue/vue-5/#_9-0-路由懒加载" class="sidebar-link">9.0 路由懒加载</a></li><li class="sidebar-sub-header"><a href="/dist/page-vue/vue-5/#_10-0-导航守卫" class="sidebar-link">10.0 导航守卫</a></li><li class="sidebar-sub-header"><a href="/dist/page-vue/vue-5/#_11-0-路由元信息" class="sidebar-link">11.0 路由元信息</a></li><li class="sidebar-sub-header"><a href="/dist/page-vue/vue-5/#总结" class="sidebar-link">总结</a></li></ul></li><li><a href="/dist/page-vue/vue-6/" class="sidebar-link">vue权限控制之路由动态加载</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>VUE3</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTTP</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>webpack</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>node</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>mysql</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构与算法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>javaScript函数式编程（美）</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>英语单词</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="vue-router-路由"><a href="#vue-router-路由" class="header-anchor">#</a> Vue Router(路由)</h2> <p>vue-router和vue.js是深度集成的,适合用于单页面应用.传统的路由是用一些超链接来实现页面切换和跳转.而vue-router在单页面应用中,则是组件之间的切换.其本质就是:建立并管理url和对应组件之间的映射关系.</p> <h2 id="_1-0-vue-路由是什么"><a href="#_1-0-vue-路由是什么" class="header-anchor">#</a> 1.0 vue 路由是什么</h2> <blockquote><p>Vue路由是指根据url分配到对应的处理程序；作用就是解析URL，调用对应的控制器（的方法，并传递参数）。
+Vue路由有助于在浏览器的URL或历史记录与Vue组件之间建立链接，从而允许某些路径渲染与之关联的任何一个视图。</p></blockquote> <h2 id="_2-0-为什么要使用路由"><a href="#_2-0-为什么要使用路由" class="header-anchor">#</a> 2.0 为什么要使用路由</h2> <blockquote><p>在传统的web开发中每一个请求地址都会请求服务器来进行处理，但是用户有些操作则无需请求服务器，
+直接页面端修改下逻辑就能达到目的，在这种方式下最好的方法是使用路由，因为使用路由时，URL会随着改变，
+用户浏览一个网页时可以直接复制或收藏当前页面的URL给别人，这种方式对于搜索引擎和用户来说都是友好的</p></blockquote> <h2 id="_3-0-入门"><a href="#_3-0-入门" class="header-anchor">#</a> 3.0 入门</h2> <p>我们在创建vue项目的时候，默认是都会把这个路由安装好的，直接使用就可以了。<br>
+步骤一：我们在 components文件夹下面新建两个页面 name.vue 和 age.vue</p> <div class="language- extra-class"><pre class="language-text"><code>--- name.vue
+
+&lt;template&gt;
+  &lt;div&gt;
+      我叫小夏
+  &lt;/div&gt;
+&lt;/template&gt;
+
+--- age.vue
+
+ &lt;template&gt;
+  &lt;div&gt;
+      我年方18
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre></div><p>步骤二：在router文件夹下的index.vue 引入文件并配置路由</p> <div class="language- extra-class"><pre class="language-text"><code> import Vue from 'vue'
+import Router from 'vue-router'
+import HelloWorld from '@/components/HelloWorld'
+// 1.0 引入组件
+import Name from '@/components/name'
+import Age from '@/components/age'
+
+Vue.use(Router)
+
+// 2.0 定义路由
+export default new Router({
+   //mode:'history', //路由模式:默认为hash,如果改为history,则需要后端进行配合
+   //base:'/',//基路径:默认值为'/'.如果整个单页应用在/app/下,base就应该设为'/app/'.一般可以写成__dirname,在webpack中配置.
+  routes: [
+    {
+      path: '/',
+      name: 'HelloWorld',
+      component: HelloWorld
+    },
+    {
+      path:'/name',
+      name:'Name', //给路由命名,设置的name要唯一!
+      component:Name, //就是第一步import的组件
+    },
+    { //路由懒加载:单页面应用,首页时,加载内容时间过长.运用懒加载对页面组件进行划分,减少首页加载时间
+      path:'/age',
+      name:'Age',
+      component:()=&gt;import('@/components/age'),//此时component则不需要在第一步import
+    }
+  ]
+})
+</code></pre></div><p>步骤三：在App.vue中配置跳转</p> <blockquote><p>1, router-link组件来导航,用户点击后切换到相关视图.<br>
+2, router-view组件来设置切换的视图在哪里渲染.(一个页面也可以有多个router-view分别展示特定的视图,并且支持嵌套)</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+ &lt;div id=&quot;app&quot; class=&quot;portal-app&quot;&gt;
+   &lt;!-- 使用 router-link 组件来导航. --&gt;
+   &lt;!-- 通过传入 `to` 属性指定链接. --&gt;
+   &lt;!-- &lt;router-link&gt; 默认会被渲染成一个 `&lt;a&gt;` 标签 --&gt;
+   &lt;router-link to=&quot;/name&quot;&gt;点我看看名字 &lt;/router-link&gt;
+   &lt;router-link to=&quot;/age&quot;&gt;点我看看年龄 &lt;/router-link&gt;
+   
+   &lt;!-- 路由出口 --&gt;
+   &lt;!-- 路由匹配到的组件将渲染在这里 --&gt;
+   &lt;router-view/&gt;
+  &lt;/div&gt;
+&lt;/template&gt; 
+</code></pre></div><p>这样基本的路由就算配置好了，点击就能看到组件之间的切换了。
+<br>
+我们在创建项目的时候，已经给我们挂载了路由，是main.js里面的如下：</p> <div class="language- extra-class"><pre class="language-text"><code> new Vue({
+  el: '#app',
+  router,
+  store,
+  components: { App },
+  template: '&lt;App/&gt;'
+})
+</code></pre></div><p>通过创建和挂载根实例，让我们的整个程序都有路由功能。<br>
+通过注入路由器，我们可以在任何组件内通过 this.$router 访问路由器，也可以通过 this.$route访问当前路由对象：<br> <strong>Tips</strong> :这里我简单说明下$router和$route的区别:<br>
+$router是指整个路由实例,你可以操控整个路由,通过'$router.push'往其中添加任意的路由对象.<br>
+$route:是指当前路由实例('$router')跳转到的路由对象;<br>
+路由实例可以包含多个路由对象.它们是父子包含关系.<br></p> <div class="language- extra-class"><pre class="language-text"><code>this.$route.params // 本页面的参数
+this.$router.go(-1) // 返回以上一页
+this.$router.push('/age') // 跳转到age页面
+</code></pre></div><h2 id="_4-0-vue-router-的两种模式"><a href="#_4-0-vue-router-的两种模式" class="header-anchor">#</a> 4.0 vue-router 的两种模式</h2> <p><strong>4.1 Hash 模式</strong></p> <blockquote><p>vue-router默认使用Hash模式.使用url的hash来模拟一个完整的url.此时url变化时,浏览器是不会重新加载的.Hash(即#)是url的锚点,代表的是网页中的一个位置,仅仅改变#后面部分,浏览器只会滚动对应的位置,而不会重新加载页面.#仅仅只是对浏览器进行指导,而对服务端是完全没有作用的!它不会被包括在http请求中,故也不会重新加载页面.同时hash发生变化时,url都会被浏览器记录下来,这样你就可以使用浏览器的后退了.</p></blockquote> <br>
+总而言之:Hash模式就是通过改变#后面的值,实现浏览器渲染指定的组件.
+<br> <p><strong>4.1 History 模式</strong></p> <blockquote><p>如果你不喜欢hash这种#样式.可以使用history模式.这种模式利用了HTML5 History新增的pushState()和replaceState()方法. 除了之前的back,forward,go方法,这两个新方法可以应用在浏览器历史记录的增加替换功能上.使用History模式,通过历史记录修改url,但它不会立即向后端发送请求.
+注意点: 虽然History模式可以丢掉不美观的#,也可以正常的前进后退,但是刷新f5后,此时浏览器就会访问服务器,在没有后台支持的情况下,此时就会得到一个404!官方文档给出的描述是:&quot;不过这种模式要玩好,还需要后台配置支持.因为我们的应用是单个客户端应用,如果后台没有正确的配置,当用户直接访问时,就会返回404.所以呢,你要在服务端增加一个覆盖所有情况的的候选资源;如果url匹配不到任何静态资源,则应该返回同一个index.html页面.&quot;</p></blockquote> <br>
+总而言之:History模式就是通过pushState()方法来对浏览器的浏览记录进行修改,来达到不用请求后端来渲染的效果.不过建议,实际项目还是使用history模式.
+<br> <h2 id="_5-0-动态路由匹配"><a href="#_5-0-动态路由匹配" class="header-anchor">#</a> 5.0 动态路由匹配</h2> <p>很多时候，我们需要将给定匹配模式的路由映射到同一个组件。例如，我们可能有一个 User 组件，它应该对所有用户进行渲染，但用户 ID 不同。在 Vue Router 中，我们可以在路径中使用一个动态字段来实现，我们称之为 路径参数 ：
+<br>
+动态路由匹配本质上就是通过url进行传参
+<br> <strong>5.1 路由对象属性介绍：</strong> <br>
+为了下面理解的方便这里简单介绍下常用的路由对象属性,在组件内可以通过this.$route(不是$router!)进行访问.</p> <div class="language- extra-class"><pre class="language-text"><code>$route.path
+类型: string
+字符串，对应当前路由的路径，总是解析为绝对路径，如 &quot;/age&quot;。
+
+$route.params
+类型: Object
+一个 key/value 对象，包含了动态片段和全匹配片段，如果没有路由参数，就是一个空对象。
+
+$route.query
+类型: Object
+一个 key/value 对象，表示 URL 查询参数。
+例如，对于路径 /age?user=1，则有 $route.query.user == 1，如果没有查询参数，则是个空对象。
+
+$route.name
+当前路由的名称，Age,如果有的话。
+这里建议最好给每个路由对象命名,方便以后编程式导航.不过记住name必须唯一!
+
+$route.hash
+类型: string
+当前路由的 hash 值 (带 #) ，如果没有 hash 值，则为空字符串。
+
+$route.fullPath
+类型: string
+完成解析后的 URL，包含查询参数和 hash 的完整路径。
+
+$route.matched
+类型: Array&lt;RouteRecord&gt;
+一个数组，包含当前路由的所有嵌套路径片段的路由记录 。
+路由记录就是 routes 配置数组中的对象副本 (还有在children数组)。
+
+$route.redirectedFrom
+如果存在重定向，即为重定向来源的路由的名字。
+</code></pre></div><p><strong>5.1 使用params进行配置:</strong></p> <p>举个例子:</p> <div class="language- extra-class"><pre class="language-text"><code>routes:[{
+	//动态路径参数,以冒号开头
+	path:'/name/:id',
+	component:User
+}] 
+</code></pre></div><p>这样,就是使用params进行配置.像/name/1和/name/2都将映射到相同的路由.
+<br>
+一个路径参数使用':'冒号进行标记.<br>
+当匹配到一个路由时,参数就会被设置到this.$route.params,可以在每个组件内使用.例如/name/1.$route.params.id就为1
+<br>
+我们对页面进行改造</p> <div class="language- extra-class"><pre class="language-text"><code>// router/index.js
+{
+      path:'/name/:id',
+      name:'Name',
+      component:Name,
+    },
+    
+// app.vue
+
+    &lt;router-link to=&quot;/name/1&quot;&gt;点我看看名字1 &lt;/router-link&gt;
+   &lt;router-link to=&quot;/name/2&quot;&gt;点我看看名字2 &lt;/router-link&gt;
+   
+// name.vue
+
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;div&gt;发生了什么&lt;/div&gt;
+    &lt;ul&gt;
+      &lt;li&gt;我是小明{{id}}&lt;/li&gt;
+      &lt;li&gt;我今天很高兴&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+created() {
+    this.id = this.$route.params.id
+  },
+</code></pre></div><p>我们发现点击 “点我看看名字1” 下面会出现新的数据 但是再点击 “点我看看名字2” 页面数据并没有改变，这是因为：<br>
+由于路由参数对组件实例是复用的.例如:/name/1 和 /name/2在使用路由参数时,复用的都是Name组件.
+此时组件的生命周期钩子不会再被调用。如果你想路径切换时,进行一些初始化操作时,可以用以下两种解决办法:
+<br>
+方法一：在组件内 watch $route 对象：</p> <div class="language- extra-class"><pre class="language-text"><code>// name 组件 增加
+watch:{
+    '$route' (to, from) {
+      // 对路由变化作出响应...
+      this.id = this.$route.params.id
+    }
+  },
+</code></pre></div><p>方法二：使用2.2版本中的  beforeRouteUpdate 路由守卫：</p> <div class="language- extra-class"><pre class="language-text"><code>    // name 组件 跟 created() 同级
+beforeRouteUpdate(to,from,next){
+    // 在当前路由改变，但是该组件被复用时调用
+    next()
+     // 可以访问组件实例 `this`
+
+    this.id = this.$route.params.id
+  },
+</code></pre></div><p>这样来回切换，数据就会随之变化了。</p> <p><strong>5.2 通过query进行配置传参:</strong></p> <p>在项目里我们可以通过上面提到的params进行传参.同时也可以用query进行传参.
+举个例子:</p> <div class="language-angular2html extra-class"><pre class="language-text"><code>&lt;router-link to=&quot;/name?id=1&quot;&gt;foo&lt;/router-link&gt;
+
+vue-route会自动将?后的id=1封装进this.$route.query里. 此时,在组件里this.$route.query.id值为'1'
+
+==除了通过router-link的to属性. query也可以通过后面讲到的编程式导航进行传参==
+</code></pre></div><h2 id="_6-0-编程式导航"><a href="#_6-0-编程式导航" class="header-anchor">#</a> 6.0 编程式导航</h2> <p>什么是编程式导航,编程式导航就是在vue组件内部通过this.$router访问路由实例,并通过this.$router.push导航到不同的url,进行路由映射,
+所以 它的作用是和<code>&lt;router-link :to&gt;</code>是一毛一样的! 当然,前提是你已经在routes里配置了对应的路由对象.<br>
+一般什么时候用到编程式导航? 如果,你想在路由跳转前做点其他事情,例如权限验证等.但是用<code>&lt;router-link&gt;</code>的话,就直接跳转了.此时就可以使用编程式导航!</p> <p><strong>6.1 编程式导航写法</strong></p> <p>编程式导航一般都是用到router.push方法.该方法的参数可以是一个字符串路径,或者一个描述地址的对象.例如:</p> <div class="language- extra-class"><pre class="language-text"><code>// 字符串路径
+router.push('/users/eduardo')
+
+// 带有路径的对象
+router.push({ path: '/users/eduardo' })
+
+// 命名的路由，并加上参数，让路由建立 url
+router.push({ name: 'user', params: { username: 'eduardo' } })
+
+// 带查询参数，结果是 /register?plan=private
+router.push({ path: '/register', query: { plan: 'private' } })
+
+// 带 hash，结果是 /about#team
+router.push({ path: '/about', hash: '#team' }) 
+</code></pre></div><p><strong>注意：</strong> 如果提供了 path，params 会被忽略，上述例子中的 query 并不属于这种情况。取而代之的是下面例子的做法，
+你需要提供路由的 name 或手写完整的带有参数的 path ：</p> <p><strong>6.2 router.replace方法</strong></p> <p>router.replace和router.push很像,写法一样.但实际效果不一样.push是向history里添加新记录.而replace是直接将当前浏览器history记录替换掉!
+<br>
+那最直接的后果是什么呢? 举个例子:</p> <blockquote><p>用push方法,页面1跳转到页面2,你使用浏览器的后退可以回到页面1 <br>
+用replace方法,页面1被替换成页面2,你使用浏览器的后退,此时你回不到页面1,只能回到页面1的前一页,页面0.</p></blockquote> <p><code>那什么时候会用到replace呢?</code> 当你不想让用户回退到之前的页面时,常见于权限验证,验证后就不让用户回退到登录页重复验证.</p> <p><strong>6.3 router.go(n)方法</strong></p> <p>这个方法的参数就是一个整数,意思是在history记录中前进或后退多少步.类似window.history.go(n).这样就能控制页面前进或者后退多少步.</p> <h2 id="_7-0-嵌套路由与单组件多视图"><a href="#_7-0-嵌套路由与单组件多视图" class="header-anchor">#</a> 7.0 嵌套路由与单组件多视图</h2> <p><code>嵌套路由:</code>就是父路由嵌套子路由.url上就是/name嵌套两个子路由后就是/user/hong和/uer/ming.<br> <code>单组件多视图:</code>就是一个组件里有多个视图进行展示.即包含有多个<code>&lt;router-view/&gt;</code></p> <p>讲之前,必须先清楚这样一件事,一个<!---->对应展示的就是一个组件 因此实现嵌套路由有两个要点:
+<br>
+一、路由对象中定义子路由(嵌套子路由)<br>
+二、组件内<code>&lt;router-view/&gt;</code>的使用.</p> <p><strong>7.1 路由对象中定义子路由</strong></p> <div class="language- extra-class"><pre class="language-text"><code>    {
+      path:'/name',
+      name:'Name',
+      component:Name,
+      children:[
+        {path:'hong',name:'Hong',component:()=&gt;import('@/components/xiaohong'),},
+         //此时path等同于'/name/hong',子路由会继承父路由的路径.但是不能写成path:'/hong'.因为以 / 开头的嵌套路径会被当作根路径,也就是说此时hong成了根路径.而不是name.
+        {path:'ming',name:'Ming',component:()=&gt;import('@/components/xiaoming'),}
+      ]
+    },
+    
+    //name.vue 页面代码
+    &lt;template&gt;
+      &lt;div&gt;
+        &lt;div&gt;我是name组件&lt;/div&gt;
+        &lt;button @click=&quot;look(1)&quot;&gt;点我看小红&lt;/button&gt;
+        &lt;button @click=&quot;look(2)&quot;&gt;点我看小明&lt;/button&gt;
+        &lt;router-view&gt;&lt;/router-view&gt;
+      &lt;/div&gt;
+    &lt;/template&gt;
+    // 增加方法
+    look(num){
+      if(num==1){
+        this.$router.push('/name/hong')
+      }else{
+        this.$router.push('/name/ming')
+      }
+    }
+</code></pre></div><p><strong>7.2 单组件多视图</strong></p> <p>如果一个组件有多个视图,来展示多个子组件.这个时候就需要用到命名视图</p> <div class="language- extra-class"><pre class="language-text"><code>//app.vue
+&lt;div id=&quot;app&quot; &gt;
+    &lt;div&gt;我布局一下页面&lt;/div&gt;
+    &lt;router-view&gt;&lt;/router-view&gt; //没有设置name的视图,会获得默认命名为default
+   &lt;router-view name=&quot;headerLayout&quot;&gt;&lt;/router-view&gt;
+   &lt;router-view name=&quot;leftLayout&quot;&gt;&lt;/router-view&gt;
+   &lt;router-view name=&quot;rightLayout&quot;&gt;&lt;/router-view&gt;
+&lt;/div&gt;
+// 增加几个页面 hello.vue   headerLayout.vue leftLayout.vue rightLayout.vue  里面内容如下
+
+&lt;template&gt;&lt;div&gt;hello vue-router&lt;/div&gt;&lt;/template&gt;
+&lt;template&gt;&lt;div&gt;我是顶部&lt;/div&gt;&lt;/template&gt;
+&lt;template&gt;&lt;div&gt;我是左边&lt;/div&gt;&lt;/template&gt;
+&lt;template&gt;&lt;div&gt;我是右边&lt;/div&gt;&lt;/template&gt;  
+
+//  router.index.js  先引入几个文件
+import Hello from '@/components/hello'
+import HeaderLayout from '@/components/headerLayout'
+import LeftLayout from '@/components/leftLayout'
+import RightLayout from '@/components/rightLayout'
+
+routes: [
+    {
+      path: '/',
+      // redirect: 'name',
+      components: {
+        default: Hello,
+        headerLayout:HeaderLayout,
+        leftLayout:LeftLayout,
+        rightLayout:RightLayout,
+      }
+    },
+  ]
+  //如果有多个视图需要展示时,以前的component换成components(加上s!!),写成对象形式.
+  左边的属性对应的&lt;router-view&gt;里设置的name=&quot;headerLayout&quot;，右边的对应上面的组件
+
+</code></pre></div><h2 id="_8-0-重定向和别名"><a href="#_8-0-重定向和别名" class="header-anchor">#</a> 8.0 重定向和别名</h2> <p><strong>8.1 重定向</strong></p> <p>重定向其实就是通过路由.拦截path,然后替换url跳转到redirect所指定的路由上. 重定向是通过 routes 配置来完成</p> <div class="language- extra-class"><pre class="language-text"><code>{ 从 /age 重定向到 /name
+      path:'/age',
+      name:'Age',
+      component:()=&gt;import('@/components/age'),
+      redirect: '/name',
+}
+
+// 第二种写法
+{ 
+      path:'/age',
+      name:'Age',
+      component:()=&gt;import('@/components/age'),
+      redirect: {name:'Name'},
+}
+
+//甚至是一个方法，动态返回重定向目标：
+const router = new VueRouter({
+  routes: [
+    { path: '/a', redirect: to =&gt; {
+      // 方法接收 目标路由 作为参数
+      // return 重定向的 字符串路径/路径对象
+	  const { hash, params, query } = to
+	  //这里使用了ES6的解构写法,分别对应了to的hash模式,params,query参数.这里解构就不具体说明了.
+        if (query.to === 'name') {
+          return { path: '/name', query: null }
+        }
+        if (hash === '#baz') {
+          return { name: 'baz', hash: '' }
+        }
+        if (params.id) {
+          return '/with-params/:id'
+        } else {
+          return '/bar'
+        }
+    }}
+  ]
+})
+</code></pre></div><p><strong>8.2别名</strong></p> <p>重定向是替url换路径,达到路由跳转.那别名就是一个路由有两个路径.两个路径都能跳转到该路由.<br>
+举个栗子:你可能大名叫'赵日天',但你的小名(别名)可能就叫'二狗子'.但'赵日天'和'二狗子'指代的是同一个人(路由).<br>
+别名是在router里的alias进行配置:</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;router-link to=&quot;/years&quot;&gt;点我看看年龄 &lt;/router-link&gt;
+
+{ 
+      path:'/age',
+      name:'Age',
+      component:()=&gt;import('@/components/age'),//此时component则不需要在第一步import
+      alias: '/years'
+      //当有多个别名时,alias也可以写成数组形式.  alias: ['/years', '/yearss','/ages']
+    }
+</code></pre></div><h2 id="_9-0-路由懒加载"><a href="#_9-0-路由懒加载" class="header-anchor">#</a> 9.0 路由懒加载</h2> <p>vue主要用于单页面应用，此时webpack会打包大量文件,这样就会造成首页需要加载资源过多,首屏时间过长,给用户一种不太友好的体验.
+如果使用路由懒加载,仅在你路由跳转的时候才加载相关页面.这样首页加载的东西少了,首屏时间也减少了.
+vueRouter的懒加载主要是靠<code>Vue 的异步组件</code>和 <code>Webpack 的代码分割功能</code>，轻松实现路由组件的懒加载。</p> <div class="language- extra-class"><pre class="language-text"><code>{ //路由懒加载:单页面应用,首页时,加载内容时间过长.运用懒加载对页面组件进行划分,减少首页加载时间
+      path:'/age',
+      name:'Age',
+      component:()=&gt;import('@/components/age'),//此时component则不需要在第一步import
+}
+</code></pre></div><p><strong>9.1把组件按组分块</strong></p> <p><code>使用 webpack</code>有时候我们想把某个路由下的所有组件都打包在同个异步块 (chunk) 中。只需要使用命名 chunk，一个特殊的注释语法来提供 chunk name (需要 Webpack &gt; 2.4)：</p> <div class="language- extra-class"><pre class="language-text"><code>// 需要在webpack.base.conf.js里面的output里面的filename下面加上chunkFileName
+ output: {
+ path: config.build.assetsRoot,
+ filename: '[name].js',
+ // 需要配置的地方
+ chunkFilename: '[name].js',
+ publicPath: process.env.NODE_ENV === 'production'
+   ? config.build.assetsPublicPath
+   : config.dev.assetsPublicPath
+}
+// 路由修改
+{
+      path:'/name',
+      name:'Name',
+      component:import(/* webpackChunkName: &quot;group-user&quot; */ '@/components/name'),
+    },
+    { 
+      path:'/age',
+      name:'Age',
+      component:()=&gt;import(/* webpackChunkName: &quot;group-user&quot; */ '@/components/age'),
+    }
+</code></pre></div><h2 id="_10-0-导航守卫"><a href="#_10-0-导航守卫" class="header-anchor">#</a> 10.0 导航守卫</h2> <p>路由导航守卫,通俗点说就是路由钩子.作用也和生命周期钩子类似,在路由跳转过程进行操作控制</p> <p><strong>10.1 导航守卫分类</strong></p> <p><code>全局守卫:</code>异步执行,每个路由跳转都会按顺序执行
+<br></p> <ul><li>router.beforeEach 全局前置守卫</li> <li>router.beforeResolve 全局解析守卫(2.5.0+) 在beforeRouteEnter调用之后调用.</li> <li>router.afterEach 全局后置钩子 进入路由之后 注意:不支持next(),只能写成这种形式router.afterEach((to, from) =&gt; {});</li></ul> <p>每个守卫方法接收三个参数：</p> <ul><li><code>to: Route:</code> 即将要进入的目标 路由对象</li> <li><code>from: Route:</code> 当前导航正要离开的路由对象</li> <li><code>next: Function:</code> 一定要调用该方法来 resolve 这个钩子。执行效果依赖 next 方法的调用参数。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>next(): 进行管道中的下一个钩子。如果全部钩子执行完了，则导航的状态就是confirmed(确认的)。
+
+next(false): 中断当前的导航。如果浏览器的 URL 改变了 (可能是用户手动或者浏览器后退按钮)，
+那么 URL 地址会重置到from路由对应的地址。
+
+next('/')或者next({ path: '/' }): 跳转到一个不同的地址。当前的导航被中断，然后进行一个新的导航。
+你可以向next传递任意位置对象，且允许设置诸如
+replace: true、name: 'home'之类的选项以及任何用在router-link的to prop或router.push中的选项。
+
+next(error): (2.4.0+) 如果传入next的参数是一个Error实例，
+则导航会被终止且该错误会被传递给router.onError()注册过的回调。
+
+</code></pre></div><p>下面就通过例子再进行详细的说明</p> <div class="language- extra-class"><pre class="language-text"><code>//1, 可以在main.js 或者在单独的路由配置文件router.js中进行设置
+router.beforeEach((to, from, next) =&gt; { 
+  ...
+  next();
+});
+
+//2, 也可以在组件内部设置
+this.$router.beforeEach((to, from, next) =&gt; { 
+  ...
+  next();
+});
+
+//3, 对函数及next()的详细使用说明
+router.beforeEach((to, from, next) =&gt; { 
+	//首先to和from 其实是一个路由对象,所以路由对象的属性都是可以获取到的(具体可以查看官方路由对象的api文档).
+	//例如:我想获取获取to的完整路径就是to.path.获取to的子路由to.matched[0].
+      next();//使用时,千万不能漏写next!!!
+	//next()  表示直接进入下一个钩子.
+	//next(false)  中断当前导航
+	//next('/path路径')或者对象形式next({path:'/path路径'})  跳转到path路由地址
+	//next({path:'/shotcat',name:'shotCat',replace:true,query:{logoin:true}...})  这种对象的写法,可以往里面添加很多.router-link 的 to prop 和 router.push 中的选项(具体可以查看api的官方文档)全都是可以添加进去的,再说明下,replace:true表示替换当前路由地址,常用于权限判断后的路由修改.
+	//next(error)的用法,(需2.4.0+) 
+ }).catch(()=&gt;{
+  //跳转失败页面
+  next({ path: '/error', replace: true, query: { back: false }})
+})
+//如果你想跳转报错后,再回调做点其他的可以使用 router.onError()
+router.onError(callback =&gt; { 
+  console.log('出错了!', callback);
+});
+
+</code></pre></div><p><code>路由独享的守卫:</code> 即路由对象独享的守卫 <br>
+beforeEnter:路由只独享这一个钩子,在routes里配置</p> <div class="language- extra-class"><pre class="language-text"><code>const router = new VueRouter({
+  routes: [
+    {
+      path: '/name',
+      component: Name,
+      beforeEnter: (to, from, next) =&gt; {
+        // 使用方法和上面的beforeEach一样
+      }
+    }
+  ]
+})
+
+</code></pre></div><p><code>组件内的守卫:</code> 注意:这类路由钩子是写在组件内部的</p> <ul><li>beforeRouteEnter 进入路由前,此时实例还没创建,无法获取到this</li> <li>beforeRouteUpdate (2.2) 路由复用同一个组件时</li> <li>beforeRouteLeave 离开当前路由,此时可以用来保存数据,或数据初始化,或关闭定时器等等</li></ul> <p>这里官方的例子说明的很详细,这里就直接进行引用了.</p> <div class="language- extra-class"><pre class="language-text"><code>//在组件内部进行配置,这里的函数用法也是和beforeEach一毛一样
+const Foo = {
+  template: `...`,
+  beforeRouteEnter (to, from, next) {
+    // 在渲染该组件的对应路由被 confirm 前调用
+    // 不！能！获取组件实例 `this`
+    // 因为当守卫执行前，组件实例还没被创建
+  },
+  beforeRouteUpdate (to, from, next) {
+    // 在当前路由改变，但是该组件被复用时调用
+    // 举例来说，对于一个带有动态参数的路径 /name/:id，在 /name/1 和 /name/2 之间跳转的时候，
+    // 由于会渲染同样的 Name 组件，因此组件实例会被复用。而这个钩子就会在这个情况下被调用。
+    // 可以访问组件实例 `this`
+  },
+  beforeRouteLeave (to, from, next) {
+    // 导航离开该组件的对应路由时调用
+    // 可以访问组件实例 `this`
+  }
+}
+</code></pre></div><p><strong>10.2 完整的导航解析流程</strong></p> <p>1.0 导航被触发。<br>
+2.0 在失活的组件里调用 beforeRouteLeave 守卫。<br>
+3.0 调用全局的 beforeEach 守卫。<br>
+4.0 在重用的组件里调用 beforeRouteUpdate 守卫(2.2+)。<br>
+5.0 在路由配置里调用 beforeEnter。<br>
+6.0 解析异步路由组件。<br>
+7.0 在被激活的组件里调用 beforeRouteEnter。<br>
+8.0 调用全局的 beforeResolve 守卫(2.5+)。<br>
+9.0 导航被确认。<br>
+10.0 调用全局的 afterEach 钩子。<br>
+11.0 触发 DOM 更新。<br>
+12.0 调用 beforeRouteEnter 守卫中传给 next 的回调函数，创建好的组件实例会作为回调函数的参数传入。</p> <h2 id="_11-0-路由元信息"><a href="#_11-0-路由元信息" class="header-anchor">#</a> 11.0 路由元信息</h2> <p><strong>11.1什么是路由元信息</strong></p> <p>一句话概括:路由配置的meta对象里的信息,如下：</p> <div class="language- extra-class"><pre class="language-text"><code>const router = new VueRouter({
+  routes: [
+    {
+      path: '/name',
+      component: Name,
+      children: [
+        {
+          path: 'bar',
+          component: Bar,
+          // a meta field
+          meta: { requiresAuth: true }
+        }
+      ]
+    }
+  ]
+})
+</code></pre></div><p>从上面例子可以看出就是给路由添加了一个自定义的meta对象,并在里面设置了一个requiresAuth状态为true.</p> <p><strong>11.2它有什么用</strong></p> <p>先看代码：</p> <div class="language- extra-class"><pre class="language-text"><code>router.beforeEach((to, from, next) =&gt; {
+  if (to.matched.some(record =&gt; record.meta.requiresAuth)) {
+    //对matched不了解的建议看官方api文档
+	//数组some方法,如果meta.requiresAuth为ture,则返回true.此时,说明进入该路由前需要判断用户是否已经登录 
+    if (!auth.loggedIn()) {   //如果没登录,则跳转到登录页
+      next({
+        path: '/login',
+        query: { redirect: to.fullPath }  //官方例子的这个小细节很好,通过query将要跳转的路由路径保存下来,待完成登录后,就可以直接获取该路径,直接跳转到登录前要去的路由
+      })
+    } else {
+      next()
+    }
+  } else {
+    next() // 确保一定要调用 next()
+  }
+})
+</code></pre></div><p>我们可以通过在meta里设置的状态,来判断是否需要进行登录验证.如果meta里的requiresAuth为true,
+则需要判断是否已经登录,没登录就跳转到登录页.如果已登录则继续跳转.
+<br></p> <p>此时,可能会有同学说,前面说的path,params,query都可以存储信息,作为登录验证的状态标记.的确,它们也可以达到同样的效果.如果是少量单个的验证,使用它们问题不大.
+但如果是多个路由都需要进行登录验证呢?path,params,query是把信息显性地存储在url上的.并且多个路径都把一个相同的状态信息加在url上.这样就使url不再单纯,并且也很不优雅美观.
+所以要优雅要隐性地传递信息,就使用meta对象吧!</p> <h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <p>以上就是Vue Router的基本操作了，希望大家学以致用。
+<br>参考链接</p> <blockquote><p>https://router.vuejs.org/zh/introduction.html<br>
+https://juejin.cn/post/6844903665388486664#heading-44</p></blockquote> <p>失败了，不要害怕重新开始，不是从头而是从经验开始。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/dist/page-vue/vue-4/" class="prev">
+        Vuex实战
+      </a></span> <span class="next"><a href="/dist/page-vue/vue-6/">
+        vue权限控制之路由动态加载
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/dist/assets/js/app.33525d97.js" defer></script><script src="/dist/assets/js/2.e62be646.js" defer></script><script src="/dist/assets/js/111.9e370421.js" defer></script>
+  </body>
+</html>
