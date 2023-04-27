@@ -2,8 +2,8 @@
 
 ## 介绍
 > module.exports 和exports 是commonjs的规范 --模块的导出 <br>
-> require 是amd规范 --模块的导入
->export 和export default 是es6 规范 --模块的导出 <br>
+> require 是amd规范 --模块的导入<br>
+> export 和export default 是es6 规范 --模块的导出 <br>
 > import 是es6 的一个语法标准 --模块的导入
 
 require: node 和 es6 都支持的引入 <br>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>html data-* 属性</h2>
+<ul>
+    <li onclick="showDetails(this)" id="owl" data-animal-type="bird">鸟</li>
+    <li onclick="showDetails(this)" id="salmon" data-animal-type="fish">鱼</li>
+    <li onclick="showDetails(this)" id="tarantula" data-animal-type="spider">Tarantula</li>
+</ul>
+<script>
+    function showDetails(animal){
+        var animalType = animal.getAttribute("data-animal-type");
+        alert("The " + animal.innerHTML + " is a " + animalType + ".");
+    }
+
+</script>
+</body>
+</html>

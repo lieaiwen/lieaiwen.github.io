@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>call5</title>
+</head>
+<body>
+<h3>call() apply() bind() 传参情况下</h3>
+<script>
+	var name = '笑笑';
+	var age  = 17;
+	var obj = {
+		name:'打打',
+		objAge:this.age, // 指向上一级作用域 window ，对象不形成作用域
+		myFun:function(fm,t){
+			console.log(this.name + '年龄' + this.age+'来自'+fm+'的'+t);
+		}
+	}
+	var dd = {
+		name:'美女',
+        age:99
+    }
+    obj.myFun.call(dd,'四川','成都');// 美女年龄99美女年龄99来自四川的成都
+    obj.myFun.apply(dd,['上海','静安区']);// 美女年龄99来自上海的静安区
+	obj.myFun.bind(dd,'上海','静安区')();// 美女年龄99来自上海静安区的
+    obj.myFun.bind(dd,['上海','静安区'])();// 美女年龄99来自上海,静安区的undefined
+</script>
+
+<script>
+</script>
+</body>
+</html>

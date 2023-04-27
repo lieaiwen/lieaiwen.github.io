@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let singleMan = function(name){
+        this.name = name;
+        this.girlFriend = null;
+    }
+    singleMan.prototype.getName = function(){
+        console.log(this.name)
+    }
+    singleMan.getGirlFriend = function(name){
+        console.log(name,this.girlFriend)
+        if(!this.girlFriend){
+            this.girlFriend = new singleMan(name)
+        }
+        console.log(name,this.girlFriend)
+        return this.girlFriend
+    }
+    let man1 = singleMan.getGirlFriend('小红1')
+    let man2 = singleMan.getGirlFriend('小红2')
+    /*
+    * 小红1 undefined
+    * 小红1 singleMan {name: '小红1', girlFriend: null}
+    *  小红2 singleMan {name: '小红1', girlFriend: null}
+    *  小红2 singleMan {name: '小红1', girlFriend: null}
+    * */
+    console.log(man1 === man2) // true
+</script>
+</body>
+</html>

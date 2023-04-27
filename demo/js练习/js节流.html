@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="height:2000px">
+<h1>js节流</h1>
+<ul>
+    <ol>1.0 函数节流：单位时间内频繁触发一个事件，只会触发一次</ol>
+    <ol>2.0 节流场景：解决高频事件（滚动条高频触发）</ol>
+</ul>
+<input type="text">
+<!---->
+<script>
+ /* 节流流程：
+ * 1.0 声明一个全局变量存储 触发的时间
+ * 2.0 每次触发交互的时候，获取当前时间
+ * 3.0 判断当前时间 与上一次触发时间。 是否超过间隔
+ * */
+   let lastTime = null;
+   window.onscroll = function(){
+       let nowTime = new Date();
+       if(nowTime - lastTime > 500){
+           console.log('我触发了',window.document.documentElement.scrollTop)
+           lastTime = nowTime
+       }
+   }
+
+</script>
+</body>
+</html>

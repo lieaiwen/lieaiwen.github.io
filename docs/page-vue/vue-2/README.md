@@ -214,7 +214,13 @@ b 发布消息 PubSub.publish('msg',data)
 ## v-show和v-if指令的共同点和不同点
 * v-show指令是通过修改元素的display的CSS属性让其显示或者隐藏
 * v-if指令是直接销毁和重建DOM达到让元素显示和隐藏的效果,如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。
+* v-show只编译一次；而v-if不停地销毁和创建
 * 所以，v-if 适用于在运行时很少改变条件，不需要频繁切换条件的场景；v-show 则适用于需要非常频繁切换条件的场景。
+
+**性能**
+
+1. v-show只编译一次，后面其实就是控制css，而v-if不停的销毁和创建，故v-show性能更好一点
+2. v-if有更高的切换消耗；v-show有更高的初始渲染消耗；
 
 ## Vue的双向数据绑定原理是什么
 >vue.js 是采用数据劫持结合发布者-订阅者模式的方式，通过Object.defineProperty()来劫持各个属性的setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调。
@@ -233,7 +239,8 @@ b 发布消息 PubSub.publish('msg',data)
 ![avatar](/images/vue/vue3.png)
 
 ## vue 页面的懒加载
-```
+>利用了函数只有被调用才会执行的特性。将组件的component属性赋值一个函数，在函数中去异步引入组件
+```js
 export default {
     path:'/test1',
     name:'test1',
@@ -243,16 +250,17 @@ export default {
 ```
 component: () => import('@/components/children/Test1')这个是配置路由懒加载，优化首屏加载缓慢
 
+
 ## Class 与 Style 如何动态绑定？
 **Class 可以通过对象语法和数组语法进行动态绑定：**
-```
-1.0 对象语法：
+```js
+// 1.0 对象语法：
  <div v-bind:class="{ active: isActive, 'text-danger': hasError }"></div>
  data: {
    isActive: true,
    hasError: false
  }
-2.0 数组语法：
+// 2.0 数组语法：
 <div v-bind:class="[isActive ? activeClass : '', errorClass]"></div>
 data: {
   activeClass: 'active',
@@ -260,14 +268,14 @@ data: {
 }
 ```
 **Style 也可以通过对象语法和数组语法进行动态绑定：**
-```
-1.0 对象语法：
+```js
+// 1.0 对象语法：
  <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>
  data: {
    activeColor: 'red',
    fontSize: 30
  }
-2.0 数组语法：
+// 2.0 数组语法：
     <div v-bind:style="[styleColor, styleSize]"></div>
     data: {
       styleColor: {
@@ -294,8 +302,8 @@ watch：更多的是「观察」的作用，类似于某些数据的监听回调
 * 当你利用索引直接设置一个数组项时，例如：vm.items[indexOfItem] = newValue
 * 当你修改数组的长度时，例如：vm.items.length = newLength
 
-```
-为了解决第一个问题，Vue 提供了以下操作方法：
+```js
+// 为了解决第一个问题，Vue 提供了以下操作方法：
 // Vue.set
 Vue.set(vm.items, indexOfItem, newValue)
 // vm.$set，Vue.set的一个别名
@@ -303,12 +311,18 @@ vm.$set(vm.items, indexOfItem, newValue)
 // Array.prototype.splice
 vm.items.splice(indexOfItem, 1, newValue)
 
-为了解决第二个问题，Vue 提供了以下操作方法：
+// 为了解决第二个问题，Vue 提供了以下操作方法：
 
 // Array.prototype.splice
 vm.items.splice(newLength)
 
 ```
+**注意：**
+
+上面说的是vue2  vue3.0 是可以监听到变化的
+
+`原理` 应该是 Object.definePrototype 和 proxy的区别
+数组的话是因为 vue 重写了array的一些方法导致的
 
 ## Vue 的父组件和子组件生命周期钩子函数执行顺序？
 * 加载渲染过程

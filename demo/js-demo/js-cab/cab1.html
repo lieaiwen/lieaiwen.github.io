@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>call</title>
+</head>
+<body>
+<h2>打开console 查看效果</h2>
+<script>
+var bool = new Boolean(1);
+var val = bool.toString();
+console.log(val) // true
+var bool = new Boolean(0);
+var val = bool.toString();
+console.log(val) //false
+var bool = new Boolean(true);
+var val = bool.toString();
+console.log(val) // true
+var bool = new Boolean(false);
+var val = bool.toString();
+console.log(val) //false
+var bool = new Boolean('');
+var val = bool.toString();
+console.log(val) //false
+var bool = new Boolean(' ');
+var val = bool.toString();
+console.log(val) // true
+var bool = new Boolean('undefined');
+var val = bool.toString();
+console.log(val) // true
+
+</script>
+</body>
+</html>

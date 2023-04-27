@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>防止字体环绕</title>
+    <style>
+        *{margin:0;padding: 0}
+        .content{
+            overflow: hidden;
+            width:400px;
+            height:400px;
+            background: #999999;
+        }
+        .one{
+            width:100px;
+            height:100px;
+            float: left;
+            background: green;
+        }
+        .spe{
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="one">1</div>
+        <p>wrgek输入科技馆技术部大公鸡wrgek输入科技馆技术部大公馆技术部大公馆技术部大公馆技术部大公馆技术部大公馆技术部大公鸡wrgek输入科技馆技术部大公鸡wrgek输入科技馆技术部大公鸡wrgek输入科技馆技术部大公鸡wrgek输入科技馆技术部大公鸡wrgek输入科技馆技术部大公鸡</p>
+    </div>
+    <h3>下面的是防止环绕的</h3>
+    <div class="content">
+        <div class="one">1</div>
+        <p class="spe">wrgek输入科技馆技术部大公鸡wrgek输入科技馆技术部大公馆技术部大公馆技术部大公馆技术部大公馆技术部大公馆技术部大公鸡wrgek输入科技馆技术部大公鸡wrgek输入科技馆技术部大公鸡wrgek输入科技馆技术部大公鸡wrgek输入科技馆技术部大公鸡wrgek输入科技馆技术部大公鸡</p>
+    </div>
+</body>
+</html>

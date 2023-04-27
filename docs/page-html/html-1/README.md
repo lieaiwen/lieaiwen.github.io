@@ -7,6 +7,16 @@ HTML称为超文本标记语言，是一种标识性的语言
  3. 搜索引擎的爬虫依赖于标记来确定上下文和各个关键字的权重，利于 **SEO(页面优化)**。<br>
  4. 使阅读源代码的人对网站更容易将网站分块，**便于阅读维护理解**。
 
+常见的语义化标签
+```html
+<header></header> <!--头部--> 
+<nav></nav>  <!--导航栏-->
+<section></section> <!--区块(有语义化的div)-->
+<main></main>  <!--主要区域-->
+<article></article> <!--主要内容-->
+<aside></aside>  <!--侧边栏-->
+<footer></footer> <!--底部-->
+```
 ## 2.0 Label 的作用是什么？是怎么用的？
 label 标签来定义表单控制间的关系,**当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件上**。
 ```js
@@ -331,15 +341,17 @@ localStorage 只能存字符串，存取 JSON 数据需配合 JSON.stringify() �
 
 
 ## 17.0 html 几个有意思的标签
-```
-1.0 table 合并边框
+```js
+// 1.0 table 合并边框
 table,tr,td{
     border:1px solid blue;
     border-collapse:collapse;
 }
-2.0 合并单元格 
-行：colspan="2"
-列：rowspan = "2"
+// 2.0 合并单元格 
+//行：
+colspan="2"
+//列：
+rowspan = "2"
 3.0 <dl> 标签定义一个描述列表。
 <dl> 标签与 <dt> （定义项目/名字）和 <dd> （描述每一个项目/名字）一起使用。
 <table>
@@ -379,7 +391,69 @@ table,tr,td{
 
 
 
-## 18.0新标签兼容低版本
+## 18.0 新标签兼容低版本
 引入html5shiv.js
 
+## 19.0 html data-* 属性
+>使用 data-* 属性来嵌入自定义数据：
+```js
+<ul>
+    <li onclick="showDetails(this)" id="owl" data-animal-type="bird">鸟</li>
+    <li onclick="showDetails(this)" id="salmon" data-animal-type="fish">鱼</li>
+    <li onclick="showDetails(this)" id="tarantula" data-animal-type="spider">Tarantula</li>
+</ul>
+<script>
+    function showDetails(animal){
+        var animalType = animal.getAttribute("data-animal-type");
+        alert("The " + animal.innerHTML + " is a " + animalType + ".");
+    }
 
+</script>
+```
+## 20.0 浏览器是如何对 HTML5 的离线储存资源进行管理和加载？
+
+在线的情况下，浏览器发现 html 头部有 manifest 属性，它会请求
+manifest 文件，如果是第一次访问页面 ，那么浏览器就会根
+据manifest 文件的内容下载相应的资源并且进行离线存储。如果已
+经访问过页面并且资源已经进行离线存储了，那么浏览器就会使用离线
+的资源加载页面，然后浏览器会对比新的 manifest 文件与旧
+的manifest 文件，如果文件没有发生改变，就不做任何操作，如果
+文件改变了，就会重新下载文件中的资源并进行离线存储。
+离线的情况下，浏览器会直接使用离线存储的资源。
+
+## 21.0  Canvas 和SVG 的区别
+
+**SVG**
+
+SVG 可缩放矢量图形（Scalable Vector Graphics）是基于可扩展标记
+语言 XML 描述的 2D 图形的语言，SVG 基于XML 就意味着 SVG DOM 中的
+每个元素都是可用的，可以为某个元素附加 Javascript 事件处理器。
+在 SVG 中，每个被绘制的图形均被视为对象。如果 SVG 对象的属性发
+生变化，那么浏览器能够自动重现图形。
+
+`其特点如下：`
+
+* 不依赖分辨率 
+* 支持事件处理器
+* 最适合带有大型渲染区域的应用程序（比如谷歌地图）
+* 复杂度高会减慢渲染速度（任何过度使用 DOM 的应用都不快）
+* 不适合游戏应用
+
+**Canvas**
+
+Canvas 是画布，通过 Javascript 来绘制2D 图形，是逐像素进行渲染
+的。其位置发生改变，就会重新进行绘制。
+
+`其特点如下：`
+
+* 依赖分辨率
+* 不支持事件处理器
+* 弱的文本渲染能力
+* 能够以 .png 或 .jpg 格式保存结果图像
+* 最适合图像密集型的游戏，其中的许多对象会被频繁重绘
+
+**注意：**
+
+矢量图，也称为面向对象的图像或绘图图像，在数学上定义为一系列
+由线连接的点。矢量文件中的图形元素称为对象。每个对象都是
+一个自成一体的实体，它具有颜色、形状、轮廓、大小和屏幕位置等属性。

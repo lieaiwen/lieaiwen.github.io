@@ -1,3 +1,5 @@
+## js知识点12
+
 ## 一道js题
 ```
 function Foo() {

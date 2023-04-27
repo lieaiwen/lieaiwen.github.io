@@ -1,97 +1,4 @@
 ## webpack
-```
-四个核心概念：
-
-入口(entry)
-输出(output)
-loader
-插件(plugins) 
-```
-**初始化一个webpack项目**
-* npm install webpack webpack-cli --save-dev
->同理初始化vue项目 vue init webpack 项目名称
-
-**处理css**
-
-npm install --save-dev style-loader css-loader
-
-**加载 Sass 文件**
-
-npm install sass-loader node-sass --save-dev
-
-**webpack 开启 SourceMap 和添加 CSS3 前缀**
-```
- {
-        loader:"css-loader",
-        options:{ sourceMap: true }
-      },
-      {
-        loader:"sass-loader",
-        options:{ sourceMap: true }
-      },
- 
-```
-**为样式添加 CSS3 前缀**
-
-npm install postcss-loader autoprefixer --save-dev
-
-**webpack 将 CSS 抽取成单独文件**
-
-npm install mini-css-extract-plugin --save-dev
-
-**压缩 CSS**
-
-npm install optimize-css-assets-webpack-plugin --save-dev
-
-**压缩 JS**
-
-npm install uglifyjs-webpack-plugin --save-dev
-
-**webpack 清理目录插件**
-
-npm install clean-webpack-plugin --save-dev
-
-**图片处理**
-
-npm install file-loader --save-dev
-
-**图片优化**
-
-pm install image-webpack-loader --save-dev
-
-**图片 base64 处理**
-
-npm install url-loader --save-dev
-
-**webpack 配置合并和提取公共配置**
-
-npm install webpack-merge --save-dev
-
-**安装 babel-loader**
-
-npm install babel-loader @babel/core @babel/preset-env --save-dev
-
->dev 开发分支  product 线上分支 生产分支
-
-开启 js 的 sourceMap  不要在生产环境中使用 
-```
-let devConfig = {
-  // ... 省略其他
-+  devtool: 'inline-source-map'
-} 
-```
-这里讲一下 babel-loader 的优化。
-```
- babel-loader 可以配置 cacheDirectory 来提高打包效率：
- 
- cacheDirectory：默认值 false，开启后构建时会缓存文件夹，后续从缓存中读取，将提高打包效率。
-```
-
-开启监控自动编译 --watch
-
-**开启热更新**
-
-npm install webpack-dev-server --save-dev
 
 ## 什么是前端缓存
 https://blog.csdn.net/u010730126/article/details/102688274
@@ -207,3 +114,14 @@ $res = 0 || $user->saveAll($data);
            referee_id: wx.getStorageSync('referee_id')
          }, result => {}
 ```
+
+| 插件名称                    | 作用                                                    |
+| --------------------------- | ------------------------------------------------------- |
+| html-webpack-plugin         | 生成 html 文件,引入公共的 js 和 css 资源                |
+| webpack-bundle-analyzer     | 对打包后的文件进行分析，生成资源分析图                  |
+| terser-webpack-plugin       | 代码压缩，移除 console.log 打印等                       |
+| HappyPack Plugin            | 开启多线程打包，提升打包速度                            |
+| Dllplugin                   | 动态链接库，将项目中依赖的三方模块抽离出来，单独打包    |
+| DllReferencePlugin          | 配合 Dllplugin，通过 manifest.json 映射到相关的依赖上去 |
+| clean-webpack-plugin        | 清理上一次项目生成的文件                                |
+| vue-skeleton-webpack-plugin | vue 项目实现骨架屏                                      |

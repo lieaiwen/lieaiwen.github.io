@@ -111,3 +111,60 @@ while的语法我们都知道，当满足某些条件的时候，while里面的�
 我们就叫上面的代码为阻塞主进程之休眠。<br>
 
 通宵复习是因为平时没听过课，拼命减肥是因为吃零食从来不会控制，分手了才开始后悔是因为之前没有给足够的关心。于是别人开始敬佩你的勤奋，同情你的遭遇，可是只有你知道，你的痛苦都是罪有应得。
+
+
+##  除了使用 `userAgent` 之外，也可以使用以下方法来判断当前浏览器是在 PC 端还是移动端：
+
+1. 使用媒体查询判断屏幕大小。移动设备的屏幕一般比较小，可以通过屏幕大小来推断是否是移动端。` window.matchMedia`
+
+2. 判断终端设备的触摸能力。通过判断设备是否支持触摸操作，通常可以分辨是移动端还是 PC 端。例如，使用 `ontouchstart` 事件来判断是否支持触摸。
+
+3. 判断浏览器是否支持某些 API。例如，Mobile Safari 支持 `touch` 事件和 `orientationchange` 事件，可以通过检测这些事件是否被支持来判断是否是移动端。
+
+需要注意的是，这些方法都不是百分百准确的，有时候可能会出现误判的情况。因此，在判断时应尽可能结合多个因素来进行推断。
+
+## ios和安卓的兼容问题
+
+1.0 获取时间戳
+```js
+//  ios 不识别 
+new Date(‘2020-11-26 11:52:00’).getTime()
+//    需要修改成 2020/11/26 11:52:00
+ let time = '2020/11/26 11:52:00';
+ time = time.replace(/\-/g,"/")
+let date = new Date(time).getTime()
+```
+2.0 window.open（）IOS环境下无法正常执行
+```js
+// 用
+window.location.href
+```
+
+3.0 input输入框type类型为number的时候出现上下箭头
+```js
+// 写样式隐藏掉
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+ -webkit-appearance: none !important; margin: 0; 
+}
+```
+
+4.0 部分安卓手机点击图片会放大
+
+```js
+ // 这种方法会取消掉img标签的点击事件，如果需要点击事件，在外层盒子上添加点击事件
+img{ 
+    pointer-events: none;
+} 
+```
+
+5.0 ios滑动卡顿问题
+
+```js
+body{
+    -webkit-overflow-scrolling: touch;
+}
+```
+
+...等等
+  

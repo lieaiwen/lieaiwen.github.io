@@ -50,8 +50,9 @@ module.exports = {
 							{ text: 'Devdocs有可能是全球最全的文档库', link: 'https://devdocs.io/' },
 							{ text: 'Overapi', link: 'https://overapi.com/' },
 							{ text: 'JavaScript 标准参考教程', link: 'http://javascript.ruanyifeng.com/' },
+							{text:'w3c教程(js)',link:'https://www.w3school.com.cn/js/js_shiyong.asp'},
 							{ text: 'es6', link: 'https://es6.ruanyifeng.com/' },
-							{ text: 'MND在线文档', link: 'https://developer.mozilla.org/zh-CN/docs/Web/JavaScript' },
+							{ text: 'MDN在线文档', link: 'https://developer.mozilla.org/zh-CN/docs/Web/JavaScript' },
 							{ text: 'JavaScript Promise迷你书（中文版）', link: 'http://liubin.org/promises-book/#introductiono' },
 
 						]
@@ -73,9 +74,11 @@ module.exports = {
 						items: [
 							{ text: '可以在线看代码流程的网站：loupe', link: 'JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7' },
 							{ text: '在线JSON解析', link: 'https://www.json.cn/' },
+							{text:'bable在线es6转es5工具',link:'https://babeljs.io/docs/'},
 							{ text: '在线MD5编码工具', link: 'https://www.zxgj.cn/g/md5' },
 							{ text: '在线JWT解码工具', link: 'http://jwt.calebb.net/' },
 							{ text: '在线JS代码格式化', link: 'https://prettier.io/playground/' },
+							{  text: '免费的编程中文书籍索引',link:'https://github.com/justjavac/free-programming-books-zh_CN'}
 						]
 					},
 					{ text: '创作必备',
@@ -120,7 +123,6 @@ module.exports = {
 				children: [
 					'/page-1/one/',
 					'/page-1/oneArray/',
-					'/page-1/three/',
 					'/page-1/two/',
 					'/page-1/Boolean/',
 					'/page-1/Object/',
@@ -132,10 +134,13 @@ module.exports = {
 					'/page-1/Error/',
 					'/page-1/Global/',
 					'/page-1/Class/',
+					'/page-1/ajax/',
+					'/page-1/BOM/',
+					'/page-1/DOM/',
 				]
 			},
 			{
-				title: 'js杂项知识点',
+				title: 'js高级',
 				children: [
 					'/page-2/one/',
 					'/page-2/console/',
@@ -150,6 +155,14 @@ module.exports = {
 					'/page-2/js-11/',
 					'/page-2/js-12/',
 					'/page-2/js-13/',
+					'/page-2/js-14/',
+					'/page-2/js-15/',
+					'/page-2/js-16/',
+					'/page-2/js-17/',
+					'/page-2/js-18/',
+					'/page-2/js-19/',
+					'/page-2/js-20/',
+					'/page-2/js-21/',
 					'/page-2/two/',
 				]
 			},
@@ -179,6 +192,20 @@ module.exports = {
 				]
 			},
 			{
+				title: 'JS其它知识点',
+				children: [
+					'/page-js/js-0/',
+					'/page-js/js-1/',
+					'/page-js/js-2/',
+					'/page-js/js-3/',
+					'/page-js/js-4/',
+					'/page-js/js-5/',
+					'/page-js/js-6/',
+					'/page-js/js-9/',
+					'/page-js/js-11/',
+				]
+			},
+			{
 				title: 'js函数（方法）',
 				// collapsable: false,
 				children: [
@@ -192,20 +219,7 @@ module.exports = {
 					'/page-a/',
 				]
 			},
-			{
-				title: 'JS',
-				children: [
-					'/page-js/js-0/',
-					'/page-js/js-1/',
-					'/page-js/js-2/',
-					'/page-js/js-3/',
-					'/page-js/js-4/',
-					'/page-js/js-5/',
-					'/page-js/js-6/',
-					'/page-js/js-9/',
-					'/page-js/js-11/',
-				]
-			},
+
 			{
 				title: 'VUE',
 				children: [
@@ -257,7 +271,13 @@ module.exports = {
             {
                 title: 'webpack',
                 children: [
-                    '/page-webpack/',
+					'/page-webpack/webpack-0/',
+					'/page-webpack/webpack-2/',
+					'/page-webpack/webpack-3/',
+					'/page-webpack/webpack-4/',
+					// '/page-webpack/webpack-1/',
+                    // '/page-webpack/webpack-11111/',
+					// '/page-webpack/webpack-22222/',
                 ]
             },
 			{
@@ -269,7 +289,6 @@ module.exports = {
 					'/page-node/node-4/',
 					'/page-node/node-5/',
 					'/page-node/node-6/',
-					'/page-node/zz-template/',
 				]
 			},
 			{
@@ -293,12 +312,19 @@ module.exports = {
 				]
 			},
 			{
+				title: 'Python基础',
+				children: [
+					'/page-python/python-1/',
+					'/page-python/python-2/',
+				]
+			},
+			{
 				title: '英语单词',
 				children: [
 					'/page-english/english-1/',
 				]
 			},
 		],
-		displayAllHeaders: false // 默认值：false // 侧边栏不显示标题
+		displayAllHeaders: false, // 默认值：false // 侧边栏不显示标题
 	}
 }

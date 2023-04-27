@@ -182,8 +182,8 @@ console.log(person.oName()) <br>
 3.0 它可以确保更好的数据质量 <br>
 4.0 有利于后台工作  <br>
  数据质量更好
- ```
- 1.0  使用 lang 属性以大写形式返回 language 属性的值：
+ ```js
+ //1.0  使用 lang 属性以大写形式返回 language 属性的值：
  // Create an object:
 var person = {
   firstName: "Bill",
@@ -197,7 +197,7 @@ var person = {
 // 使用 getter 来显示来自对象的数据：
 person.lang
 
-2.0 使用 lang 属性将大写值存储在 language 属性中：
+//2.0 使用 lang 属性将大写值存储在 language 属性中：
 var person = {
   firstName: "Bill",
   lastName : "Gates",
@@ -214,7 +214,7 @@ person.lang = "en";
 person.language;
  ```
  实例：
- ```
+ ```js
 var obj = {
   counter : 0,
   get reset() {
@@ -241,6 +241,32 @@ obj.subtract = 1;
 obj.increment;
 obj.decrement;
  ```
+实例2：
+```js
+let obj = {
+    name:'zz',
+	age:18,
+	location:{
+        province:'河南',
+		city:'郑州'
+	},
+    get city(){
+        return this.location.city
+	},
+    set city(value){
+      this.location.city = value  
+	},
+	get uppername(){
+        return this.name.substring(0,1).toUpperCase() + this.name.substring(1)
+	},
+    set uppername(value){
+      this.name = value  
+	}
+}
+console.log(obj.uppername) // Zz
+console.log(obj.city) // 郑州
+```
+
  Object.defineProperty() 方法也可用于添加 Getter 和 Setter：
 
 ```

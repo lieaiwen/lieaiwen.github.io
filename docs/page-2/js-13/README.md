@@ -4,7 +4,7 @@
 **外加一句这个原型是所有js的根本必须记死了**
 
  构造函数创建一个对象
-```
+```js
 function Person(){}
 
 var person = new Person();
@@ -14,7 +14,7 @@ console.log(person.name) // Kevin
 **1.0 prototype**
 
 每个函数都有一个prototype属性
-```
+```js
  function Person() {
  
  }
@@ -41,7 +41,7 @@ JavaScript的对象中都包含了一个”[[Prototype]]”内部属性，这个
 **2.0 \_\_proto\_\_**
 >每一个js对象（null除外）都有一个属性__proto__属性，这个属性指向对象的原型。
 
-```
+```js
 function Person(){}
 var person = new Person();
 console.log(person.__proto__ === Person.prototype) // true 
@@ -54,14 +54,14 @@ console.log(person.__proto__ === Person.prototype) // true
 
 >每个原型都有一个 constructor 属性指向关联的构造函数。
 
-```
+```js
  function Person() {}
  console.log(Person === Person.prototype.constructor); // true
 ```
 更新关系图：
 ![avatar](/images/js/proto-3.png) <br>
 综上我们已经得出：
-```
+```js
  function Person() {
  
  }
@@ -75,7 +75,7 @@ console.log(person.__proto__ === Person.prototype) // true
 **4.0 实例与原型**
 
 当读取实例的属性时，如果找不到，就会查找与对象关联的原型中的属性，如果还查不到，就去找原型的原型，一直找到最顶层为止。(Object.prototype)
-```
+```js
 function Person() {
 
 }
@@ -101,7 +101,7 @@ console.log(person.name) // Kevin
 
 **5.0 原型链**
 那 Object.prototype 的原型
-```
+```js
  console.log(Object.prototype.__proto__ === null) // true
 ```
 >null 表示“没有对象”，即该处不应该有值。
@@ -114,7 +114,7 @@ console.log(person.name) // Kevin
 顺便还要说一下，图中由相互关联的原型组成的链状结构就是原型链，也就是蓝色的这条线。
 
 最后
-```
+```js
  function Person() {
  
  }

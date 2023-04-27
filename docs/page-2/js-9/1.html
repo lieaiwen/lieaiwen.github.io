@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let wfun = function(){
+        console.log(this)
+        return this
+    }
+    let obj = {
+        name:'1',
+        foo:function (){
+            console.log(this)
+        },
+        woo:wfun
+    }
+    obj.woo()
+</script>
+</body>
+</html>

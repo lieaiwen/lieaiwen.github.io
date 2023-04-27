@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>js防抖</h1>
+<ul>
+    <ol>1.0 函数防抖：单位时间内频繁触发一个事件，以最后一次触发为准</ol>
+    <ol>2.0 防抖应用场景：输入框输入事件</ol>
+</ul>
+<input type="text">
+<!---->
+<script>
+ /* 防抖流程：
+ * 1.0 声明一个全局变量存储定时器ID
+ * 2.0 每次触发交互的时候，先清除上一次定时器
+ * */
+ let timeId = null;
+      document.querySelector('input').oninput = function(){
+          clearTimeout(timeId)
+          timeId = setTimeout(()=>{
+              console.log('我要触发了',this.value)
+          },1000)
+      }
+</script>
+</body>
+</html>

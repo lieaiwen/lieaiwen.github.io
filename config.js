@@ -165,6 +165,5 @@ module.exports = {
 				]
 			},
 		],
-		displayAllHeaders: false // 默认值：false // 侧边栏不显示标题
 	}
 }

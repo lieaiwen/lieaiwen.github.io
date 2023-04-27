@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>boolean-construct</title>
+</head>
+<body>
+<h2>给js Boolean类型 添加一个方法 ，打卡查看源代码 和 控制台的console 查看</h2>
+<script>
+	Boolean.prototype.myColor=function()
+	{
+		if (this.valueOf()==true)
+		{
+			this.color="green";
+		}
+		else
+		{
+			this.color="red";
+		}
+	}
+		var a=new Boolean(1);
+        var c = a.color;
+        console.log(c) // undefined
+        a.myColor();
+        var b=a.color;
+        console.log(b)// green
+</script>
+</body>
+</html>

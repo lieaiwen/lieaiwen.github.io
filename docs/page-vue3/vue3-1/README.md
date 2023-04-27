@@ -7,3 +7,9 @@
 3.0 composition api 组合API (最重要)<br>
 4.0 更优秀的Ts支持<br>
 5.0 暴露了自定义渲染API
+
+**1.0 创建项目**
+```js
+vue create vue3-test
+```
+**注意** vue-cli的版本一定要很高才可以哦

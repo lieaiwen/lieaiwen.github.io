@@ -18,5 +18,7 @@ http://www.zliel.top/vpdemo/css-demo/css-media.html
 技巧 记录
 1.0 本地图片 引用： ![avatar](/images/proto.jpg)
 2.0 引用参考：  [demo](http://www.zliel.top/vpdemo/css-demo/position/p1.html)<br>
+3.0 本地html文件 位置在 public 文件下面 [bar - four](/demo/css-demo/css-center1.html) 不是很管用呀
+
 
 

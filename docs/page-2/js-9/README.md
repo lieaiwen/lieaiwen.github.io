@@ -10,17 +10,17 @@ var obj = {
  console.log(obj.age) // undefined
 ```
 1. 单独的this，指向的是window这个对象 (默认绑定)
-```
+```js
  console.log(this) // window
 ```
 2. 全局函数中的this (默认绑定)
-```
+```js
  function foo(){
      console.log(this) // window
  }
  foo()
 
-严格模式下,this->undefined
+//严格模式下,this->undefined
     function foo(){
         'use strict'
         console.log(this)
@@ -30,7 +30,7 @@ var obj = {
 3. 通过new 关键字生成的对象 this就指向该对象
 >所谓构造函数，就是通过这个函数生成一个新对象，这时，this就指向这个对象。
 
-```
+```js
 function foo(){
     this.name = "big"
     console.log(this) // foo {name: "big"}
@@ -40,7 +40,7 @@ console.log(a) // foo {name: "big"}
 console.log(a.name) // big
 ```
 4. 用call与apply的方式调用函数
-```
+```js
 function demo() {
     console.log(this);
 }
@@ -49,27 +49,27 @@ demo.call(null); // this -> window
 demo.call(undefined); // this -> window 
 ```
 5. 定时器中的this，指向的是window
-```
+```js
 setTimeout(function() {
         console.log(this); // this -> window ，严格模式 也是指向window
     },500) 
 ```
 6. 元素绑定事件，事件触发后，执行的函数中的this，指向的是当前元素
-```
+```js
  let $btn = document.getElementById('btn');
  $btn.onclick = function(){
      console.log(this); // this -> 当前元素
  }
 ```
 7. 函数调用时如果绑定了bind，那么函数中的this指向了bind中绑定的元素
-```
+```js
  let $btn = document.getElementById('btn');
  $btn.addEventListener('click',function() {
     console.log(this); // window
  }.bind(window)) 
 ```
 8. 对象中的方法，该方法被哪个对象调用了，那么方法中的this就指向该对象 (隐式绑定)
-```
+```js
  let name = 'out'
      let obj = {
          name: 'in',
@@ -82,7 +82,7 @@ setTimeout(function() {
      fn(); //out  this -> window
 ```
 9. 箭头函数是ES6中新增的，它和普通函数有一些区别，箭头函数没有自己的this，它的this继承于外层代码库中的this
-```
+```js
 var obj = {
         hi: function(){
             console.log(this);
@@ -119,7 +119,7 @@ var obj = {
 6. 如果是箭头函数，箭头函数的this继承的是外层代码块的this。
 
 **来做一道题**
-```
+```js
  var x = 10;
      var a = {
          x: 20,
@@ -138,7 +138,7 @@ var obj = {
      console.log( a.fn().call(a) ) // this->a->20
 ```
 **再来一道**
-```
+```js
 var number = 5;
 var obj = {
     number: 3,

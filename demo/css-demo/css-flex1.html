@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex1</title>
+    <style>
+        .one{
+            width:600px;
+            border:1px solid blue;
+        }
+        .flex-row{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .two{
+            justify-content: space-between;
+        }
+        p{
+            width:150px;
+            height:150px;
+            background: #6a8bad;
+        }
+        p:nth-child(2){
+            background: #3eaf7c;
+        }
+    </style>
+</head>
+<body>
+<h2>space-around</h2>
+    <div class="one flex-row">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+    </div>
+<h2>space-between</h2>
+    <div class="one two flex-row">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>call5</title>
+</head>
+<body>
+<h3>call() apply() bind() 都是用来重定义this这个对象的</h3>
+<script>
+	var name = '笑笑';
+	var age  = 17;
+	var obj = {
+		name:'打打',
+		objAge:this.age, // 指向上一级作用域 window ，对象不形成作用域
+		myFun:function(){
+			console.log(this.name + '年龄' + this.age);
+		}
+	}
+	var dd = {
+		name:'美女',
+        age:99
+    }
+    obj.myFun.call(dd);// 美女年龄99
+    obj.myFun.apply(dd);// 美女年龄99
+    obj.myFun.bind(dd)();// 美女年龄99
+</script>
+
+<script>
+</script>
+</body>
+</html>

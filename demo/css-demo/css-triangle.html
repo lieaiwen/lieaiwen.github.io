@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三角形</title>
+    <style>
+        body{
+            margin-top:100px;
+        }
+        .one{
+            margin-left: 100px;
+            float: left;
+        }
+        .triangle1{
+            width:0px;
+            height:0px;
+            border-color:red blue green black;
+            border-width:100px;
+            border-style:solid;
+        }
+        .triangle2{
+            width:0px;
+            height:0px;
+            border-color:red transparent transparent transparent;
+            border-width:100px;
+            border-style:solid;
+
+        }
+        .triangle3{
+            width: 100px;
+            height: 100px;
+            background: deeppink;
+            clip-path: polygon(0px 0px, 0px 100px, 100px 0px);  /*将坐标(0,0),(0,100),(100,0)连成一个三角形*/
+            transform: rotate(225deg);  /*旋转225，变成下三角*/
+        }
+    </style>
+</head>
+<body>
+    <h3>border</h3>
+    <div class="one triangle1"></div>
+    <div class="one triangle2"></div>
+    <div class="one triangle3"></div>
+</body>
+</html>

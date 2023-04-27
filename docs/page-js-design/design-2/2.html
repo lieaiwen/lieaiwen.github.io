@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let singleMan = function(name){
+        this.name = name;
+    }
+    singleMan.prototype.getName = function(){
+        console.log(this.name)
+    }
+    singleMan.getGirlFriend = (function(){
+        let girlFriend = null //// 使用闭包防止全局变量的污染
+        //console.log(girlFriend)
+        return function(name){
+            if(!girlFriend){
+                girlFriend = new singleMan(name)
+            }
+            //console.log(name,girlFriend)
+            return girlFriend
+        }
+
+    })()
+    let man1 = singleMan.getGirlFriend('小红1')
+    let man2 = singleMan.getGirlFriend('小红2')
+    /*
+    *  null
+    *  小红1 singleMan {name: '小红1'}
+    *  小红2 singleMan {name: '小红1'}
+    * */
+    console.log(man1 === man2) // true
+</script>
+</body>
+</html>

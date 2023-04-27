@@ -8,20 +8,21 @@
 </head>
 <body>
     <script>
-        function fn1(a){
-            if(a>10){
-                fn2(a)
-            }else{
-                fn3()
-            }
-        };
-        function fn2(b){
-            if(b>16){
-                fn4()
-            }else{
-                fn5()
-            }
-        }
+       function flattenDeep(arr1){
+           return arr1.reduce(function(acc,val){
+               return Array.isArray(val) ? acc.concat(flattenDeep(val)) : acc.concat(val)
+           },[])
+       }
+       let oarr = flattenDeep([1,2,[3,[6,7]]])
+       // 递归函数
+       function fac(n){
+           if( n == 1){
+               return 1
+           }
+           return n * fac(n-1)
+       }
+       fac(3)
+
     </script>
 </body>
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css-media</title>
+    <style>
+        .example {
+            padding: 20px;
+            color: white;
+        }
+        /*小于600px的设备：比如手机*/
+        @media only screen and (max-width: 600px) {
+            .example {background: red;}
+        }
+
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        /*大于600px的设备：比如大屏手机和平板*/
+        @media only screen and (min-width: 600px) {
+            .example {background: green;}
+        }
+
+        /*大于768px的设备：小屏电脑*/
+        @media only screen and (min-width: 768px) {
+            .example {background: blue;}
+        }
+
+        /*大于992px的设备：中屏电脑*/
+        @media only screen and (min-width: 992px) {
+            .example {background: orange;}
+        }
+
+        /*大于1200x的设备：大屏电脑*/
+        @media only screen and (min-width: 1200px) {
+            .example {background: pink;}
+        }
+    </style>
+</head>
+<body>
+    <h2>响应式判断</h2>
+    <p class="example">操作浏览器窗口，查看效果。</p>
+</body>
+</html>
